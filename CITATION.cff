@@ -1,9 +1,11 @@
 cff-version: 1.2.0
-message: "If you use these certificates or checkers, please cite them. These are computer-assisted, not a formal proof: the arithmetic is re-checked in Lean, the reasoning connecting it to the packing statements is not formalized."
+message: "If you use these certificates or checkers, please cite them. Concept DOI (all versions): 10.5281/zenodo.24191316; v0.1.0: 10.5281/zenodo.24191317. These are computer-assisted, not a formal proof: the arithmetic is re-checked in Lean, the reasoning connecting it to the packing statements is not formalized."
 title: "packing-optimality-certificates: computer-assisted optimality certificates for packing two unit Platonic solids into a Platonic container"
 authors:
   - family-names: Nakano
     given-names: Hirotaka
 repository-code: "https://github.com/konoha-ily2/packing-optimality-certificates"
+doi: 10.5281/zenodo.24191316
 license: MIT
 version: 0.1.0
+date-released: 2026-11-13
