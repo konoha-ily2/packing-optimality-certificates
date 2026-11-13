@@ -1,0 +1,1 @@
+U_J in Data 5/16 -> 5/32 (changes both the far L leaves of J and the root boxes of local J); far: n box 0, local: J face 1 side 0 (accepted 23)

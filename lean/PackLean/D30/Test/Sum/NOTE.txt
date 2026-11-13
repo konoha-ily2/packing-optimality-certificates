@@ -1,0 +1,1 @@
+the same accepted box as in Lam: sum of λ set to qlam + 1

@@ -1,0 +1,66 @@
+{
+ "problem": "cubinico",
+ "local": "d30_cubinico_local_r16_nolp.json",
+ "far": "d30_cubinico_far",
+ "RHO0": "1/16",
+ "DEN_exp": 44,
+ "local_boxes": 74,
+ "local_kinds": {
+  "single": 74
+ },
+ "local_faces": {
+  "x=+1": {
+   "boxes": 4,
+   "kinds": {
+    "single": 4
+   }
+  },
+  "x=-1": {
+   "boxes": 6,
+   "kinds": {
+    "single": 6
+   }
+  },
+  "y=+1": {
+   "boxes": 24,
+   "kinds": {
+    "single": 24
+   }
+  },
+  "y=-1": {
+   "boxes": 24,
+   "kinds": {
+    "single": 24
+   }
+  },
+  "z=+1": {
+   "boxes": 8,
+   "kinds": {
+    "single": 8
+   }
+  },
+  "z=-1": {
+   "boxes": 8,
+   "kinds": {
+    "single": 8
+   }
+  }
+ },
+ "far_counts": {
+  "A": 4194,
+  "D": 789,
+  "L": 8,
+  "X": 0,
+  "bad": 0
+ },
+ "far_L_boxes": 8,
+ "far_L_volume_ok": true,
+ "local_params_version": {},
+ "seconds": {
+  "local_verify": 31.3,
+  "far_replay": 37.0,
+  "total": 68.3
+ },
+ "passed": true,
+ "note": "Claude が書いた確かめ。第三者の点検なし、形式証明ではない"
+}

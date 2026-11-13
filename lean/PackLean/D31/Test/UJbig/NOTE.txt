@@ -1,0 +1,1 @@
+U_J in Data 5/16 -> 3/8 (the root boxes of local J grow; in test n2c of D31, J does not close). All faces and sides of local J

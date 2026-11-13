@@ -1,0 +1,1 @@
+local J face 1 side 0: remove accepted leaf 6 from the tree

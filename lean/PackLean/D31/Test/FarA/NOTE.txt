@@ -1,0 +1,1 @@
+n box 0, leaf 22: candidate 62 -> 0 (Python far_lb is < 0 too)

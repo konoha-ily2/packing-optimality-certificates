@@ -2,6 +2,8 @@
 
 Cases: `icointet_n02` (icosahedra in a tetrahedron) and `cubintet_n02` (cubes in a tetrahedron). Tool: `d28_*`.
 
+T1–T4 below are also the basis of `octintet_n02` (octahedra in a tetrahedron), which uses a different certificate (one linear $\kappa$ everywhere and a local region around two curves of minimisers) and its own tool `d31_*`; see [reduction_octintet.md](reduction_octintet.md). The cases $n=3,4,5$ in a tetrahedron are in [plateau.md](plateau.md).
+
 The regular tetrahedron is not centrally symmetric, so Lemma R of [reduction_symmetric.md](reduction_symmetric.md) does not apply. Instead the two pieces are separated by a plane with normal $n$, and the translations available to one piece form a tetrahedron that can be written down explicitly. This removes the translations and the separating height from the problem and leaves an inequality in $(n,R)$ only.
 
 Everything here is a prose argument, re-derived once by a reviewer model (see [review_log.md](review_log.md)) and not formalized; Lean checks only the arithmetic built on top of it.
@@ -135,4 +137,4 @@ The optimal configurations are substituted exactly (icointet: 96 containment ine
 
 ## 12. Consequence for $n=3,4$ (icointet)
 
-Since removing pieces preserves feasibility, the minimal edge for 3 or 4 icosahedra in a tetrahedron is at least $s^{\ast}=2\sqrt2(1+2/\sqrt5)$, the $n=2$ value. **Only this lower bound is shown.** The known numerical configurations for $n=3,4$ (floating point) are about $1.1\times10^{-7}$ above $s^{\ast}$, and no configuration attaining $s^{\ast}$ for $n=3,4$ has been substituted exactly. The minimum for $n=3,4$ is therefore not proved.
+Since removing pieces preserves feasibility, the minimal edge for 3 or 4 icosahedra in a tetrahedron is at least $s^{\ast}=2\sqrt2(1+2/\sqrt5)$, the $n=2$ value. In v0.1.0 only this lower bound was stated. From v0.2.0 on, configurations of 3 and 4 icosahedra in the tetrahedron of edge exactly $s^{\ast}$ are substituted exactly, so the minimum for $n=3,4$ equals $s^{\ast}$; see [plateau.md](plateau.md).

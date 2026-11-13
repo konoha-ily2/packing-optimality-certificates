@@ -1,0 +1,1 @@
+local C face 2 side 1, leaf 5: candidate 39 -> 0 (Python: sign of E fits, lower bound > 0 is false)

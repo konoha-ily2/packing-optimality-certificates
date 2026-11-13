@@ -1,0 +1,1 @@
+accepted box chart 0 [-5497558138880,-2199023255552,-3298534883328]–[-4398046511104,-1099511627776,-2199023255552]: move 1888979/2^24 of λ from face 11 to 0 (same sum; Python's check_box rejects it too)

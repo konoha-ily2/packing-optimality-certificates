@@ -1,0 +1,1 @@
+discard box chart 0 [-2^44]^3–[-2^43]^3: pair 98 → 1 (Python's check_discard rejects it too)

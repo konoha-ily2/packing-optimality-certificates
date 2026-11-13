@@ -1,0 +1,1 @@
+n box 0, leaf 4: rotation 4 -> 0 (Python discard_lb is <= 0 too)

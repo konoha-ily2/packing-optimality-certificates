@@ -1,0 +1,1 @@
+local J face 1 side 0, leaf 6: candidate 16 -> 1 (Python: sign of E fits, lower bound > 0 is false)

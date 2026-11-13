@@ -1,0 +1,1 @@
+ρ₀ changed from 1/16 to 1/8 (both the far L and the local root box read the same constant; the sequences stay those of the 1/16 record). This widens the region, so the local check should fail. The far check should pass: widening L keeps the L leaves inside the range

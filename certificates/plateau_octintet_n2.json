@@ -1,0 +1,37 @@
+{
+ "case": "octintet",
+ "n": 2,
+ "piece": "octahedron",
+ "container": "tetrahedron",
+ "sqrt_d": 2,
+ "number_format": "each number is [a, b] = a + b*sqrt(2); a, b are integer or fraction strings",
+ "container_c": [
+  "0",
+  "3/4"
+ ],
+ "container_note": "container {b_f . x <= c}, b_f in {(-1,-1,-1), (-1,1,1), (1,-1,1), (1,1,-1)}; edge s = 2*sqrt(2)*c",
+ "vertex_order": "vertex k of every piece corresponds to vertex k of the standard unit-edge solid of the checker (ICO in d28_plateau_n34.py, OCT in d31_plateau_n34.py)",
+ "source": {
+  "how": "test U of D31 placed exactly (both R = I, centres (sqrt2/4)(-1,1,-1), (sqrt2/4)(1,1,1))",
+  "record_id": "octintet_n02",
+  "record_s_full": "3.0000006123885"
+ },
+ "pieces": [
+  [
+   [["0", "1/4"], ["0", "1/4"], ["0", "-1/4"]],
+   [["0", "-3/4"], ["0", "1/4"], ["0", "-1/4"]],
+   [["0", "-1/4"], ["0", "3/4"], ["0", "-1/4"]],
+   [["0", "-1/4"], ["0", "-1/4"], ["0", "-1/4"]],
+   [["0", "-1/4"], ["0", "1/4"], ["0", "1/4"]],
+   [["0", "-1/4"], ["0", "1/4"], ["0", "-3/4"]]
+  ],
+  [
+   [["0", "3/4"], ["0", "1/4"], ["0", "1/4"]],
+   [["0", "-1/4"], ["0", "1/4"], ["0", "1/4"]],
+   [["0", "1/4"], ["0", "3/4"], ["0", "1/4"]],
+   [["0", "1/4"], ["0", "-1/4"], ["0", "1/4"]],
+   [["0", "1/4"], ["0", "1/4"], ["0", "3/4"]],
+   [["0", "1/4"], ["0", "1/4"], ["0", "-1/4"]]
+  ]
+ ]
+}

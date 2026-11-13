@@ -1,0 +1,1 @@
+n box 0: remove accepted leaf 22 from the R tree

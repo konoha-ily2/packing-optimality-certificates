@@ -1,0 +1,1 @@
+T = 71/64 → 55/64 (Python's check_T rejects it too)

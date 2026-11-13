@@ -1,0 +1,1 @@
+local face x=+1, leaf [0,-2^44,-2^44]–[2^40,0,0]: candidate 6 → 0 (Python's check_single rejects it too)
