@@ -1,0 +1,8 @@
+name = "PackLean"
+version = "0.1.0"
+defaultTargets = ["PackLean"]
+
+# No dependencies: the re-check uses only Lean core (no Mathlib, no Std/Batteries).
+
+[[lean_lib]]
+name = "PackLean"

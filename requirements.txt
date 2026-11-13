@@ -1,0 +1,6 @@
+# Versions used for the runs recorded in certificates/ (Python 3.10.5, Windows 11), checked with `pip show` on 2026-11-13.
+python-flint==0.9.0   # fmpz_mpoly.compose, isqrt (integer polynomials in all acceptance decisions)
+sympy==1.14.0         # local stages: expansion, simplification, cancel, Poly
+numpy==2.2.6          # floating point: proposing candidates only
+scipy==1.15.3         # floating-point LPs (linprog) proposing multipliers; never used in a decision
+# optional: psutil (only lowers the process priority; the scripts run without it)
