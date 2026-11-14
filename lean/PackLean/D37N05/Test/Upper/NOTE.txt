@@ -1,0 +1,2 @@
+EXPECT_FAIL
+upper bound broken: the translation of the central piece moved by 1e-30 in x (it touches the wall, so it leaves the container)

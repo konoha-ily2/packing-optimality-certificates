@@ -1,0 +1,2 @@
+EXPECT_FAIL
+n box 18, side B, leaf 401: mu lowered by 1/64 to 195/64 below D_j (Python valid_opt is false as well)

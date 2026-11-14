@@ -1,0 +1,2 @@
+EXPECT_FAIL
+s0 raised from 2 to 2001/1000 in Data (kappa unchanged, as test ts of d37_tet_n05_tests); LocS: T_S face 3 (119 leaves, Python rejects 119); LocC: T_C face 1 (9 leaves, Python rejects 9)

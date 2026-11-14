@@ -1,0 +1,2 @@
+EXPECT_FAIL
+sign of μ in Data set to −1 (weights n·(b₂ − b_f) − μ, constant +μs̄/2; the same direction as t1 of d40_tests). One far n box containing type-M leaves and one local face: far n box 0 (M leaves of side A: 75), local face 0 of T_S (accepted 1540). consts_ok (prmOk requires msign = 1) should also fail

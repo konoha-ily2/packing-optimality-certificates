@@ -1,0 +1,2 @@
+EXPECT_FAIL
+accepted leaf 5 removed from the tree of local T_S face 0

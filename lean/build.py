@@ -3,10 +3,13 @@
 Usage (from this lean/ directory, with elan installed; lean-toolchain pins the version):
   python build.py icoinoct                 # one case: cubinoct | icoincub | dodinico | icoinoct | icointet | cubintet
                                            #           | icoindod | octindod | cubinico | octintet
-  python build.py all                      # all ten cases, then the #print axioms summaries
-  python build.py inject [d16|b2|d28|d30|d31]  # injected-error certificates: every target must FAIL
-                                           # (b2 = only the D16 tests of icoindod / octindod; D30 and D31 also build
-                                           #  the targets listed in EXPECT_PASS, which must build)
+                                           #           | octinico | tetintet | dodincub | dodinoct | tetintet_n05
+                                           #           | dodintet
+  python build.py all                      # all cases, then the #print axioms summaries
+  python build.py inject [d16|b2|d28|d30|d31|d30s3|d40|d30x|d37n05|d45dt]  # injected-error certificates: every target must FAIL
+                                           # (b2 = only the D16 tests of icoindod / octindod; d30x = dodincub and
+                                           #  dodinoct; D30, D31, D30S3, D40 and D30X
+                                           #  also build the targets listed in EXPECT_PASS, which must build)
   python build.py plateau                  # plateau corollaries (icointet / octintet, n = 2..5), decide +kernel
   python build.py inject plateau           # injected errors of the plateau corollaries (24 files): every target must FAIL
   python build.py kernel                   # optional kernel (decide +kernel) trials on parts of icoinoct / icointet
@@ -35,14 +38,28 @@ CASES = {
     "octindod": ("D16/OctDod", "PackLean.D16.OctDod"),
     "cubinico": ("D30", "PackLean.D30"),
     "octintet": ("D31", "PackLean.D31"),
+    "octinico": ("D30S3", "PackLean.D30S3"),
+    "tetintet": ("D40", "PackLean.D40"),
+    "dodincub": ("D30X/Cub", "PackLean.D30X.Cub"),
+    "dodinoct": ("D30X/Oct", "PackLean.D30X.Oct"),
+    "tetintet_n05": ("D37N05", "PackLean.D37N05"),
+    "dodintet": ("D45DT", "PackLean.D45DT"),
 }
 # cases whose modules are built in their own order (other stems in the directory, e.g. D31/Core, are left to the imports)
 CASE_ORDER = {
     "octintet": [r"Data", r"Consts", r"Far\d+", r"Far", r"LocJ\d+", r"LocC\d+", r"Local"],
+    "octinico": [r"Data", r"Tok\d+", r"Far", r"Local", r"Consts"],
+    "tetintet": [r"Data", r"Consts", r"Far\d+", r"Far", r"Loc\d+", r"Local"],
+    "dodincub": [r"Data", r"Tok\d+", r"Far", r"Local", r"Consts"],
+    "dodinoct": [r"Data", r"Tok\d+", r"Far", r"Local", r"Consts"],
+    "tetintet_n05": [r"Data", r"Consts", r"Far\d+", r"Far", r"Loc\d+", r"Local"],
+    "dodintet": [r"Data", r"Consts", r"Local", r"Far\d+", r"Far"],
 }
 # summaries with #print axioms, built after the cases by `all`
 AXIOMS = ["PackLean.D16.Axioms", "PackLean.D16.AxiomsB2", "PackLean.D28.Ico.Axioms", "PackLean.D28.Cub.Axioms",
-          "PackLean.D30.Axioms", "PackLean.D31.Axioms"]
+          "PackLean.D30.Axioms", "PackLean.D31.Axioms", "PackLean.D30S3.Axioms", "PackLean.D40.Axioms",
+          "PackLean.D30X.Cub.Axioms", "PackLean.D30X.Oct.Axioms",
+          "PackLean.D37N05.Axioms", "PackLean.D45DT.Axioms"]
 # injected-error modules that are expected to BUILD. In D30/Test/RhoBig only the local theorem is the injected-error
 # test: the far theorem passes, because widening the L region only makes the far check easier, and the constants
 # theorem passes, because ρ₀ = 1/8 and r0 = ρ₀·rden are consistent with each other (Consts was not built in the
@@ -51,11 +68,47 @@ EXPECT_PASS = {"PackLean.D30.Test.RhoBig.Far", "PackLean.D30.Test.RhoBig.Consts"
 # D31/Test/UJ (U_J 5/16 -> 5/32): only the far module Far000 is the injected-error test (its L leaves of J leave the
 # narrower J range). The local module LocJ passes: narrowing J only makes the local check easier (as in test n2 of D31)
 EXPECT_PASS |= {"PackLean.D31.Test.UJ.LocJ"}
+# D30S3 (octinico, tube): the tube far part and the local root boxes read the same constants S3. RhoBig (ρ₀ 1/64 -> 1/32)
+# and TwBig (TW 9/512 -> 9/256) widen the tube: the far theorem passes, because the leaves of the original (narrower)
+# tube stay inside the wider one, so the far check only gets easier; the constants theorem passes, because the widened
+# values are consistent with each other (RhoBig also sets ρ₀ and r0 of D16 to 1/32) and TW is not a checked constant.
+# TcShift (TC 1/512 -> 5/256) moves the tube centre, which is not part of the constants check, so its Consts passes.
+# The injected-error tests of these three are the Local modules (and Far for TcShift)
+EXPECT_PASS |= {"PackLean.D30S3.Test.RhoBig.Far", "PackLean.D30S3.Test.RhoBig.Consts",
+                "PackLean.D30S3.Test.TwBig.Far", "PackLean.D30S3.Test.TwBig.Consts",
+                "PackLean.D30S3.Test.TcShift.Consts"}
+# D40/Test/R0Big (r₀ 1/32 -> 1/16): the local modules LocS and LocC are the injected-error tests. The far module Far000
+# (an n box with L leaves) passes: widening L keeps the 1/32 L leaves inside it, so the far check only gets easier
+EXPECT_PASS |= {"PackLean.D40.Test.R0Big.Far000"}
+# D30X/{Cub,Oct}/Test/RhoBig (ρ₀ doubled): only the local module is the injected-error test. The far theorem passes,
+# because widening the L region only makes the far check easier, and the constants theorem passes, because the doubled
+# ρ₀ and r0 are consistent with each other (as for D30/Test/RhoBig)
+EXPECT_PASS |= {"PackLean.D30X.Cub.Test.RhoBig.Far", "PackLean.D30X.Cub.Test.RhoBig.Consts",
+                "PackLean.D30X.Oct.Test.RhoBig.Far", "PackLean.D30X.Oct.Test.RhoBig.Consts"}
+# D37N05/Test/R0Big (r0 1/16 -> 1/8): LocS, LocC and Consts (regionOk) are the injected-error tests. The far module
+# Far000 (an n box with L leaves) passes: widening L keeps the 1/16 L leaves inside it, so the far check only gets easier
+EXPECT_PASS |= {"PackLean.D37N05.Test.R0Big.Far000"}
+# D45DT/Test/R0Big (r0 1/32 -> 1/16): the local module is the injected-error test; the far module Far000 (an n box with
+# L leaves) passes: widening the tubes keeps the 1/32 L leaves inside them, so the far check only gets easier
+EXPECT_PASS |= {"PackLean.D45DT.Test.R0Big.Far000"}
+# D30S3 exports every part (Data, Tok, Far, Local, Consts) into each Test/<name>/ directory, but an injected error touches
+# only some of them; the untouched parts are not tests and are not built. Listed here: the injected-error targets
+# (expected to FAIL) of each D30S3 test, as built in the original run (plan D12 section 19), besides EXPECT_PASS
+INJECT_ONLY = {"D30S3": {
+    "Lam": ["Far"], "Sum": ["Far"], "Drop": ["Far"], "Disc": ["Far"], "Ident": ["Local", "Consts"], "Tsmall": ["Consts"],
+    "LocCand": ["Local"], "LocDrop": ["Local"], "Nolift": ["Local"], "WCand": ["Local"], "RhoBig": ["Local"],
+    "TwBig": ["Local"], "TcShift": ["Local", "Far"], "LiftZero": ["Local"], "LiftHalf": ["Local"], "WHalf": ["Local"]}}
 # kernel trials (not part of `all`); for cubinico only the trials that finished (ConstsAll and LocalAll were stopped)
 KERNEL = ["PackLean.D16.IcoOct.Kernel", "PackLean.D28.Ico.Kernel.Axioms", "PackLean.D30.Kernel.Axioms"]
 # octintet: constants and identities, then the far/local trials (D31/Kernel/Loc3, a C face with 215 leaves, took
 # about 7 min and 9.5 GB in the original run)
 KERNEL += ["PackLean.D31.Kernel.Consts", "PackLean.D31.Kernel.Axioms"]
+# octinico: the trials that finished (Kernel/Local, one whole tube edge, was stopped at 10.7 GB); one local leaf took
+# about 50 s and 3.4 GB in the original run
+KERNEL += ["PackLean.D30S3.Kernel.Axioms"]
+# tetintet: constants, three small n boxes (Far000, about 400 s and 7.1 GB in the original run) and three local faces
+# (Loc: two faces, Loc2: one face; Kernel/Far001, the middle n box, was stopped at 8 GB)
+KERNEL += ["PackLean.D40.Kernel.Axioms"]
 # order inside a case directory: data first, then the far chunks, the far theorem, the local theorem, the constants
 ORDER = [r"Data", r"CoverData", r"Tok\d+", r"CoverTok\d+", r"Far\d+", r"Far", r"CoverFar", r"Local", r"CoverLocal", r"Consts"]
 
@@ -64,6 +117,8 @@ EXPLICIT = {
     "plateau": ["PackLean.Plateau." + s for s in
                 ("Core", "Data", "Ico", "Oct", "N5Data", "N5", "N5EndCore", "N5End", "Axioms", "N5Axioms")],
 }
+# inject groups whose Test/ directories sit one level deeper
+INJECT_GROUPS = {"d30x": ["D30X/Cub", "D30X/Oct"]}
 # injected-error groups kept as flat files in <dir>/Test/, and the Lean messages that count as "rejected by the check".
 # These use `decide +kernel`: a wrong certificate fails either with "application type mismatch" (the kernel does not
 # accept the value as true) or with "`decide` proved that the proposition ... is false".
@@ -91,12 +146,21 @@ def inject_targets(group):
     """Injected-error modules: in each Test/<name>/ directory, the modules that are not data or tree chunks."""
     out = []
     b2 = group is not None and group.lower() == "b2"
-    for g in (["D16", "D28", "D30", "D31"] if group is None else ["D16" if b2 else group.upper()]):
+    if group is None:
+        groups = ["D16", "D28", "D30", "D31", "D30S3", "D40", "D37N05", "D45DT"] + [g for gs in INJECT_GROUPS.values() for g in gs]
+    elif group.lower() in INJECT_GROUPS:
+        groups = INJECT_GROUPS[group.lower()]
+    else:
+        groups = ["D16" if b2 else group.upper()]
+    for g in groups:
         for d in sorted((PL / g / "Test").iterdir()):
             if d.is_dir() and (not b2 or d.name.startswith(("IcoDod", "OctDod"))):
+                only = INJECT_ONLY.get(g, {}).get(d.name)
                 for p in sorted(d.glob("*.lean")):
+                    if only is not None and p.stem not in only:
+                        continue
                     if not re.fullmatch(r"Data|CoverData|Tok\d+|CoverTok\d+", p.stem):
-                        m = f"PackLean.{g}.Test.{d.name}.{p.stem}"
+                        m = f"PackLean.{g.replace('/', '.')}.Test.{d.name}.{p.stem}"
                         if m not in EXPECT_PASS:
                             out.append(m)
     return out

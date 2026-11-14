@@ -1,0 +1,4 @@
+Injected error Upper (export_d45dt.py --inject upper):
+- upper: t0_x of piece 0 moved by +1e-30 (piece 0 touches a wall, so it leaves the container; Python containment fails)
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.Upper.Consts

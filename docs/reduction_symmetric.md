@@ -1,8 +1,8 @@
 # Reduction for a centrally symmetric container and piece
 
-Cases: `cubinoct_n02`, `icoincub_n02`, `dodinico_n02`, `icoinoct_n02`, `icoindod_n02`, `octindod_n02`, `cubinico_n02`.
+Cases: `cubinoct_n02`, `icoincub_n02`, `dodinico_n02`, `icoinoct_n02`, `icoindod_n02`, `octindod_n02`, `cubinico_n02`, `octinico_n02` (new in v0.3.0, §6c).
 
-This document states the reduction from "two pieces fit" to a minimisation over rotations of a small linear program, the symmetry reduction of the rotation domain, the bound on the translation used by the box certificates, and the local lemma. `cubinoct_n02` uses its own coordinates and its own checker (`d16_cover_*`), described in the last part. The other six use the general tool `d16d_*`, or its extension `d16e_*` to two square roots (`octindod_n02`); `cubinico_n02` uses `d16e_*` through a thin wrapper `d30_*` that adds the problem and stores the local certificate (§6b).
+This document states the reduction from "two pieces fit" to a minimisation over rotations of a small linear program, the symmetry reduction of the rotation domain, the bound on the translation used by the box certificates, and the local lemma. `cubinoct_n02` uses its own coordinates and its own checker (`d16_cover_*`), described in the last part. The other six use the general tool `d16d_*`, or its extension `d16e_*` to two square roots (`octindod_n02`); `cubinico_n02` uses `d16e_*` through a thin wrapper `d30_*` that adds the problem and stores the local certificate (§6b). `octinico_n02` uses the same wrapper with tube coordinates around a curve of minimisers and a weighted local certificate (`d30_s3_*`, §6c).
 
 Everything here is a prose argument. It has been re-derived once by a reviewer model (see [review_log.md](review_log.md)) but has not been formalized; Lean checks only the arithmetic built on top of it.
 
@@ -99,6 +99,80 @@ The optimal rotation of `octindod_n02` does not lie in $\mathbb{Q}(\sqrt5)$: the
 - **The claim rests on the record without weights** (`d30_cubinico_local_r16_nolp.json`, run with `--no-lp`): 142 boxes evaluated, 74 accepted leaves, all of kind `single`. The development notes also contain a second local certificate using a weighted combination of candidates ("Lemma W", 50 accepted leaves); it is not needed and not part of this repository's claim.
 - At $R^{\ast}$ all multipliers $A_j$ are positive (no active face has multiplier 0), so the difficulty that motivated weights for other pairs does not arise here.
 
+## 6c. `octinico_n02`: a curve of minimisers, weights and paired lifting (new in v0.3.0)
+
+`octinico_n02` (octahedra in an icosahedron, $s^{\ast}=3\sqrt2-\sqrt{10}$, $S^{\ast}=\sqrt2$, field $\mathbb{Q}(\sqrt2,\sqrt5)$) is set up by `d30_s3_common.py` in the same way as cubinico (the container is the same icosahedron). The piece is the octahedron $\pm\tfrac{\sqrt2}2e_k$, $n_0=(1,1,1)$, $D_0=\sqrt2/2$. At the optimum the face $-n_0$ of the piece lies flat on the container face $f_0=(-1,-1,-1)$, and the piece can be **spun about $n_0$** within an arc of angle about $0.094$ rad without increasing $\varphi$: the minimum is not an isolated point but a curve. The tool keeps the far region of `d16e_*` and the acceptance tests of `d30_local.py`, and replaces the local coordinates by a tube around the curve.
+
+**Optimum.** $R^{\ast}=\operatorname{spin}(-1/5)$, the rotation with quaternion $(1,-\tfrac15,-\tfrac15,-\tfrac15)$ $=\tfrac17\begin{pmatrix}6&3&-2\\-2&6&3\\3&-2&6\end{pmatrix}$, lies inside the arc; $\varphi(R^{\ast})=S^{\ast}$ is checked exactly (primal and dual). The piece is pre-rotated by $R^{\ast}$; since $R^{\ast}$ commutes with the spins about $n_0$, the curve is again $\{q=(1,\tau n_0)\}$ in chart 0.
+
+### Lemma W (weights and paired lifting)
+
+Fix $R$ and a feasible $(t,S)$ of the LP of §3. Suppose numbers $a_f\ge0$ on (some) container faces, one vertex $v_f$ for each of them, and $\nu\ge0$ satisfy $\sum_f a_f c_f+\nu Rn_0=0$. Then
+
+$$S\sum_f a_f\ \ge\ \sum_f a_f\,c_f\cdot Rv_f+\nu D_0 .$$
+
+*Proof.* Multiply $c_f\cdot(Rv_f+t)\le S$ by $a_f$ and add; $(\sum a_fc_f)\cdot t=-\nu(Rn_0)\cdot t\ge\nu D_0$. ∎ (The same face may appear in several terms, each with its own vertex; each term needs $a\ge0$.)
+
+- **(i) Weights.** For each candidate $k=(J_k,\alpha_k)$ of §6, $(A_{J_k}(R),N)$ satisfies the equality. It is linear, so constant weights $w_k\ge0$ give $a=\sum_kw_kA_{J_k}$, $\nu=N\sum_kw_k$ that satisfy it too. Only the combined $a_f\ge0$ is needed, not each $A_{J_k}\ge0$.
+- **(ii) Paired lifting.** If the container is centrally symmetric, $c_{-f}=-c_f$, so adding the same amount $\rho\,c_f^{\rm lift}\ge0$ to the terms of $f$ and of $-f$ does not change the equality. With the vertex $-v_f$ for $-f$ (a vertex, since the piece is centrally symmetric), the cost is $\rho\,c_f^{\rm lift}\cdot2\big(S^{\ast}N-c_f\cdot R(q)v_f\big)$ in the polynomial $F$ below. This lets a multiplier that changes sign inside a box ($a_f$ slightly negative) be lifted to $\ge0$ at a cost proportional to $\rho$.
+
+**Acceptance of a "mix" box** (`check_mix`, integers only): the record gives one vertex per active face, rational weights $w_k\ge0$ and lifts $c_f\ge0$ (on active faces only). The checker forms $F=\sum_kw_kF_k+\sum_fc_f\cdot(\text{lift polynomial of }f)$ and checks, on the box, that $F/\rho$ has lower bound $>0$, and for every active face that the combined multiplier is $\ge0$ (divided by $\rho$ first where it vanishes at $R^{\ast}$). By Lemma W, $\varphi(R)\ge S^{\ast}$ there, with $>$ for $\rho>0$. Boxes of kind "single" are the single-candidate test of §6.
+
+### The tube
+
+Write chart 0 as $p=\tau\,n+y_1e_1+y_2e_2$ with $n=(1,1,1)$, $e_1=(1,-1,0)$, $e_2=(\tfrac12,\tfrac12,-1)$ (rational, orthogonal to $n$). The curve is $y=0$. The tube is
+
+$$\mathcal T=\{\tau\in[-\tfrac1{64},\tfrac5{256}],\ \lvert y_1\rvert,\lvert y_2\rvert\le\rho_0\},\qquad\rho_0=\tfrac1{64},$$
+
+a prism in $p$-space that contains the arc ($\tau\in[-0.0113,0.0159]$, floating point) with a margin of about $0.004$ in $\tau$ at each end. Inside it, $y=\rho\theta$ with $\theta$ on one of the four sides of the square ($y_1=\pm1$, $y_2=\pm1$), $\tau=\tfrac1{512}+\tfrac9{512}a_1$, and a box is a box in $(\rho,a_1,a_2)\in[0,\rho_0]\times[-1,1]^2$. The checks of §6 are the same with these four sides in place of the six cube faces:
+
+- **Zero-order identity as a polynomial in $\tau$:** for each of the 36 candidates ($J=\{f_0,g,g'\}$ with $g,g'$ among the three faces that bound the optimal translation set along the curve; $\alpha$: 3 tied vertices on $f_0$ and 2 on each of $g,g'$), $F(\tau n)\equiv0$ for all $\tau$, exactly in the field. Equivalently, after substituting each side, every component of $F$ is divisible by $\rho$ (checked).
+- Multipliers that vanish at $R^{\ast}$ vanish identically on the curve and are divided by $\rho$; then $\ge0$ is checked. $A_{f_0}>0$ (or the combined $a_{f_0}\ge0$) is checked on the box.
+- On the curve ($\rho=0$) the certificate gives $\varphi\ge S^{\ast}$ through $F\equiv0$; off the curve ($\rho>0$) it gives $\varphi>S^{\ast}$. On the part of the segment outside the arc $\varphi>S^{\ast}$ in fact, but only $\ge$ is claimed there; for the value of $s^{\ast}$ this is enough.
+
+**Why the lifting is needed.** Along the curve the set of optimal translations is a triangle bounded by three faces; near the boundary of a candidate's cone one multiplier changes sign inside a box. Without lifting (`--no-lift`) the local stage does not close (stopped after 2,000 boxes on the first side). In the record, 6 of the 16 accepted boxes are "mix" boxes with one candidate ($w=1$) and a lift on one face ($c\approx0.85$–$2.10$); removing the lift makes each of them fail the exact check. So, unlike cubinico, **this claim relies on Lemma W (ii)**; there is no alternative record with single candidates only.
+
+**Seam with the far region.** The far region is `d16e_far` with the "to local" test replaced: a box is handed to the local stage only if it is in chart 0 and its 8 corners have tube coordinates inside $\mathcal T$ (exact rationals; $\mathcal T$ is convex, so the whole box is inside). The tube constants are defined once (`d30_s3_local.py`), written into both records, and compared by verify, replay and `d30_s3_claim.py`.
+
+**Records.** Local: 4 sides × 7 boxes evaluated, 16 accepted (4 per side; 10 single, 6 mix). Far: 1,804 evaluated, 676 accepted, 206 discarded, 44 to local, split limit 0 ($T=47/64$, 357 symmetry pairs used of $120\times6/2=360$). `d30_s3_claim.py` combines local verify, far replay with the coverage check, equality of the tube constants and premises in both records, and prints one verdict.
+
+**What the certificate says about the minimisers.** (a) At 50 rational points of the curve inside the arc, $\varphi=S^{\ast}$ exactly. (b) Every minimiser lies, up to symmetry, on the segment $\tau\in[-1/64,5/256]$ of the curve. (c) The ends of the arc and its length are floating-point values; exactly, $\varphi>S^{\ast}$ was checked at four points outside the arc.
+
+## 6d. `dodincub_n02`: dodecahedra in a cube (new in v0.3.0)
+
+`dodincub_n02` is set up by `d30x_problems.py`, which installs the problem behind `d30_problems` (it replaces
+`d30_problems._ORIG_LOAD`; `d16e_common.py` and `d30_problems.py` are unchanged, and `d16e_common.load` alone raises an error
+for this name) and then runs a d30 script through runpy. The tools are those of cubinico (§6b) unchanged: the far region is
+`d16e_far` ($\rho_0=1/16$, $T=53/64$), the local region is the single-candidate check `check_single` of `d30_local.py` with
+a stored certificate, and `d30_claim.py` combines local verify, far coverage check and far replay.
+
+- Piece: the unit-edge dodecahedron $(\varphi/2)(\pm1,\pm1,\pm1)$, $(\varphi/2)\cdot$cyclic$(0,\pm(\varphi-1),\pm\varphi)$, face
+  $n_0=(-1,0,-\varphi)$, $D_0=\varphi^3/2$. Container: the cube $\lvert x_i\rvert\le S$, $S=s/2$. Field $\mathbb{Q}(\sqrt2,\sqrt5)$.
+- $s^{\ast}=\dfrac{16+334\sqrt2+46\sqrt5+137\sqrt{10}}{267}=3.836848300526861\ldots$, and
+  $R^{\ast}=\begin{pmatrix}a&b&\sqrt2/2\\ \tfrac{-1+\sqrt2+\sqrt5+\sqrt{10}}6&\tfrac{-1-\sqrt2-\sqrt5+\sqrt{10}}6&0\\ a&b&-\sqrt2/2\end{pmatrix}$
+  with $a=\tfrac{2+\sqrt2-2\sqrt5+\sqrt{10}}{12}$, $b=\tfrac{2-\sqrt2+2\sqrt5+\sqrt{10}}{12}$, read off with PSLQ from a 60-digit
+  numerical minimum; stage 0 checks exactly that $R^{\ast}$ is a rotation and that $\varphi(I)=S^{\ast}$ (primal and dual).
+- At $R^{\ast}$ three container faces are active (two tied vertices on each, 6 contacts), 8 candidates $(J,\alpha)$, and all
+  zero-order identities hold with all components $0$.
+- **Records.** Local: 40 boxes evaluated, 23 accepted leaves, all single candidates (the run allowed LP, but no LP leaf was
+  accepted). Far: 7,596 evaluated, 3,347 accepted, 449 discarded, 8 to local, split limit 0 (charts 1–3 only discard).
+
+## 6e. `dodinoct_n02`: dodecahedra in an octahedron (new in v0.3.0)
+
+Same set-up as §6d (`d30x_problems.py`), with the octahedron with vertices $\pm e_k$ (edge $\sqrt2$) as container:
+$\{\sigma\cdot x\le S\}$ for $\sigma\in\{\pm1\}^3$, $s=\sqrt2\,S$, $T=23/16$. The arithmetic (units of $S$) is in $\mathbb{Q}(\sqrt5)$.
+
+- $S^{\ast}=\dfrac{411+157\sqrt5}{228}$, $s^{\ast}=\sqrt2\,S^{\ast}=\dfrac{411\sqrt2+157\sqrt{10}}{228}=4.726839327990252\ldots$, and
+  $R^{\ast}=\begin{pmatrix}\tfrac{1+\sqrt5}4&\tfrac{1-\sqrt5}4&-\tfrac12\\-\tfrac16&\tfrac{-9-\sqrt5}{12}&\tfrac{-1+\sqrt5}4\\\tfrac{-9+\sqrt5}{12}&-\tfrac16&\tfrac{-1-\sqrt5}4\end{pmatrix}$.
+- At $R^{\ast}$ four container faces are active (6 contacts), 4 candidates, zero-order identities all $0$.
+- **$\rho_0=1/32$.** With $\rho_0=1/16$ and single candidates only, the local stage does not close: near one corner of a face
+  the best candidate has a multiplier that becomes negative at $\rho\approx0.045$ (stopped after 600 s and about 200,000
+  boxes). With $\rho_0=1/32$ for both the local and the far region it closes with single candidates only, so the claim
+  rests on the same checks as cubinico (no weights, no lifting). (The development notes also contain a certificate with
+  $\rho_0=1/16$ using the weights of Lemma W (i); it is not part of this repository's claim.)
+- **Records.** Local: 246 boxes evaluated, 126 accepted leaves, all single. Far: 31,958 evaluated, 15,250 accepted, 727
+  discarded, 8 to local, split limit 0.
+
 ## 7. Case data (`d16d_*`, `d16e_*`)
 
 | | icoincub | dodinico | icoinoct |
@@ -127,6 +201,20 @@ Here $\varphi=(1+\sqrt5)/2$. For dodinico $R^{\ast}=\begin{pmatrix}-1&0&0\\0&-2\
 | contacts at the optimum | 6 (3 faces × 2 tied vertices) | 6 (3 faces × 2 tied vertices) | 6 (5 faces, one with 2 tied vertices) |
 | local candidates $(J,\alpha)$ | 8 | 8 | 8 ($J$: 4 choices × $\alpha$: 2) |
 | symmetry pairs $(g,k)$ | 360 | 360 | 480 |
+
+| | dodincub | dodinoct |
+|---|---|---|
+| container, piece | cube, dodecahedron | octahedron (vertices $\pm e_k$), dodecahedron |
+| tool | `d16e_*` via `d30_*` + `d30x_problems.py` | same |
+| tool scale | $S=s/2$ | $S=s/\sqrt2$ |
+| $S^{\ast}$ | $(16+334\sqrt2+46\sqrt5+137\sqrt{10})/534$ | $(411+157\sqrt5)/228$ |
+| $s^{\ast}$ | $(16+334\sqrt2+46\sqrt5+137\sqrt{10})/267$ | $(411\sqrt2+157\sqrt{10})/228$ |
+| field | $\mathbb{Q}(\sqrt2,\sqrt5)$ | $\mathbb{Q}(\sqrt5)$ ($s^{\ast}$ is in $\mathbb{Q}(\sqrt2,\sqrt5)$) |
+| container faces active at $R^{\ast}$ | 3 | 4 |
+| contacts at the optimum | 6 (3 faces × 2 tied vertices) | 6 (two faces with 1, two with 2 tied vertices) |
+| local candidates $(J,\alpha)$ | 8 | 4 |
+| $\rho_0$ | $1/16$ | $1/32$ |
+| symmetry pairs $(g,k)$ | 240 (238 used) | 240 (238 used) |
 
 The dodecahedron's normals are the cyclic permutations of $(0,\pm\varphi,\pm1)$ with offset $\varphi^3/2$ (the unit-edge dodecahedron). Piece face $n_0=(1,1,1)$ for icoindod and octindod, $D_0=\varphi^2/2$ (icosahedron) and $D_0=\sqrt2/2$ (octahedron); for cubinico $n_0=(0,0,-1)$, $D_0=1/2$. For icoindod and octindod $R^{\ast}n_0$ points to a vertex of the container (a 3-fold axis): $(-(\varphi-1),\varphi,0)$ and $(1,1,-1)$. For icoindod the entries of $R^{\ast}$ are in $\mathbb{Q}(\sqrt5)$ with denominator 12, e.g. the first row is $\big(-\tfrac{1+2\sqrt5}{6},\ \tfrac{1-\sqrt5}{12},\ \tfrac{7-\sqrt5}{12}\big)$. For octindod $R^{\ast}=\begin{pmatrix}a&b&c\\b&c&a\\-c&-a&-b\end{pmatrix}$ with $a=\tfrac{2-\sqrt{10}}{6}$, $b=\tfrac{4-3\sqrt2+\sqrt{10}}{12}$, $c=\tfrac{4+3\sqrt2+\sqrt{10}}{12}$. For cubinico $R^{\ast}=\begin{pmatrix}-1&0&0\\0&-2/3&\sqrt5/3\\0&\sqrt5/3&2/3\end{pmatrix}$ and $t^{\ast}=\big(0,\tfrac{-13+26\sqrt5}{114},\tfrac{41+13\sqrt5}{228}\big)$. All three rotations were found numerically and read off with PSLQ; how they were found does not matter, because stage 0 checks exactly in the field that $R^{\ast}$ is orthogonal with determinant 1 and that $\varphi(I)=S^{\ast}$ (primal and dual).
 
@@ -164,3 +252,4 @@ What is shown is $\varphi\ge S^{\ast}$ on $L$ with equality only at $R^{\ast}$ (
 - Floating-point estimates of the "sharpness" of the minimum (linear growth rates such as 0.292, 0.293, 0.447 in units of $s$) were used only to decide whether to proceed. They are not part of any proof.
 - The first-order growth rates of icoindod and octindod ($0.149$ in units of $s$ for both) and of cubinico ($0.080$), and the floating-point classification of the type of the minimum used to choose the method for cubinico, are estimates only.
 - A directional-derivative formula for the V-shaped minimum of `cubinoct_n02` was compared only with numerical samples; it is not used.
+- For `octinico_n02`: the floating-point scan of the arc (its ends, its length 0.094 rad, the faces that bound the optimal translation set), the floating-point probe of the single candidates in the tube (minimum $1.09$–$1.31$), and the small LP that proposes weights and lifts. Only the exact checks decide acceptance.

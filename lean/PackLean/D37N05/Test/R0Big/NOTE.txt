@@ -1,0 +1,2 @@
+EXPECT_FAIL (LocS, LocC, Consts) / EXPECT_PASS (Far000)
+r0 widened from 1/16 to 1/8 in Data (local root boxes and far L); Consts: regionOk (the Python region_check of T_C fails as well); LocS: T_S face 3 (119 leaves, Python rejects 52); LocC: T_C face 1 (9 leaves, Python rejects 4); Far000: n box 0 with L leaves (widening L only makes the far check easier: EXPECT_PASS)

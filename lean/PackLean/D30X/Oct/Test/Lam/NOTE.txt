@@ -1,0 +1,1 @@
+error: accepted box chart 0 [-5497558138880, -2199023255552, -2199023255552]–[-4398046511104, 0, 0]: move 2340573/2^24 of λ from face 3 to 0 (Python rejects it too)

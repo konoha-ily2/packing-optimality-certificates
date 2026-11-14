@@ -1,0 +1,2 @@
+EXPECT_FAIL
+sign of mu set to -1 in Data (weights n.(b_j - b_f) - mu, constant + mu s0/2). Far: n box 9 (Python box_lb with -mu < 0 on at least 3 M leaves); local: T_S face 3 (119 leaves); Consts: prmOk requires msign = 1

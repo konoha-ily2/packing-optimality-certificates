@@ -1,0 +1,2 @@
+EXPECT_FAIL
+accepted leaf 21 removed from the side-A R tree of n box 0 (the cover is incomplete)

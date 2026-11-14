@@ -1,0 +1,4 @@
+Injected error FarOff (export_d45dt.py --inject farOff):
+- n box ((717225984, 377487360), (721420288, 381681664)) (type I, L leaves in the U tree): offsets k_U [0, 1] -> +1/2^24, k_L -> -1/2^24 (L leaves need k_U <= 0); check_box: bad 4
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.FarOff.Far000

@@ -1,0 +1,4 @@
+Injected error FarD (export_d45dt.py --inject farD):
+- discarded leaf 0 of the U tree of n box ((0, 0), (16777216, 16777216)): rotation 29 -> 1 (Python discard_lb <= 0); check_box: bad 1
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.FarD.Far000

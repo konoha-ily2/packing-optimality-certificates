@@ -1,0 +1,4 @@
+Injected error FarA (export_d45dt.py --inject farA):
+- accepted leaf 37 of the U tree of n box ((0, 0), (16777216, 16777216)): top vertex 2 -> 0 (Python box_lb < 0); check_box: bad 1
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.FarA.Far000

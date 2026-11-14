@@ -1,0 +1,4 @@
+Injected error FarSum (export_d45dt.py --inject farSum):
+- type III n box ((503316480, 0), (520093696, 16777216)): k_L [-47213, 2097152] -> -1 (the pair sum kappa_U + kappa_L < 0; Python pair_sum_ok False); check_box raised: sum of κ of the pair ≥ 0
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.FarSum.Far000

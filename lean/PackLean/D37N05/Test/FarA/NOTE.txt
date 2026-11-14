@@ -1,0 +1,2 @@
+EXPECT_FAIL
+n box 0, side A, leaf 21: top vertex changed, candidate -> ('M', 0, Fraction(12, 1), 1, (2, 1, 0, 'c')) (Python box_lb < 0 as well)

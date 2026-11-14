@@ -1,0 +1,19 @@
+-- Written by lean/tools/export_d45dt.py (do not edit by hand).
+import PackLean.D45DT.Test.FarDrop.Data
+
+namespace PackLean.D45DT
+
+def boxes000 : List FBox := [
+  ⟨⟨0, 0, 16777216, 16777216⟩, 1, -3006003, 3006003,
+   "....DQ.Dh.DN..DQ..Dh..A9785A278AA978B..AE76GAE7C5AE741.DQ.Dp...DQ.AEI81DS...A2I81A2I8BDpAEI81DS..Dr..DN..AEHCADr.AEHCAA6HCADV.Dr.......A654ADrAEB4ADSDr....AE741AEH41AE741.AE54FAEI4F..A6H40.A6H4FACHG9DoDSDo....Dh.Dk..A0J4BA8J4B.D3A8J4BD3..Dp......A9C8BA9I8BA06ABDp..A8741.A87GBA87G1.A8I0FA8IA3.D3...A06GH.A8JG1A87G3.D3A0JG3DqDqD3....Dk....A83C1A8DC1A8741.DV.ACHI1.A4JI1A4351.A4JC1DMDVDM.....A87GF..A4HGFA47GFDo...A87GFA8JGFDqDMDqDoDM..DTDx.DBDF..DwD9.DWDl..DIDv.DtDD",
+   "....DQ.Dh.DN..DQA276A..Dh..A9785A278AA978B..AE76GAE7C5AE741.DQ.Dp...DQ...DQAEI8AAEI81DS...A2I81A2I8BDpAEI81DS..Dr..DN..AEHCADr.AEHCAA6HCADV.Dr.......A654ADrAEB4ADSDr....AE741AEH41AE741.AE54FAEI4F..A6H40.A6H4FACHG9DoDSDo....Dh.Dk..A0J4BA8J4B.D3A8J4BD3..Dp......A9C8BA9I8BA06ABDp..A8741.A87GBA87G1.A8I0FA8IA3.D3...A06GH.A8JG1A87G3.D3A0JG3DqDqD3....Dk....A83C1A8DC1A8741.DV.ACHI1.A4JI1AC351.A4JC1DMDVDM.....A87GF..A4HGFA47GFDo..A87GFDqDMDqDoDM..DTDx.DBDF..DwD9.DWDl..DIDv.DtDD"⟩]
+
+/-- the counts of the Python records: [accepted, discarded, L] of the U tree and of the L tree -/
+def res000 : List (Bool × List Nat) := [(true, [51, 56, 0, 51, 57, 0])]
+
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+/-- far, pair boxes 1 of file 0: every check of `boxRun` passes -/
+theorem far000_ok : boxes000.map (boxRun P) = res000 := by native_decide
+
+end PackLean.D45DT

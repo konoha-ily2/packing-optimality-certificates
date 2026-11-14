@@ -1,0 +1,1 @@
+Local: c set to 0 in all 6 boxes with lifting (Python's check_mix also rejects all 6 boxes on a (face 17 or 19)). Should fail

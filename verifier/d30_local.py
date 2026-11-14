@@ -305,10 +305,18 @@ class Ctx:
             c = {f: v for f, v in c.items() if v > 0}
             if not w:
                 continue
-            ok, why = self.check_mix(fname, lo, hi, amap, w, c, fault=fault)
-            if ok:
-                return dict(alpha={str(f): v for f, v in amap.items()}, w={str(k): str(v) for k, v in w.items()},
-                            c={str(k): str(v) for k, v in c.items()}, margin=marg)
+            # FD_d30s3 H4 (2026-11-13): the LP puts "a_f/rho >= m" on every active face, so faces that are not in J of any
+            # weighted candidate also get c_f >= m (a pair with nothing to lift against). Try the version with that c
+            # dropped first (acceptance is the same check_mix).
+            used = set(f for ci in w for f in cands[ci]["J"])
+            c_try = [c]
+            if any(f not in used for f in c):
+                c_try = [{f: v for f, v in c.items() if f in used}, c]
+            for cc in c_try:
+                ok, why = self.check_mix(fname, lo, hi, amap, w, cc, fault=fault)
+                if ok:
+                    return dict(alpha={str(f): v for f, v in amap.items()}, w={str(k): str(v) for k, v in w.items()},
+                                c={str(k): str(v) for k, v in cc.items()}, margin=marg)
         return None
 
     def diag_box(self, fname, lo, hi, D):

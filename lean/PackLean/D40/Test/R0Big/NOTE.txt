@@ -1,0 +1,2 @@
+EXPECT_FAIL (local) / EXPECT_PASS (far Far000)
+r₀ in Data from 1/32 to 1/16 (both the local root boxes and the far L grow). One local T_S face and one T_C face (T_S face 0 accepted 1540, T_C face 0 accepted 772). Far: n box 0 containing L leaves (widening L makes the far part easier: EXPECT_PASS)

@@ -1,0 +1,4 @@
+Injected error FarOut (export_d45dt.py --inject farOut):
+- n tree: the pair box ((0, 0), (16777216, 16777216)) is claimed to be outside D_n ('o' -> 'x'); Python is_out is False
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.FarOut.Far

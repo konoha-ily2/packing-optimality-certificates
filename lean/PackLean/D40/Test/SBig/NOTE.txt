@@ -1,0 +1,2 @@
+EXPECT_FAIL
+s̄ in Data from 1953564244/10⁹ to 1953565245/10⁹ (about s₀ + 1e−6; corresponds to t5 of d40_tests). One local T_S face and one T_C face (T_S face 0 accepted 1540, T_C face 0 accepted 772)

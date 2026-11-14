@@ -2,7 +2,7 @@
 
 Cases: `icointet_n02` (icosahedra in a tetrahedron) and `cubintet_n02` (cubes in a tetrahedron). Tool: `d28_*`.
 
-T1–T4 below are also the basis of `octintet_n02` (octahedra in a tetrahedron), which uses a different certificate (one linear $\kappa$ everywhere and a local region around two curves of minimisers) and its own tool `d31_*`; see [reduction_octintet.md](reduction_octintet.md). The cases $n=3,4,5$ in a tetrahedron are in [plateau.md](plateau.md).
+T1–T4 below are also the basis of `octintet_n02` (octahedra in a tetrahedron), which uses a different certificate (one linear $\kappa$ everywhere and a local region around two curves of minimisers) and its own tool `d31_*`; see [reduction_octintet.md](reduction_octintet.md). The cases $n=3,4,5$ in a tetrahedron are in [plateau.md](plateau.md). `tetintet_n02` (tetrahedra in a tetrahedron, new in v0.3.0) also uses T1–T4, but with the restriction $s_1(R)\le s$ and a rational enclosure of $s^{\ast}$; see [reduction_tetintet.md](reduction_tetintet.md).
 
 The regular tetrahedron is not centrally symmetric, so Lemma R of [reduction_symmetric.md](reduction_symmetric.md) does not apply. Instead the two pieces are separated by a plane with normal $n$, and the translations available to one piece form a tetrahedron that can be written down explicitly. This removes the translations and the separating height from the problem and leaves an inequality in $(n,R)$ only.
 
@@ -61,7 +61,7 @@ Then the minimal scale satisfies $s^{\ast}\ge s_0$.
 
 *Proof.* Suppose two pieces fit at $s<s_0$. By T3 there are $n$ and minimisers $R_1,R_2$ with $0\ge g(n,s)+g(-n,s)=[\Phi(n,R_1)-3rs\,m(n)]+[\Phi(-n,R_2)-3rs\,m(-n)]$. Since $m(\pm n)\ge1/3>0$, replacing $s$ by $s_0$ makes the right side strictly smaller: $0>[\Phi(n,R_1)-3rs_0m(n)]+[\Phi(-n,R_2)-3rs_0m(-n)]\ge\kappa(n)+\kappa(-n)\ge0$, a contradiction. ∎
 
-Only the direction (⇒) of T3 is used. The original statement restricts (K) to $R$ with $s_1(R)\le s_0$; **the certificate checks (K) for all $R\in SO(3)$**, which is stronger, so this restriction is never used.
+Only the direction (⇒) of T3 is used. The original statement restricts (K) to $R$ with $s_1(R)\le s_0$; **the certificate checks (K) for all $R\in SO(3)$**, which is stronger, so this restriction is never used for icointet, cubintet and octintet. (`tetintet_n02` does use it; see [reduction_tetintet.md §2](reduction_tetintet.md#2-t4-with-the-restriction-s_1rlebar-s).)
 
 The function $\kappa$ is the certificate: it fixes in advance how the joint slack of the two pieces is split between $n$ and $-n$, so the two pieces can be checked separately by one inequality in $(n,R)$.
 

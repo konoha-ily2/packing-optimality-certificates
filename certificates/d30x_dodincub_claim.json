@@ -1,0 +1,73 @@
+{
+ "problem": "dodincub",
+ "local": "d30x_dodincub_local_r16.json",
+ "far": "d30_dodincub_far",
+ "RHO0": "1/16",
+ "DEN_exp": 44,
+ "local_boxes": 23,
+ "local_kinds": {
+  "single": 23
+ },
+ "local_faces": {
+  "x=+1": {
+   "boxes": 5,
+   "kinds": {
+    "single": 5
+   }
+  },
+  "x=-1": {
+   "boxes": 4,
+   "kinds": {
+    "single": 4
+   }
+  },
+  "y=+1": {
+   "boxes": 6,
+   "kinds": {
+    "single": 6
+   }
+  },
+  "y=-1": {
+   "boxes": 1,
+   "kinds": {
+    "single": 1
+   }
+  },
+  "z=+1": {
+   "boxes": 6,
+   "kinds": {
+    "single": 6
+   }
+  },
+  "z=-1": {
+   "boxes": 1,
+   "kinds": {
+    "single": 1
+   }
+  }
+ },
+ "far_counts": {
+  "A": 3347,
+  "D": 449,
+  "L": 8,
+  "X": 0,
+  "bad": 0
+ },
+ "far_L_boxes": 8,
+ "far_L_volume_ok": true,
+ "local_params_version": {
+  "SSTAR_str": "(8/267+167/267√2+23/267√5+137/534√10)",
+  "sha256": {
+   "d30_local.py": "a9bf9667b4bf6eed9bbc556ad618bf98f8f35344456d571d515d6f6c87e55cc6",
+   "d30_problems.py": "be086660c606d2d2cb89f04dfc16a157c38d2baa546e9885fbdcc5d95daf097e",
+   "d16e_common.py": "df5287081af71b2ede1ccb75f5e0fbd95862ecc6f3d87ee9c8edda87f6d709d1"
+  }
+ },
+ "seconds": {
+  "local_verify": 107.8,
+  "far_replay": 64.0,
+  "total": 171.9
+ },
+ "passed": true,
+ "note": "Claude が書いた確かめ。第三者の点検なし、形式証明ではない"
+}

@@ -1,0 +1,99 @@
+{
+ "problem": "octinico_n02",
+ "s_star": "3√2 − √10",
+ "S_star": "(0+1√2)",
+ "R_star": [
+  [
+   "(6/7)",
+   "(3/7)",
+   "(-2/7)"
+  ],
+  [
+   "(-2/7)",
+   "(6/7)",
+   "(3/7)"
+  ],
+  [
+   "(3/7)",
+   "(-2/7)",
+   "(6/7)"
+  ]
+ ],
+ "local": {
+  "record": "d30_s3_octinico_local.json",
+  "faces": {
+   "y1=+1": {
+    "boxes": 4,
+    "kinds": {
+     "single": 2,
+     "mix": 2
+    }
+   },
+   "y1=-1": {
+    "boxes": 4,
+    "kinds": {
+     "single": 2,
+     "mix": 2
+    }
+   },
+   "y2=+1": {
+    "boxes": 4,
+    "kinds": {
+     "single": 4
+    }
+   },
+   "y2=-1": {
+    "boxes": 4,
+    "kinds": {
+     "mix": 2,
+     "single": 2
+    }
+   }
+  },
+  "cands_table_checked": true,
+  "lift_used_boxes": 6
+ },
+ "far": {
+  "record": "d30_s3_octinico_far",
+  "A": 676,
+  "D": 206,
+  "L": 44,
+  "X": 0,
+  "bad": 0,
+  "cover_leaves": 926,
+  "Sbar": "939906129562517623222788173740722879/664613997892457936451903530140172288",
+  "T": "47/64"
+ },
+ "tube": {
+  "TC": "1/512",
+  "TW": "9/512",
+  "RHO0": "1/64",
+  "n": [
+   "1",
+   "1",
+   "1"
+  ],
+  "e1": [
+   "1",
+   "-1",
+   "0"
+  ],
+  "e2": [
+   "1/2",
+   "1/2",
+   "-1"
+  ],
+  "TAU0": "-1/5"
+ },
+ "sha256_vs_now": {
+  "d30_s3_common.py": "一致",
+  "d30_s3_local.py": "一致",
+  "d30_local.py": "一致",
+  "d16e_local.py": "一致",
+  "d16e_common.py": "一致",
+  "d30_problems.py": "一致"
+ },
+ "passed": true,
+ "seconds": 317.5,
+ "note": "議論・コードは Claude が書いたもので第三者の点検なし、形式証明ではない。前提：補題 R、補題 W (i)(ii)、d16e の遠方の道具、python-flint・sympy・Fraction"
+}

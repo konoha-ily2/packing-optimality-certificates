@@ -1,0 +1,2 @@
+Tube centre TC from 1/512 to 5/256 (shifted along τ by TW). The far part should fail because some leaves of the original tube leave the new tube. The local substitution changes (if it passed, the certificate would also hold on the shifted tube, which is not an error)
+Result (2026-11-14): both the local and the far part failed. The constants passed (the tube centre is not part of the constants check, which is correct)

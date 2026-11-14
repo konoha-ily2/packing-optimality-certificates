@@ -1,0 +1,1 @@
+Far: in one accepted box (chart 0 [-2^43, -2^42, -2^41]–[-3·2^41, -2^41, 0]), λ moved from face 7 to 10 by 1683978/2^24 with the sum unchanged (Python's check_box also rejects it). Should fail

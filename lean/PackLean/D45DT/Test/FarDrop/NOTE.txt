@@ -1,0 +1,4 @@
+Injected error FarDrop (export_d45dt.py --inject farDrop):
+- accepted leaf 37 removed from the U tree of n box ((0, 0), (16777216, 16777216)) (the tree does not close); check_box raised: a branch that does not reach a leaf of R
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.FarDrop.Far000

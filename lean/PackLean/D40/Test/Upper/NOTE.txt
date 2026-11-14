@@ -1,0 +1,2 @@
+EXPECT_FAIL
+upper-bound placement broken: the x of the translation t1 of the stuck piece shifted by 1e−30 (it touches the container wall, so it leaves the container)

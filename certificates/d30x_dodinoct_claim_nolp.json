@@ -1,0 +1,73 @@
+{
+ "problem": "dodinoct",
+ "local": "d30x_dodinoct_local_r32_nolp.json",
+ "far": "d30_dodinoct_far_r32",
+ "RHO0": "1/32",
+ "DEN_exp": 44,
+ "local_boxes": 126,
+ "local_kinds": {
+  "single": 126
+ },
+ "local_faces": {
+  "x=+1": {
+   "boxes": 2,
+   "kinds": {
+    "single": 2
+   }
+  },
+  "x=-1": {
+   "boxes": 110,
+   "kinds": {
+    "single": 110
+   }
+  },
+  "y=+1": {
+   "boxes": 5,
+   "kinds": {
+    "single": 5
+   }
+  },
+  "y=-1": {
+   "boxes": 5,
+   "kinds": {
+    "single": 5
+   }
+  },
+  "z=+1": {
+   "boxes": 2,
+   "kinds": {
+    "single": 2
+   }
+  },
+  "z=-1": {
+   "boxes": 2,
+   "kinds": {
+    "single": 2
+   }
+  }
+ },
+ "far_counts": {
+  "A": 15250,
+  "D": 727,
+  "L": 8,
+  "X": 0,
+  "bad": 0
+ },
+ "far_L_boxes": 8,
+ "far_L_volume_ok": true,
+ "local_params_version": {
+  "SSTAR_str": "(137/76+157/228√5)",
+  "sha256": {
+   "d30_local.py": "a9bf9667b4bf6eed9bbc556ad618bf98f8f35344456d571d515d6f6c87e55cc6",
+   "d30_problems.py": "be086660c606d2d2cb89f04dfc16a157c38d2baa546e9885fbdcc5d95daf097e",
+   "d16e_common.py": "df5287081af71b2ede1ccb75f5e0fbd95862ecc6f3d87ee9c8edda87f6d709d1"
+  }
+ },
+ "seconds": {
+  "local_verify": 17.7,
+  "far_replay": 85.6,
+  "total": 103.4
+ },
+ "passed": true,
+ "note": "Claude が書いた確かめ。第三者の点検なし、形式証明ではない"
+}

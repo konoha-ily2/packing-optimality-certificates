@@ -1,0 +1,2 @@
+EXPECT_FAIL
+n box 0, side A, leaf 6: discard rotation 7 -> 0 (Python discard_lb <= 0 as well)

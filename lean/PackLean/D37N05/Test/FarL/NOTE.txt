@@ -1,0 +1,2 @@
+EXPECT_FAIL
+n box 0, side A, leaf 168: L code P2#0 -> T_S#0 (Python r_in_cube is false as well)

@@ -1,0 +1,4 @@
+Injected error RotBad (export_d45dt.py --inject rotBad):
+- rotation 1 replaced by its negative (det -1; Python is_rot False): consts_ok must fail
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.RotBad.Consts

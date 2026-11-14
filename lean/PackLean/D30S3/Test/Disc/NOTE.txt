@@ -1,0 +1,1 @@
+Far: one discarded box (corner [-2^44]^3–[-2^43]^3 of chart 0): pair 17 → 2 (Python's check_discard also rejects it). Should fail

@@ -1,0 +1,4 @@
+Injected error CBig (export_d45dt.py --inject cBig):
+- cbar 14986756529/5000000000 -> cbar + 1e-6 (test t5); Python: leaves at the centre (u = 0, r = 0) that fail: {'T_A': 166, 'T_B': 67}
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.CBig.Local

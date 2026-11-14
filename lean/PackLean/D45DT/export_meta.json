@@ -1,0 +1,65 @@
+{
+ "shas": {
+  "certificates/d45_dodintet_local_TA.leaves.jsonl.gz": "56a517c87b70f440b2c25fe197ca8002599388f662605b97fc5d7fb99c4c6a30",
+  "certificates/d45_dodintet_local_TB.leaves.jsonl.gz": "9b488633cacec411139888b84a594b065a52eb77ed6e5c1f0755c4f503ddebd2",
+  "certificates/d45_dodintet_far.boxes.jsonl.gz": "95823659ba823989a2f11dd2c8c1d46063b26f216e3f2566d98c306361558032",
+  "certificates/d45_dodintet_far.part1.boxes.jsonl.gz": "bce4db9f944d41104e95577750d624c9dbb535210ef4b468d006bc6aed3cb409",
+  "certificates/d45_dodintet_local_TA.json": "74f55b561210eb847f8424e2b92efd2c64378dcb50ecc7888c402e5d1e6c3122",
+  "certificates/d45_dodintet_local_TB.json": "7056b31bbb201e2162a60da26c864f55f855d222d3d587624e68bbf6e8763ebe",
+  "certificates/d45_dodintet_far_run1.json": "210272f8d7c97bd247ffde2fac00eb8318678ae40299de83e9a1df7837571b01",
+  "certificates/d45_dodintet_far.json": "a23e80bf04c5b2ad7b38015aee86d7c4f4e60d7e14232906912711a338c6b7d5",
+  "certificates/d45_dodintet_upper.json": "d7f8d4242e50dfc66995f9ce5ccc1c4588b61291758fd2a6fa7eaa39e46c6331",
+  "certificates/d45_dodintet_common.json": "c0ef2ba75905306d62e12f3a54b54cd05b2a9f67a082a367ec52b6dea3969c57"
+ },
+ "python_sha256": {
+  "d45_dodintet_common.py": "69d2560b1ee964945242fbe31458d17c78f0d77837631bf98e2fd08146bcf2e7",
+  "d45_dodintet_local.py": "87f65c38877fcdde70a05b76591120b3d322d6123eb0d675697d8b2695893bff",
+  "d45_dodintet_far.py": "071adf3c64b6e2da2ffc88a48a0382acb623eb66aecb50af84bea8dcd84e9626",
+  "d45_dodintet_upper.py": "19f92d88b5ab3591a6e6ecd4f7aaf0597d3b79a50bda3fb4bd11b78bb4004849",
+  "d28_common.py": "dfbbfd89912392d2786c292a72487d3ce58dd588f0bab4cdb48da6be71e665c6"
+ },
+ "n_ok": 5477,
+ "n_out_leaves": 114,
+ "leaves": {
+  "A": 2717927,
+  "D": 1314967,
+  "L": 18816
+ },
+ "token_chars": 20246279,
+ "far_files": 51,
+ "local": {
+  "T_A": {
+   "n": 2670,
+   "ncand": 50,
+   "D": 1024,
+   "faces": [
+    124,
+    2450,
+    26,
+    16,
+    10,
+    14,
+    6,
+    24
+   ]
+  },
+  "T_B": {
+   "n": 1002,
+   "ncand": 20,
+   "D": 512,
+   "faces": [
+    259,
+    480,
+    2,
+    40,
+    4,
+    1,
+    168,
+    48
+   ]
+  }
+ },
+ "DT": 2360686561520264951196156972092273885747488309987282929267017143210591081497350964060948695003433389861895161471991946578437396023721349568366393212180707398339512995932068344149721934799934454380772809083400,
+ "cbar": "14986756529/5000000000",
+ "sbar_rational": "4238894867859/500000000000"
+}

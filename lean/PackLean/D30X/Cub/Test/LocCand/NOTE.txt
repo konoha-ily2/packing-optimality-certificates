@@ -1,0 +1,1 @@
+error: local face x=+1: leaf [0, -17592186044416, -17592186044416]–[1099511627776, 0, 0], candidate 0 → 1 (Python's check_single rejects it too)

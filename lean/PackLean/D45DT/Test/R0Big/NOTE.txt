@@ -1,0 +1,6 @@
+Injected error R0Big (export_d45dt.py --inject r0Big):
+- r0 of both tubes 1/32 -> 1/16 (the local leaves stay those of 1/32: the cover of the wider tube fails)
+- EXPECT_PASS PackLean.D45DT.Test.R0Big.Far000: n box ((717225984, 377487360), (721420288, 381681664)) with L leaves; widening the tube only makes the far check easier
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.R0Big.Local
+- PackLean.D45DT.Test.R0Big.Far000

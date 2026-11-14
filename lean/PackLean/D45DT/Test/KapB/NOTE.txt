@@ -1,0 +1,4 @@
+Injected error KapB (export_d45dt.py --inject kapB):
+- k-hat_3 -> k-hat_3 + 1e-9 (kappa_B larger by 1e-9 on the plane z = 1; T_B has e0 about 2.3e-10); Python: leaves at the centre (u = 0, r = 0) that fail: {'T_B': 67}
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.KapB.Local

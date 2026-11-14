@@ -1,0 +1,2 @@
+EXPECT_FAIL
+n box 0 side A leaf 17: candidate ('M', 6, 0, (3, 3, 1, 0)) → ('M', 6, 1, (3, 3, 1, 0)) (top changed; Python's box_lb is also < 0)

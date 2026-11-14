@@ -1,0 +1,1 @@
+T from 47/64 to 31/64 (Python's check_T also rejects it). Should fail in boundsOk of the constants

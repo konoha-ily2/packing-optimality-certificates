@@ -1,0 +1,1 @@
+Local: c halved in all 6 boxes with lifting (rounded down to 2^-24; Python's check_mix rejects 5 boxes on a and accepts only the second box of y1=-1). Should fail

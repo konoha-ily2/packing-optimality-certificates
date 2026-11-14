@@ -1,0 +1,4 @@
+Injected error LocDrop (export_d45dt.py --inject locDrop):
+- T_A leaf (('-1/8', '0', '1', '-1', '0', '-1'), ('0', '1/64', '1', '0', '1', '1')) removed (Python replay: the cover count differs)
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.LocDrop.Local

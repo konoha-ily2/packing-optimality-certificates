@@ -1,0 +1,2 @@
+EXPECT_FAIL
+n box 0 [0, 0]-[33554432, 33554432] meets N1: k_N 0 -> -1/1024 (the Python replay requires k_N = 0 there)

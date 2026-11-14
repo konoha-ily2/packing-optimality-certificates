@@ -1,0 +1,2 @@
+EXPECT_FAIL
+n box 0, side A, leaf 21: the constant 1 used for face 0 (allowed only for f = 3; the Python replay rejects it as well)

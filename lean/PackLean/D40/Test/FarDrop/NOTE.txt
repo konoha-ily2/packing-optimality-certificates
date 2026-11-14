@@ -1,0 +1,2 @@
+EXPECT_FAIL
+accepted leaf 17 removed from the R tree of side A of n box 0

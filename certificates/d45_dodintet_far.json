@@ -1,0 +1,31 @@
+{
+ "n_tasks": 4096,
+ "n_live": 2,
+ "evaluated": 3228,
+ "n_ok": 2,
+ "n_out": 0,
+ "n_X": 0,
+ "n_neg": 0,
+ "X_boxes": [],
+ "timeouts": 0,
+ "secs": [
+  4.7,
+  5.0
+ ],
+ "evs": [
+  1611,
+  1617
+ ],
+ "seconds": 13.2,
+ "closed": true,
+ "params": {
+  "forced_exp": 6,
+  "budget": 8000,
+  "wmin_exp": 16,
+  "nmin": 14,
+  "tcap": 0,
+  "KDENOM": 16777216,
+  "NDEN_exp": 30,
+  "DEN_exp": 44
+ }
+}

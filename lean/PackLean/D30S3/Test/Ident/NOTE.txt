@@ -1,0 +1,1 @@
+S* increased by 1/1000. The local part should fail on the degree-0 identities (F(R*) = 0, F(t·n) ≡ 0, divisibility by ρ), and the constants on S* = C0·s* and the comparison S* = √2

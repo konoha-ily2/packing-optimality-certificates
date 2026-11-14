@@ -1,0 +1,2 @@
+EXPECT_FAIL
+n box 0 side A leaf 499: L centre P_cyc2 → T_S (Python's r_in_cube is also false)

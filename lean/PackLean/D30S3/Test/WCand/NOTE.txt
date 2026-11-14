@@ -1,0 +1,1 @@
+Local: in one weighted box of edge y1=+1, the weighted candidate 29 → 0 (Python's check_mix also rejects it). Should fail

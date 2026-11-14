@@ -1,0 +1,4 @@
+Injected error LocCand (export_d45dt.py --inject locCand):
+- T_A leaf (('-1/8', '0', '1', '-1', '0', '-1'), ('0', '1/64', '1', '0', '1', '1')): candidate 13 -> 0 (Python e0_ok and lam_lb > 0 is False)
+Targets (must FAIL unless marked EXPECT_PASS):
+- PackLean.D45DT.Test.LocCand.Local

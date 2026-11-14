@@ -1,0 +1,2 @@
+EXPECT_FAIL
+k_N of n box 0 [0, 0]–[33554432, 33554432], which meets N₁, from 0 to −1/1024 (the same as t6 of d40_tests)

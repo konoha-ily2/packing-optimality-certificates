@@ -1,0 +1,1 @@
+Far: the same accepted box removed from the tree (the tree does not close). Should fail

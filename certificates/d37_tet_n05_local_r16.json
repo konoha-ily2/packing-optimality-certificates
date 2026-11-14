@@ -1,0 +1,147 @@
+{
+ "centers": {
+  "T_S": {
+   "closed": true,
+   "leaves": 3045,
+   "ev": 6083,
+   "nfail": 0,
+   "timeout": false,
+   "sec": 62.2,
+   "types": {
+    "M6": 487,
+    "M12": 2134,
+    "M4": 234,
+    "F": 189,
+    "M1": 1
+   },
+   "failed": [],
+   "open_sample": []
+  },
+  "P1_g021": {
+   "closed": true,
+   "leaves": 310,
+   "ev": 612,
+   "nfail": 0,
+   "timeout": false,
+   "sec": 8.6,
+   "types": {
+    "M4": 11,
+    "M12": 182,
+    "M6": 86,
+    "F": 31
+   },
+   "failed": [],
+   "open_sample": []
+  },
+  "P1_g102": {
+   "closed": true,
+   "leaves": 1087,
+   "ev": 2166,
+   "nfail": 0,
+   "timeout": false,
+   "sec": 29.0,
+   "types": {
+    "M4": 76,
+    "M12": 722,
+    "M6": 232,
+    "F": 57
+   },
+   "failed": [],
+   "open_sample": []
+  },
+  "P2": {
+   "closed": true,
+   "leaves": 1049,
+   "ev": 2090,
+   "nfail": 0,
+   "timeout": false,
+   "sec": 34.4,
+   "types": {
+    "M12": 1044,
+    "M6": 5
+   },
+   "failed": [],
+   "open_sample": []
+  },
+  "T_C": {
+   "closed": true,
+   "leaves": 1243,
+   "ev": 2479,
+   "nfail": 0,
+   "timeout": false,
+   "sec": 23.6,
+   "types": {
+    "F": 1243
+   },
+   "failed": [],
+   "open_sample": []
+  }
+ },
+ "closed": true,
+ "header": {
+  "kind": "root",
+  "A_MAX": "7/8",
+  "R0": "1/16",
+  "BETA": "-7/4",
+  "S0": "2",
+  "a0": "1",
+  "a1": "-1",
+  "centers": [
+   [
+    "T_S",
+    "A",
+    [
+     "3",
+     "1",
+     "-1",
+     "1"
+    ],
+    "tube"
+   ],
+   [
+    "P1_g021",
+    "A",
+    [
+     "3",
+     "-1",
+     "-1",
+     "1"
+    ],
+    "point"
+   ],
+   [
+    "P1_g102",
+    "A",
+    [
+     "3",
+     "1",
+     "-1",
+     "-1"
+    ],
+    "point"
+   ],
+   [
+    "P2",
+    "A",
+    [
+     "2",
+     "-1",
+     "0",
+     "1"
+    ],
+    "point"
+   ],
+   [
+    "T_C",
+    "B",
+    [
+     "1",
+     "0",
+     "0",
+     "0"
+    ],
+    "tube"
+   ]
+  ]
+ }
+}

@@ -1,0 +1,1 @@
+Local: in all 6 boxes with lifting, the weights w from 1 to 1/2 (c unchanged, so the lifting loss is relatively doubled; Python's check_mix rejects 5 boxes on G and accepts only the second box of y1=-1). Should fail

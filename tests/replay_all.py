@@ -10,6 +10,14 @@ d16_cover_check_roots.py checks that they join to [0, 1] together with the local
 For cubinico, d30_claim.py re-checks the stored local certificate, the coverage of the far
 record and the far replay together; for octintet, d31_far.py replay_all replays the far record
 and the two stored local records (J, C) and checks that they share the same constants.
+For octinico, d30_s3_claim.py re-checks the stored local certificate (tube coordinates, weights and
+lifts), the coverage of the far record and the far replay together; for tetintet, d40_tests.py --only chain
+replays the local leaves and the far record and re-checks the rational upper bound.
+For dodincub and dodinoct, d30x_problems.py installs the two problems behind d30_problems and runs d30_claim.py
+(local verify, far coverage check and far replay) through runpy, as for cubinico (about 2 min each).
+For tetintet_n05, d37_tet_n05_replay_both.py --r0 1/16 replays the local and far records and checks the upper bound.
+For dodintet, d45_dodintet_tests.py --only chain replays both tubes and the far record (main part and continuation)
+and re-checks the upper bound.
 "plateau" runs the exact substitutions for n = 2..5 and the n >= 5 lower-bound check.
 Nothing is written to certificates/: tools that write files run in a copy under work/replay/.
 """
@@ -42,6 +50,24 @@ COMMANDS = {
     "octintet": ([["d31_far.py", "replay_all"]],
                  ["d31_far.json", "d31_far.boxes.jsonl.gz", "d31_local_J.json", "d31_local_J.leaves.jsonl.gz",
                   "d31_local_C.json", "d31_local_C.leaves.jsonl.gz"]),
+    "octinico": ([["d30_s3_claim.py", "d30_s3_octinico_local.json", "d30_s3_octinico_far"]],
+                 ["d30_s3_octinico_local.json", "d30_s3_octinico_far.json", "d30_s3_octinico_far.boxes.jsonl.gz"]),
+    "tetintet": ([["d40_tests.py", "--only", "chain"]],
+                 ["d40_local.json", "d40_local.leaves.jsonl.gz", "d40_far.json", "d40_far.boxes.jsonl.gz",
+                  "d40_upper.json"]),
+    "dodincub": ([["d30x_problems.py", str(V / "d30_claim.py"), "dodincub", "d30x_dodincub_local_r16.json",
+                   "d30_dodincub_far", "--out", "d30x_dodincub_claim_replay.json"]],
+                 ["d30x_dodincub_local_r16.json", "d30_dodincub_far.json", "d30_dodincub_far.boxes.jsonl.gz"]),
+    "dodinoct": ([["d30x_problems.py", str(V / "d30_claim.py"), "dodinoct", "d30x_dodinoct_local_r32_nolp.json",
+                   "d30_dodinoct_far_r32", "--out", "d30x_dodinoct_claim_replay.json"]],
+                 ["d30x_dodinoct_local_r32_nolp.json", "d30_dodinoct_far_r32.json", "d30_dodinoct_far_r32.boxes.jsonl.gz"]),
+    "tetintet_n05": ([["d37_tet_n05_replay_both.py", "--r0", "1/16", "--out", "d37_tet_n05_replay_both.json"]],
+                     ["d37_tet_n05_local_r16.json", "d37_tet_n05_local_r16.leaves.jsonl.gz",
+                      "d37_tet_n05_far_r16.json", "d37_tet_n05_far_r16.boxes.jsonl.gz"]),
+    "dodintet": ([["d45_dodintet_tests.py", "--only", "chain"]],
+                 ["d45_dodintet_local_TA.json", "d45_dodintet_local_TA.leaves.jsonl.gz", "d45_dodintet_local_TB.json",
+                  "d45_dodintet_local_TB.leaves.jsonl.gz", "d45_dodintet_far.json", "d45_dodintet_far.boxes.jsonl.gz",
+                  "d45_dodintet_far.part1.boxes.jsonl.gz", "d45_dodintet_upper.json", "dodintet_n02.json"]),
     "plateau": ([["d28_plateau_n34.py", "--inject", "--out", "."],
                  ["d31_plateau_n34.py", "--inject", "--out", "."],
                  ["plateau_n05_upper.py", "--out", "."],

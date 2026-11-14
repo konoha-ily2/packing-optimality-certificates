@@ -1,0 +1,1 @@
+error: ρ₀ changed from 1/16 to 1/8 (both the far L and the local root box read it from here; the sequences stay those of the record)
