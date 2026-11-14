@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use these certificates or checkers, please cite them. Concept DOI (all versions): 10.5281/zenodo.24191316; v0.1.0: 10.5281/zenodo.24191317; v0.2.0: 10.5281/zenodo.24195467. These are computer-assisted, not a formal proof: the arithmetic is re-checked in Lean, the reasoning connecting it to the packing statements is not formalized."
+message: "If you use these certificates or checkers, please cite them. Concept DOI (all versions): 10.5281/zenodo.24191316; v0.1.0: 10.5281/zenodo.24191317; v0.2.0: 10.5281/zenodo.24195467; v0.3.0: 10.5281/zenodo.24223156. These are computer-assisted, not a formal proof: the arithmetic is re-checked in Lean, the reasoning connecting it to the packing statements is not formalized."
 title: "packing-optimality-certificates: computer-assisted optimality certificates for packing unit Platonic solids into a Platonic container"
 authors:
   - family-names: Nakano
