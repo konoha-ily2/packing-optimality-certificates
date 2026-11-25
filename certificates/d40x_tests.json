@@ -1,0 +1,76 @@
+{
+ "E0X": {
+  "T_S": {
+   "points": 19,
+   "exact_zero": 19
+  },
+  "T_S'": {
+   "points": 19,
+   "exact_zero": 19
+  }
+ },
+ "tX2": {
+  "s_lo": 1,
+  "s0": 0,
+  "s_hi": -1
+ },
+ "R3X": {
+  "T_S": {
+   "points": 324,
+   "mismatch": 0
+  },
+  "T_S'": {
+   "points": 348,
+   "mismatch": 0
+  },
+  "P_23": {
+   "points": 348,
+   "mismatch": 0
+  },
+  "P_13": {
+   "points": 324,
+   "mismatch": 0
+  },
+  "P_cyc1": {
+   "points": 348,
+   "mismatch": 0
+  },
+  "P_cyc2": {
+   "points": 348,
+   "mismatch": 0
+  },
+  "T_C": {
+   "points": 324,
+   "mismatch": 0
+  }
+ },
+ "tX1": {
+  "tested": 400,
+  "fail_with_s0_plus_eps": 400
+ },
+ "chain": {
+  "local": {
+   "rc": 0,
+   "tail": [
+    "確かめ直し d40x_local: 合格 28946、不合格 0、281 秒"
+   ],
+   "err": ""
+  },
+  "far": {
+   "rc": 0,
+   "tail": [
+    "確かめ直し d40x_far: n の箱 ok 236・out 18、R の葉 受理 154697・捨てた 72810・L 268、不合格 0、被覆の木 OK、58 秒"
+   ],
+   "err": ""
+  },
+  "upper": {
+   "rc": 0,
+   "tail": [
+    "{'s1_eq_s0': True, 'T3_s_n_eq_s0': {'1/100': True, '1/10': True, '1/4': True}, '容器に入る': True, '分ける平面で分かれる': True, '上端_下端_は0': True, 's0': ['20653/6856', '2781/6856', '-16761/6856', '-19283/20568', '-235/2571'], 's0_float': 1.9535642445615806, 'n': ['99/100', '99/100', '1'], '接する壁の数': 15}"
+   ],
+   "err": ""
+  },
+  "passed": true,
+  "seconds": 344.0
+ }
+}

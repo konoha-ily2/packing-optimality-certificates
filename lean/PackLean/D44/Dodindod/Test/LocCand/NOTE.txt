@@ -1,0 +1,2 @@
+dodindod locCand (part local)
+error: local face x=+1: single leaf [0, -2199023255552, -15393162788864]–[137438953472, 0, -13194139533312], candidate 1 → 0 (Python rejects it too)

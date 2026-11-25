@@ -1,0 +1,17 @@
+{
+ "pair": "icoinico",
+ "local": "d44_icoinico_local_k10.json",
+ "far": "d44_icoinico_s3far_k10",
+ "ok": true,
+ "k": 10,
+ "rhat_sha256": "f709494da652bb9ace09baa27f85c7e3be5836e76fa113d120d62efda90bb422",
+ "same_pair": true,
+ "same_rhat": true,
+ "same_sbar": true,
+ "same_rho0": true,
+ "local_replay": true,
+ "far_replay": true,
+ "upper": true,
+ "sbar_lt_sup": true,
+ "rhat_unchanged": true
+}

@@ -1,0 +1,173 @@
+Build log for the formal Lean proofs of the 19 n = 2 results (v1.0, bundle release/proof_v100/lean/)
+Date: 2026-11-25 (builds 2026-11-25 05:21-05:58 and 08:21-09:28 JST)
+Lean: v4.36.0-rc2 (leanprover/lean4:v4.36.0-rc2), Lake 5.0.0
+Mathlib: v4.36.0-rc2, commit 9d581dfff2e41de989072ea63abf3daf69311520
+
+What this log is (plan A): The sources in lean/ of this bundle are byte-identical to the working
+tree in which the build was run (SHA-256 table: SHA256SUMS_sources.txt; English copies made for
+v0.3.0 and for the four enclosures of v1.0.0 that differ only in comments are listed in
+sources_vs_worktree.tsv). The build was
+run in the working tree, not in this copy, with the Lake artifact cache disabled.
+
+This is the final build of v1.0.0, run after the last source edits (comments in section 6 of
+PackLean/Formal/Spec.lean and in the four D44 modules, and an `#assert_std_axioms` for
+cubindod_n02_proof in PackLean/Formal/Cases/CubDodR.lean). Because Spec.lean changed, Lake rebuilt
+every module that imports it: the modules of PackLean.Formal, the hand-written PackLean.E3i.BunCore
+and PackLean.E3i.BunCase, PackLean.Formal.N2All, and the generated dodintet modules
+PackLean.E3i.Bun.* (154) and PackLean.E3i.NT.* (3). Modules whose inputs did not
+change (other generated modules, kernel checkers, Mathlib) were reused from the working tree's
+existing build. An earlier full rebuild of the 113 hand-written modules of PackLean.Formal from deleted build outputs
+(2026-11-25 00:02-02:13 JST) also passed; the generated dodintet modules were rebuilt from scratch
+on 2026-11-24.
+
+Each target was built with `lake build <module>`, one at a time. The first sequential run built
+Spec through Cases.TetTet and was stopped by the memory guard during Cases.DodTet, because that
+single `lake build` rebuilt the E3i.Bun modules in parallel (114.7 GB). The second run built the
+154 E3i.Bun modules two at a time (77 steps, 3528 s in total), then Cases.DodTet through N2All
+(peak about 26.3 GB). Result: all 21 targets (Spec, the 19 case modules, N2All) exit 0, no errors,
+no sorry.
+
+Per-target (seconds, wall clock of the run in which it was built):
+=== END PackLean.Formal.Spec exit 0 sec 49
+=== END PackLean.Formal.CubinoctUpper exit 0 sec 275
+=== END PackLean.Formal.Cases.IcoCub exit 0 sec 281
+=== END PackLean.Formal.Cases.DodIco exit 0 sec 74
+=== END PackLean.Formal.Cases.IcoOct exit 0 sec 67
+=== END PackLean.Formal.Cases.IcoDod exit 0 sec 73
+=== END PackLean.Formal.Cases.OctDod exit 0 sec 89
+=== END PackLean.Formal.Cases.CubIco exit 0 sec 66
+=== END PackLean.Formal.Cases.IcoTet exit 0 sec 200
+=== END PackLean.Formal.Cases.CubTet exit 0 sec 35
+=== END PackLean.Formal.Cases.OctTet exit 0 sec 283
+=== END PackLean.Formal.Cases.OctIco exit 0 sec 292
+=== END PackLean.Formal.Cases.DodCub exit 0 sec 90
+=== END PackLean.Formal.Cases.DodOct exit 0 sec 69
+=== END PackLean.Formal.Cases.TetTet exit 0 sec 280
+=== END PackLean.Formal.Cases.DodTet exit 0 sec 90
+=== END PackLean.Formal.Cases.CubDodR exit 0 sec 88
+=== END PackLean.Formal.Cases.IcoIco exit 0 sec 149
+=== END PackLean.Formal.Cases.DodDod exit 0 sec 68
+=== END PackLean.Formal.Cases.OctOct exit 0 sec 55
+=== END PackLean.Formal.N2All exit 0 sec 53
+
+Axiom reports (lines "depends on axioms" and "axiom audit" printed by the build):
+PackLean/E3i/Bun/Final.lean:43:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/E3i/BunCase.lean:53:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/E3i/BunCore.lean:63:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/E3i/NT/All.lean:74:0: axiom audit: 2 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/E3i/NT/Final.lean:21:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/E3i/NT/NTree.lean:18:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/CaseBridge.lean:303:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/CubDodR.lean:88:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/CubDodR.lean:90:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/CubDodR.lean:92:0: 'PackLean.Formal.Cases.CubDodR.cubindod_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/CubIco.lean:92:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/CubIco.lean:95:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/CubIco.lean:97:0: 'PackLean.Formal.Cases.CubIco.cubinico_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/CubTet.lean:122:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/CubTet.lean:124:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/CubTet.lean:126:0: 'PackLean.Formal.Cases.CubTet.cubintet_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/DodCub.lean:91:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/DodCub.lean:94:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/DodCub.lean:96:0: 'PackLean.Formal.Cases.DodCub.dodincub_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/DodDod.lean:92:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/DodDod.lean:95:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/DodDod.lean:97:0: 'PackLean.Formal.Cases.DodDod.dodindod_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/DodIco.lean:88:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/DodIco.lean:91:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/DodIco.lean:93:0: 'PackLean.Formal.Cases.DodIco.dodinico_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/DodOct.lean:101:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/DodOct.lean:104:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/DodOct.lean:106:0: 'PackLean.Formal.Cases.DodOct.dodinoct_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/DodTet.lean:26:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/IcoCub.lean:118:0: axiom audit: 5 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/IcoCub.lean:122:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/IcoCub.lean:124:0: 'PackLean.Formal.Cases.IcoCub.icoincub_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/IcoDod.lean:91:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/IcoDod.lean:94:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/IcoDod.lean:96:0: 'PackLean.Formal.Cases.IcoDod.icoindod_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/IcoIco.lean:93:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/IcoIco.lean:96:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/IcoIco.lean:98:0: 'PackLean.Formal.Cases.IcoIco.icoinico_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/IcoOct.lean:100:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/IcoOct.lean:103:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/IcoOct.lean:105:0: 'PackLean.Formal.Cases.IcoOct.icoinoct_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/IcoTet.lean:119:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/IcoTet.lean:121:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/IcoTet.lean:123:0: 'PackLean.Formal.Cases.IcoTet.icointet_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/OctDod.lean:100:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/OctDod.lean:103:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/OctDod.lean:105:0: 'PackLean.Formal.Cases.OctDod.octindod_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/OctIco.lean:107:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/OctIco.lean:110:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/OctIco.lean:112:0: 'PackLean.Formal.Cases.OctIco.octinico_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/OctOct.lean:89:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/OctOct.lean:92:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/OctOct.lean:94:0: 'PackLean.Formal.Cases.OctOct.octinoct_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/Cases/OctTet.lean:34:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Cases/TetTet.lean:145:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Charts.lean:321:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/CoverTreeG.lean:149:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/CubinoctLocalCP.lean:308:0: 'PackLean.Formal.Loc.cubinoct_hloc' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/CubinoctLocalCP.lean:315:0: 'PackLean.Formal.Loc.cubinoct_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/CubinoctUpper.lean:241:0: 'PackLean.Formal.Up.cubinoct_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/CubinoctUpper.lean:242:0: 'PackLean.Formal.Up.cubinoct_n02_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/CubinoctUpper.lean:245:0: axiom audit: 2 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/D16Bridge.lean:355:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/D16Main.lean:228:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/DTCase.lean:150:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/DTCover.lean:413:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/DTLocalBox.lean:644:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/DTLocalOk.lean:19:0: axiom audit: 2 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/DTLocalPoly.lean:60:0: axiom audit: 2 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/DTLocalRun.lean:161:0: axiom audit: 2 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/DTLocalTree.lean:441:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/DTLocalVal.lean:465:0: axiom audit: 2 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/DTLocalVal.lean:547:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/DTUpper.lean:525:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/DTUpperOk.lean:28:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/E3iFar.lean:538:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/FarAccept.lean:661:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/FarG.lean:447:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/FieldSem.lean:309:0: axiom audit: 5 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/LocalG.lean:840:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/LocalQ.lean:291:0: axiom audit: 5 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/LocalQMain.lean:585:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/LocalTube.lean:482:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/LocalTubeMain.lean:628:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/LocalTubeMixLeaf.lean:154:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/LocalTubeMixMain.lean:670:0: axiom audit: 2 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/LocalW.lean:240:0: axiom audit: 2 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/N2All.lean:45:0: 'PackLean.Formal.N2All.n2_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+PackLean/Formal/N2All.lean:46:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/OctCover.lean:584:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/OctFar.lean:612:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/OctUpper.lean:117:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Orbit.lean:184:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/PolyLP.lean:299:0: axiom audit: 6 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/PolySem5.lean:584:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/PolySemG.lean:852:0: axiom audit: 6 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/PolySemN.lean:615:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Polytope.lean:674:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/PolytopeSolids.lean:240:0: axiom audit: 8 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/QuadSem.lean:371:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/Sandwich.lean:446:0: axiom audit: 7 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/SandwichQ.lean:234:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/SandwichQR.lean:357:0: axiom audit: 6 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/SandwichR.lean:439:0: axiom audit: 8 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/SandwichT.lean:146:0: axiom audit: 2 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetCase.lean:179:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetCover.lean:440:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetFar.lean:652:0: axiom audit: 6 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetLocal.lean:795:0: axiom audit: 2 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetLocalPoly.lean:802:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetReduction.lean:567:0: axiom audit: 9 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetUpper.lean:294:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetintCase.lean:183:0: axiom audit: 5 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetintCover.lean:504:0: axiom audit: 4 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetintFar.lean:361:0: axiom audit: 6 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetintLocal.lean:468:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/TetintUpper.lean:77:0: axiom audit: 1 theorem(s) use only propext, Classical.choice, Quot.sound
+PackLean/Formal/UpperG.lean:359:0: axiom audit: 3 theorem(s) use only propext, Classical.choice, Quot.sound
+
+All reported axiom sets: [propext, Classical.choice, Quot.sound].

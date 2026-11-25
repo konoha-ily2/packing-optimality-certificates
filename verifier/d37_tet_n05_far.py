@@ -600,6 +600,7 @@ def replay(name):
             dmax = max(sum(round(math.log2(2 * DEN / (h - l))) for l, h in zip(k_[1], k_[2])) for k_ in rl)
             cur = [(ch, [-DEN] * 3, [DEN] * 3) for ch in range(4)]; seen = 0; depth = 0
             while cur:
+                need(len(cur) <= len(rl) - seen, "hole in the cover (a box without leaves)")   # in a correct tree every box of a level contains at least one leaf not yet seen (L4'r, 11-15)
                 need(depth <= dmax, "a branch that does not reach a leaf of R"); depth += 1
                 nxt = []
                 for ch, a, b in cur:
@@ -612,6 +613,7 @@ def replay(name):
     dmax = max(sum(round(math.log2(ND / (h - l))) for l, h in zip(k_[0], k_[1])) for k_ in nleaves)
     cur = [([0, 0], [ND, ND])]; seen = 0; depth = 0
     while cur:
+        need(len(cur) <= len(nleaves) - seen, "hole in the cover (a box without leaves)")   # in a correct tree every box of a level contains at least one leaf not yet seen (L4'r, 11-15)
         need(depth <= dmax, "a branch that does not reach a leaf of n"); depth += 1
         nxt = []
         for lo, hi in cur:

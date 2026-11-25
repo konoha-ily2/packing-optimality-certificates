@@ -1,0 +1,701 @@
+{
+ "checks": [
+  {
+   "name": "C1 number of triangles",
+   "ok": true,
+   "detail": "1920"
+  },
+  {
+   "name": "C1 no triangle is degenerate (det ≠ 0, det > 0 after orienting)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 each oriented edge is paired with exactly one reversed edge (an oriented surface without boundary)",
+   "ok": true,
+   "detail": "edges 2880"
+  },
+  {
+   "name": "C1 V − E + F = 2",
+   "ok": true,
+   "detail": "V 962, E 2880, F 1920"
+  },
+  {
+   "name": "C1 the general point ('(1/7+0√5)', '(2/9+0√5)', '(5/11+0√5)') is in the interior of exactly 1 triangle (0 on a boundary)",
+   "ok": true,
+   "detail": "interior 1, boundary 0"
+  },
+  {
+   "name": "C1 the general point ('(-3/5+0√5)', '(1/13+0√5)', '(2/3+0√5)') is in the interior of exactly 1 triangle (0 on a boundary)",
+   "ok": true,
+   "detail": "interior 1, boundary 0"
+  },
+  {
+   "name": "C1 the general point ('(4/17+0√5)', '(-7/19+0√5)', '(-1/23+0√5)') is in the interior of exactly 1 triangle (0 on a boundary)",
+   "ok": true,
+   "detail": "interior 1, boundary 0"
+  },
+  {
+   "name": "C2 Q has 5 edges (intersections of adjacent 2 faces)",
+   "ok": true,
+   "detail": "5"
+  },
+  {
+   "name": "C2 g_k is in Q* (inner products with the edges ≥ 0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 classification: Q* 340, −Q* 340, band 1,240",
+   "ok": true,
+   "detail": "{'Q*': 340, '-Q*': 340, 'band': 1240}"
+  },
+  {
+   "name": "C2 the triangles of the band are pairwise distinct",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the 62 representatives of the table are all in the band",
+   "ok": true,
+   "detail": "62"
+  },
+  {
+   "name": "C3 the orbits (stabilizer of order 10 × {±1}) all have 20 elements, are disjoint, and lie in the band",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the union of the orbits = the 1,240 triangles of the band",
+   "ok": true,
+   "detail": "1240 / 1240"
+  },
+  {
+   "name": "C4 for each triangle T of the band, −T is also in the band and κ(−T) = κ(T) (all 1,240, exact)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C4 the 10 elements of the stabilizer preserve v, w₀ and the cone Q",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C4 the maps 2r, 2r+1 of d87_dod_far are the table triangles ±N_r with the same w (124 of them)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C4 premise of (I): |w₀|² = ρ² (squared radius of the inscribed sphere of the piece)",
+   "ok": true,
+   "detail": "(5/8+11/40√5)"
+  },
+  {
+   "name": "X with the best choice E = G − n·w (exact equality)",
+   "ok": true,
+   "detail": "32 / 32"
+  },
+  {
+   "name": "X the value of the integer coefficients (e_coefs) = a positive integer multiple of |q|²·E",
+   "ok": true,
+   "detail": "32 / 32"
+  },
+  {
+   "name": "X other choices are ≤ true value",
+   "ok": true,
+   "detail": "192 pairs, violations 0"
+  },
+  {
+   "name": "X sensitivity: reversing the sign of the s₀ term gives E > true value at all points where a container face is in the basis",
+   "ok": true,
+   "detail": "31 / 31 (the other 1 points have a basis of cone faces only)"
+  },
+  {
+   "name": "X sensitivity: replacing the point by −w gives points where the equality breaks",
+   "ok": true,
+   "detail": "32 / 32"
+  },
+  {
+   "name": "P special points × R: the true value ≥ 0, a leaf of the record is found, and the claim of the leaf holds at that point",
+   "ok": true,
+   "detail": "228 / 228, leaves followed {'D': 365, 'L': 1, 'A': 227}, leaves reached {'L': 1, 'A': 227}"
+  },
+  {
+   "name": "P the equality point n = −v, R = R* of (II) has true value exactly 0 (goes into type L)",
+   "ok": true,
+   "detail": "pairs with true value 0: 1"
+  },
+  {
+   "name": "W P: copy (unbroken) -> passes",
+   "ok": true,
+   "detail": "exit 0, 104 s: re-check local P E:\\packing-lab\\release\\proof_v040\\work\\d87dod\\tests_scratch\\w_P_0: leaves 2515, failed 0, covering tree OK (10 faces), 102 s"
+  },
+  {
+   "name": "W P: change the number of the candidate -> rejected",
+   "ok": true,
+   "detail": "exit 1, 99 s: d16e_common.CheckFailed: some leaves failed"
+  },
+  {
+   "name": "W P: delete 1 leaf (a hole in the cover) -> rejected",
+   "ok": true,
+   "detail": "exit 1, 97 s: d16e_common.CheckFailed: hole in the cover (a box without a leaf)"
+  },
+  {
+   "name": "W P: raise s₀ in the header by 1/1000 -> rejected",
+   "ok": true,
+   "detail": "exit 1, 1 s: d16e_common.CheckFailed: the record is not a broken copy"
+  },
+  {
+   "name": "W II: copy (unbroken) -> passes",
+   "ok": true,
+   "detail": "exit 0, 26 s: re-check E:\\packing-lab\\release\\proof_v040\\work\\d87dod\\tests_scratch\\w_II_0: maps 1, n triangles 70, R leaves accepted 11662, discarded 5200, L 41, failed 0, co"
+  },
+  {
+   "name": "W II: change the index of the basis of type A -> rejected",
+   "ok": true,
+   "detail": "exit 1, 26 s: d16e_common.CheckFailed: failed 1"
+  },
+  {
+   "name": "W II: change the top vertex i of type A -> rejected",
+   "ok": true,
+   "detail": "exit 1, 26 s: d16e_common.CheckFailed: failed 1"
+  },
+  {
+   "name": "W II: change the vertex j of a face of type A -> rejected",
+   "ok": true,
+   "detail": "exit 1, 29 s: d16e_common.CheckFailed: failed 1"
+  },
+  {
+   "name": "W II: change type A to type D (k = 0) -> rejected",
+   "ok": true,
+   "detail": "exit 1, 29 s: d16e_common.CheckFailed: failed 1"
+  },
+  {
+   "name": "W II: delete 1 leaf of R (a hole in the cover) -> rejected",
+   "ok": true,
+   "detail": "exit 1, 25 s: d16e_common.CheckFailed: hole in the cover (a box without a leaf)"
+  },
+  {
+   "name": "W II: delete 1 triangle of n (a hole in the cover) -> rejected",
+   "ok": true,
+   "detail": "exit 1, 26 s: d16e_common.CheckFailed: hole in the cover of n"
+  },
+  {
+   "name": "W II: duplicate a triangle of n -> rejected",
+   "ok": true,
+   "detail": "exit 1, 12 s: d16e_common.CheckFailed: the same triangle appears twice"
+  },
+  {
+   "name": "W II: test marker in the header -> rejected",
+   "ok": true,
+   "detail": "exit 1, 2 s: d16e_common.CheckFailed: the record contains no test-only breakage"
+  },
+  {
+   "name": "W II: change the number of the rotation of the piece of type L -> rejected",
+   "ok": true,
+   "detail": "exit 1, 28 s: d16e_common.CheckFailed: failed 1"
+  },
+  {
+   "name": "W II: set the local width SN in the header to 1/2 -> rejected",
+   "ok": true,
+   "detail": "exit 1, 12 s: d16e_common.CheckFailed: premise SN of the record differs from the current one"
+  },
+  {
+   "name": "W T: copy (unbroken) -> passes",
+   "ok": true,
+   "detail": "exit 0, 41 s: re-check E:\\packing-lab\\release\\proof_v040\\work\\d87dod\\tests_scratch\\w_T_0: maps 124, n triangles 331, R leaves accepted 45552, discarded 26163, L 0, failed 0, "
+  },
+  {
+   "name": "W T: change the index of the basis of type A -> rejected",
+   "ok": true,
+   "detail": "exit 1, 42 s: d16e_common.CheckFailed: failed 1"
+  },
+  {
+   "name": "W T: change the top vertex i of type A -> rejected",
+   "ok": true,
+   "detail": "exit 1, 41 s: d16e_common.CheckFailed: failed 1"
+  },
+  {
+   "name": "W T: change the vertex j of a face of type A -> rejected",
+   "ok": true,
+   "detail": "exit 1, 43 s: d16e_common.CheckFailed: failed 1"
+  },
+  {
+   "name": "W T: change type A to type D (k = 0) -> rejected",
+   "ok": true,
+   "detail": "exit 1, 43 s: d16e_common.CheckFailed: failed 1"
+  },
+  {
+   "name": "W T: delete 1 leaf of R (a hole in the cover) -> rejected",
+   "ok": true,
+   "detail": "exit 1, 32 s: d16e_common.CheckFailed: hole in the cover (a box without a leaf)"
+  },
+  {
+   "name": "W T: delete 1 triangle of n (a hole in the cover) -> rejected",
+   "ok": true,
+   "detail": "exit 1, 40 s: d16e_common.CheckFailed: hole in the cover of n"
+  },
+  {
+   "name": "W T: duplicate a triangle of n -> rejected",
+   "ok": true,
+   "detail": "exit 1, 11 s: d16e_common.CheckFailed: the same triangle appears twice"
+  },
+  {
+   "name": "W T: test marker in the header -> rejected",
+   "ok": true,
+   "detail": "exit 1, 2 s: d16e_common.CheckFailed: the record contains no test-only breakage"
+  },
+  {
+   "name": "W T: SHA-256 of the table in the header -> rejected",
+   "ok": true,
+   "detail": "exit 1, 10 s: d16e_common.CheckFailed: premise table_sha256 of the record differs from the current one"
+  },
+  {
+   "name": "W T: shift the point w of map 108 in the header -> rejected",
+   "ok": true,
+   "detail": "exit 1, 10 s: d16e_common.CheckFailed: premise charts of the record differs from the current one"
+  },
+  {
+   "name": "B1 move one point of the table out of the window: at that point G − n·w ≥ 0, G − n·w′ < 0 (exact)",
+   "ok": true,
+   "detail": "0.01616, -0.02299 (|n| = 0.7832)"
+  },
+  {
+   "name": "B1 re-checking the leaves of map 108 of the record with w′ gives failures",
+   "ok": true,
+   "detail": "failures 1627 / 3906"
+  },
+  {
+   "name": "B1 rebuilding the triangle of n containing that point with w′ is not accepted (3 levels)",
+   "ok": true,
+   "detail": "[[False, 3001], [False, 3001], [False, 3001]]"
+  },
+  {
+   "name": "B2 the table with w₀ only: at that point G − n·w_N ≥ 0, G − n·w₀ < 0 (exact)",
+   "ok": true,
+   "detail": "map 112: 0.02666, -0.00815 (|n| = 0.7584)"
+  },
+  {
+   "name": "B2 re-checking the leaves of all maps of the record with w₀ gives failures",
+   "ok": true,
+   "detail": "failures 9185 / 71715, maps that fail 70 / 124"
+  },
+  {
+   "name": "B2 rebuilding the triangle of n containing that point with w₀ is not accepted (3 levels)",
+   "ok": true,
+   "detail": "[[False, 3001], [False, 3001], [False, 3001]]"
+  },
+  {
+   "name": "B3 s₀ + 1/1000: at the equality point n = −v, R*, G − n·w₀ goes from 0 to negative (exact)",
+   "ok": true,
+   "detail": "(0+0√5) → (-1/1600-1/8000√5)"
+  },
+  {
+   "name": "B3 the build of the local L_P (0th-order identity) rejects s₀ + 1/1000",
+   "ok": true,
+   "detail": "the identity of order 0 does not hold (candidate ((0, 1, 3), 0, (5, 5, 7)): [-1/"
+  },
+  {
+   "name": "B4 drop cone face 0: at that point G − n·w ≥ 0, G′ − n·w < 0 with the face dropped (exact)",
+   "ok": true,
+   "detail": "map 115 (1, 0): 0.08793, -0.70487"
+  },
+  {
+   "name": "B4 re-checking the record without face 0 gives failures (leaves that use that face in the basis)",
+   "ok": true,
+   "detail": "T 27979 / 71715 (maps 68), (II) 0 / 16903"
+  },
+  {
+   "name": "B4 rebuilding the triangle of n containing that point without face 0 is not accepted (3 levels)",
+   "ok": true,
+   "detail": "[[False, 3001], [False, 3001], [False, 3001]]"
+  },
+  {
+   "name": "B4b re-checking the record of (II) without cone face k gives failures for the faces used by (II) (2 and 3) (per face)",
+   "ok": true,
+   "detail": "failures per face {0: 0, 1: 0, 2: 9924, 3: 3830, 4: 0} / 16903"
+  },
+  {
+   "name": "B5 mix up the cone with that of v′: in the direction n = −v′, G − n·w ≥ 0, mixed-up G′ − n·w < 0 (exact)",
+   "ok": true,
+   "detail": "map 61 ((0+0√5), (0+0√5)), 5 maps contain −v′: 0.10138, -0.48403"
+  },
+  {
+   "name": "B5 re-checking the record with the mixed-up cone gives failures",
+   "ok": true,
+   "detail": "T 45552 / 71715 (maps 124), (II) 9048 / 16903"
+  },
+  {
+   "name": "B5 rebuilding the triangle of n containing that point with the mixed-up cone is not accepted (3 levels)",
+   "ok": true,
+   "detail": "[[False, 3001], [False, 3001], [False, 3001]]"
+  }
+ ],
+ "C": {
+  "triangles": 1920,
+  "kinds": {
+   "Q*": 340,
+   "-Q*": 340,
+   "band": 1240
+  },
+  "edges": 2880,
+  "vertices": 962,
+  "reps": 62,
+  "orbit": 20,
+  "seconds": 38.4
+ },
+ "X": {
+  "points": 32,
+  "eq": 32,
+  "le_checks": 192,
+  "le_bad": 0,
+  "int_ok": 32,
+  "sens_s0": 31,
+  "sens_s0_n": 31,
+  "sens_w": 32,
+  "seconds": 62.2
+ },
+ "P": {
+  "points": 228,
+  "ok": 228,
+  "leaves_visited": {
+   "D": 365,
+   "L": 1,
+   "A": 227
+  },
+  "ends": {
+   "L": 1,
+   "A": 227
+  },
+  "zero": 1,
+  "seconds": 174.4
+ },
+ "W": {
+  "cases": [
+   {
+    "kind": "P",
+    "desc": "copy (unbroken)",
+    "rc": 0,
+    "ok": true
+   },
+   {
+    "kind": "P",
+    "desc": "change the number of the candidate",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "P",
+    "desc": "delete 1 leaf (a hole in the cover)",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "P",
+    "desc": "raise s₀ in the header by 1/1000",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "II",
+    "desc": "copy (unbroken)",
+    "rc": 0,
+    "ok": true
+   },
+   {
+    "kind": "II",
+    "desc": "change the index of the basis of type A",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "II",
+    "desc": "change the top vertex i of type A",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "II",
+    "desc": "change the vertex j of a face of type A",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "II",
+    "desc": "change type A to type D (k = 0)",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "II",
+    "desc": "delete 1 leaf of R (a hole in the cover)",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "II",
+    "desc": "delete 1 triangle of n (a hole in the cover)",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "II",
+    "desc": "duplicate a triangle of n",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "II",
+    "desc": "test marker in the header",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "II",
+    "desc": "change the number of the rotation of the piece of type L",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "II",
+    "desc": "set the local width SN in the header to 1/2",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "T",
+    "desc": "copy (unbroken)",
+    "rc": 0,
+    "ok": true
+   },
+   {
+    "kind": "T",
+    "desc": "change the index of the basis of type A",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "T",
+    "desc": "change the top vertex i of type A",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "T",
+    "desc": "change the vertex j of a face of type A",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "T",
+    "desc": "change type A to type D (k = 0)",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "T",
+    "desc": "delete 1 leaf of R (a hole in the cover)",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "T",
+    "desc": "delete 1 triangle of n (a hole in the cover)",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "T",
+    "desc": "duplicate a triangle of n",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "T",
+    "desc": "test marker in the header",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "T",
+    "desc": "SHA-256 of the table in the header",
+    "rc": 1,
+    "ok": true
+   },
+   {
+    "kind": "T",
+    "desc": "shift the point w of map 108 in the header",
+    "rc": 1,
+    "ok": true
+   }
+  ],
+  "seconds": 898.5
+ },
+ "B": {
+  "B1": {
+   "cid": 108,
+   "shift": "w + (1/20)û（û は重心の向きの 3 桁の有理数）",
+   "G_minus_nw": 0.01616141295657368,
+   "G_minus_nw2": -0.022992138721871315,
+   "q": [
+    "1353/2048",
+    "-331/2048",
+    "2577/4096",
+    "1541/4096"
+   ],
+   "replay_bad": 1627,
+   "replay_total": 3906,
+   "builds": [
+    [
+     false,
+     3001
+    ],
+    [
+     false,
+     3001
+    ],
+    [
+     false,
+     3001
+    ]
+   ]
+  },
+  "B2": {
+   "cid": 112,
+   "G_minus_nwN": 0.026663122683191365,
+   "G_minus_nw0": -0.008150752784863373,
+   "q": [
+    "2819/4096",
+    "647/2048",
+    "-643/1024",
+    "367/2048"
+   ],
+   "replay_bad": 9185,
+   "replay_total": 71715,
+   "bad_charts": 70,
+   "builds": [
+    [
+     false,
+     3001
+    ],
+    [
+     false,
+     3001
+    ],
+    [
+     false,
+     3001
+    ]
+   ]
+  },
+  "B3": {
+   "G0": "(0+0√5)",
+   "G1": "(-1/1600-1/8000√5)",
+   "local_rejects": true,
+   "local_msg": "the identity of order 0 does not hold (candidate ((0, 1, 3), 0, (5, 5, 7)): [-1/",
+   "far_II_replay_bad": 188,
+   "far_II_total": 16903
+  },
+  "B4": {
+   "face": 0,
+   "cid": 115,
+   "a": "1",
+   "b": "0",
+   "G_minus_nw": 0.08793474240892901,
+   "Gdrop_minus_nw": -0.704872912054971,
+   "q": [
+    "105/512",
+    "415/512",
+    "463/4096",
+    "2199/4096"
+   ],
+   "replay_bad_T": 27979,
+   "replay_total_T": 71715,
+   "bad_charts_T": 68,
+   "replay_bad_II": 0,
+   "replay_total_II": 16903,
+   "builds": [
+    [
+     false,
+     3001
+    ],
+    [
+     false,
+     3001
+    ],
+    [
+     false,
+     3001
+    ]
+   ],
+   "note": "局所 L_P は錐の面を使わない（等号の点で t = 2w₀ は錐の内部、弱双対は錐の面を落としても下界）ので影響なし"
+  },
+  "B4b": {
+   "replay_bad_II_by_face": {
+    "0": 0,
+    "1": 0,
+    "2": 9924,
+    "3": 3830,
+    "4": 0
+   },
+   "replay_total_II": 16903,
+   "note": "(II) の遠方も錐の面（2・3）を基底に使う。D48 20 節の「(II) は錐の面を使わない」は B4 が面 0 を選んだための誤り"
+  },
+  "B5": {
+   "vprime": 1,
+   "cid": 61,
+   "a": "(0+0√5)",
+   "b": "(0+0√5)",
+   "charts_containing": 5,
+   "G_minus_nw": 0.10137788418167797,
+   "Gmix_minus_nw": -0.4840319186933264,
+   "q": [
+    "231/256",
+    "-77/256",
+    "-291/4096",
+    "-77/256"
+   ],
+   "replay_bad_T": 45552,
+   "replay_total_T": 71715,
+   "bad_charts_T": 124,
+   "replay_bad_II": 9048,
+   "replay_total_II": 16903,
+   "builds": [
+    [
+     false,
+     3001
+    ],
+    [
+     false,
+     3001
+    ],
+    [
+     false,
+     3001
+    ]
+   ]
+  },
+  "seconds": 349.7
+ },
+ "only": [
+  "B",
+  "C",
+  "P",
+  "W",
+  "X"
+ ],
+ "fail": [],
+ "when": "2026-11-15 14:14",
+ "total_sec": 1523.6,
+ "code_sha256": {
+  "d87_common.py": "82655b779f75cf1bb8b983fb5687d009f590b74a7dacc5cd03792c366975660f",
+  "d87_dod_step0.py": "e785866d6ec9b9dac37c4abf1a664472c25268b697170eb87c731396ec7749a8",
+  "d87_dod_local.py": "743c1ddf8ea41f97a2ad05f28d05596549817dd9d654f28ac5f640e0cd17b0d6",
+  "d87_dod_far.py": "5a1eb3e6f27b6792461f8b1c6826e63913e99ef172ad4c523e455e3be26d29a2",
+  "d87_dod_tests.py": "0da35216f077fc98103bd9857f5f6f1c7a89803628975433e6f8b71cafd323a4",
+  "d31_common.py": "c7257465cd4a074f6b98b60996dd115c7b0fd65035e0cdfcb86f9f2a25c19441",
+  "d16e_common.py": "407bc3bb6b334cddb92c5ab557ebace1029c56e10a77cd3d4699d24d1667ee75",
+  "d37_tet_n05_common.py": "bdb4bcc64f99f6c233fe96852e9a2a5df6dfd5a0dc0de1f614dbf6c8de9dbe00"
+ },
+ "note": "受理の判定は整数・Q(√5) の有理数だけ。浮動は負の点の探索と LP の基底の当たりだけ。点検なし、形式証明ではない。"
+}

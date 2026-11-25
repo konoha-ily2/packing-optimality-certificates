@@ -249,6 +249,7 @@ def replay(path, Sbar=None, T1=T1_DEFAULT):
     root = ([0, 0, int(troot[0] * DEN)], [DEN // 2, DEN // 2, int(troot[1] * DEN)])
     cur = [root]; seen = 0
     while cur:
+        need(sum(1 for lo, hi in cur if not outside_D(lo, hi, tmax)) <= len(leaves) - seen, "hole in the cover (a box without leaves)")   # every box not outside D contains at least one leaf not yet seen (L4'r, 11-15)
         nxt = []
         for lo, hi in cur:
             key = (tuple(lo), tuple(hi))

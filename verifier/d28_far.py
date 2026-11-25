@@ -271,6 +271,7 @@ def replay(name):
         seen = 0
         cur = [(ch, [-DEN] * 3, [DEN] * 3) for ch in range(4)]
         while cur:
+            need(len(cur) <= len(rl) - seen, "hole in the cover (a box without leaves)")   # in a correct tree every box of a level contains at least one leaf not yet seen (L4'r, 11-15)
             nxt = []
             for ch, a, b in cur:
                 if (ch, tuple(a), tuple(b)) in rl:
@@ -285,6 +286,7 @@ def replay(name):
     cur = [([0, -NDEN], [NDEN, NDEN])]
     first = True
     while cur:
+        need(len(cur) <= len(nleaves) - seen, "hole in the cover (a box without leaves)")   # in a correct tree every box of a level contains at least one leaf not yet seen (L4'r, 11-15)
         nxt = []
         for lo, hi in cur:
             if (tuple(lo), tuple(hi)) in nleaves:

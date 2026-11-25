@@ -1,0 +1,31 @@
+{
+ "作成": "2026-11-15 14:20",
+ "注": "改行は LF に直して計算（作業の写しの CRLF によらない）。versions は記録だけ（照合しない）",
+ "versions": {
+  "python": "3.10.5",
+  "sympy": "1.14.0",
+  "flint": "0.9.0",
+  "numpy": "2.2.6"
+ },
+ "sha256": {
+  "d87_dod_local_P.json": "8fd15da8dfcff3b3c4fb4942d9a81973535c3d56d4b26b0ba946e4b6e0fa47af",
+  "d87_dod_local_P.leaves.jsonl.gz": "b494d7dcaed95ea8b1c8613286d50d7874cdc19927e9e158d76ff8b22f7f2858",
+  "d87_dod_far_II.json": "f6a1a21bb830d008f8d6c59ecfd95e4841bdfb5a4ff12ea55e03deebe53784d2",
+  "d87_dod_far_II.boxes.jsonl.gz": "4ea9024b4f00444863f1a8684b32b4c6e0a8e1fc89cb64c50f1115b7b27db06c",
+  "d87_dod_far_T.json": "9e534060d8641628e85efc310ee7d337e7c79af12023dc673c2448e8037e48e6",
+  "d87_dod_far_T.boxes.jsonl.gz": "dd02bae5f3e0b11d5467fa2236fc194a57692b176d8b87895fd5d4f97450ecec",
+  "d87_dod_step0.json": "e27a2fec49a48302ab99e0ec1ec3c39bda12d4d9df7201a133f8356413c14b5c",
+  "d87_dod_table.json": "ecb5295ab22b6d0f7bc414b5b8432d8842d7cb82324ceb0a32e160f4330fcd21",
+  "d87_dod_tests.json": "623620adae9e2612f5c54ac87908777b9de6630a657913bf376d29077506805a",
+  "../records/dodinico/dodinico_n13.json": "53044b17e1fc6b4fe0a112ede1fb6de2733e5633b557337a5817b0b53bf4b76b",
+  "d87_common.py": "82655b779f75cf1bb8b983fb5687d009f590b74a7dacc5cd03792c366975660f",
+  "d87_dod_step0.py": "e785866d6ec9b9dac37c4abf1a664472c25268b697170eb87c731396ec7749a8",
+  "d87_dod_local.py": "743c1ddf8ea41f97a2ad05f28d05596549817dd9d654f28ac5f640e0cd17b0d6",
+  "d87_dod_far.py": "5a1eb3e6f27b6792461f8b1c6826e63913e99ef172ad4c523e455e3be26d29a2",
+  "d87_dod_tests.py": "0da35216f077fc98103bd9857f5f6f1c7a89803628975433e6f8b71cafd323a4",
+  "d87_dod_replay_all.py": "c1085c82b8686ba4b60ba83ddeeb12d0b5d3271e1ee9f7cf5fddf39b73eca3eb",
+  "d31_common.py": "c7257465cd4a074f6b98b60996dd115c7b0fd65035e0cdfcb86f9f2a25c19441",
+  "d16e_common.py": "407bc3bb6b334cddb92c5ab557ebace1029c56e10a77cd3d4699d24d1667ee75",
+  "d37_tet_n05_common.py": "bdb4bcc64f99f6c233fe96852e9a2a5df6dfd5a0dc0de1f614dbf6c8de9dbe00"
+ }
+}

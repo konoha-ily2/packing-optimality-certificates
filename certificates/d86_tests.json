@@ -1,0 +1,2432 @@
+{
+ "X_A": {
+  "pts": 269,
+  "over": 0,
+  "eq": 269,
+  "sens": {
+   "kappa_sign": 263,
+   "k34": 183,
+   "face12": 233
+  }
+ },
+ "checks": [
+  {
+   "name": "X far A: candidate ≤ ψ_A − κ_A (rational, LP in t)",
+   "ok": true,
+   "detail": "269 points, exceeded at 0"
+  },
+  {
+   "name": "X far A: equality at the true face and vertex",
+   "ok": true,
+   "detail": "equality 269/269"
+  },
+  {
+   "name": "X far A sensitivity: mixing up the sign of κ gives points that do not agree",
+   "ok": true,
+   "detail": "263/269 points"
+  },
+  {
+   "name": "X far A sensitivity: mixing up k = 3/4 gives points that do not agree",
+   "ok": true,
+   "detail": "183/269 points"
+  },
+  {
+   "name": "X far A sensitivity: mixing up faces b_1 ↔ b_2 gives points that do not agree",
+   "ok": true,
+   "detail": "233/269 points"
+  },
+  {
+   "name": "X far M: candidate ≤ ψ_M − κ_M (rational, LP in t)",
+   "ok": true,
+   "detail": "300 points, exceeded at 0"
+  },
+  {
+   "name": "X far M: choosing the true face, vertex and μ gives equality (strong duality)",
+   "ok": true,
+   "detail": "equality 300/300"
+  },
+  {
+   "name": "X far M sensitivity: mixing up the sign of κ gives points that do not agree",
+   "ok": true,
+   "detail": "291/300 points"
+  },
+  {
+   "name": "X far M sensitivity: mixing up k = 3/4 gives points that do not agree",
+   "ok": true,
+   "detail": "291/300 points"
+  },
+  {
+   "name": "X far M sensitivity: mixing up faces b_1 ↔ b_2 gives points that do not agree",
+   "ok": true,
+   "detail": "260/300 points"
+  },
+  {
+   "name": "Xk k = 1/4: F̃ (H′_0 = 1 + k) stays a lower bound but points without equality appear (the constant H′_0 of D47 2.4 breaks)",
+   "ok": true,
+   "detail": "1572 points, F̃ < LP at 15, exceeded at 0"
+  },
+  {
+   "name": "Xk the candidate formulas for k = 1 exceed the true value for k = 1/4 at some points (the record cannot be reused for another k; the k in the header is tested in W)",
+   "ok": true,
+   "detail": "106/150 points"
+  },
+  {
+   "name": "Xk control k = 1: F̃ = LP in t (equality)",
+   "ok": true,
+   "detail": "79 points"
+  },
+  {
+   "name": "Xu re-judging the type L leaves of far A with u_J = 1/32 gives failures",
+   "ok": true,
+   "detail": "of the 5549 L leaves, 5549 fail"
+  },
+  {
+   "name": "Xu on the arc n = −b_1, u = 1/16 (> 1/32): G_A = 0 and placeable (Š ≤ 0)",
+   "ok": true,
+   "detail": "G = 0, Š = -19/518"
+  },
+  {
+   "name": "P far A: special points × R give true value ≥ 0 and a leaf of the record is found (D followed, L down to the local leaf)",
+   "ok": true,
+   "detail": "132 pairs, failures 0, followed down to local 56"
+  },
+  {
+   "name": "P far M: special points × R give true value ≥ 0 and a leaf of the record is found (D followed, L down to the local leaf)",
+   "ok": true,
+   "detail": "81 pairs, failures 0, followed down to local 32"
+  },
+  {
+   "name": "L1 hand-over: points that fall in type L lie in a local leaf, and the local and far true values agree",
+   "ok": true,
+   "detail": "A 56 points, M 32 points"
+  },
+  {
+   "name": "Xb running the local PM with β = 1 (θ = 0) does not pass",
+   "ok": true,
+   "detail": "== local PM E:\\packing-lab\\release\\proof_v040\\work\\d86\\tests_scratch\\d86_local_PM_beta1_1: 通った False, evaluated 63595, at limit 0, 64.9 s; minimum of ψ_M − κ_M(θ) by floating-point descent -6.31e-12"
+  },
+  {
+   "name": "Xb running the local PM with β = 1/2 (θ = 1) does not pass",
+   "ok": true,
+   "detail": "== local PM E:\\packing-lab\\release\\proof_v040\\work\\d86\\tests_scratch\\d86_local_PM_beta1_2: 通った False, evaluated 61534, at limit 0, 65.1 s; minimum of ψ_M − κ_M(θ) by floating-point descent -0.0416"
+  },
+  {
+   "name": "W local J: 写し（壊さない） → passes",
+   "ok": true,
+   "detail": "[0] :\\packing-lab\\release\\proof_v040\\work\\d86\\tests_scratch\\w_d86_local_J_wide_0: leaves 1091 (types {'F': 661, 'O': 23, 'S': 407}), failed 0, covering tree OK, 3 s (4 s)"
+  },
+  {
+   "name": "W local J: candidate of type F changed to one that does not exist → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: there are failed leaves (4 s)"
+  },
+  {
+   "name": "W local J: type F written as type S (O for PM) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: there are failed leaves (4 s)"
+  },
+  {
+   "name": "W local J: delete 1 leaf → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the covering (a box without leaves) (4 s)"
+  },
+  {
+   "name": "W local J: test-only breakage option put in the header → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the record must not contain test-only breakages (1 s)"
+  },
+  {
+   "name": "W local J: k in the header changed to 3/4 → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the premises of the record differ from the current d86_common (1 s)"
+  },
+  {
+   "name": "W local J: r_n in the header changed to 1/2 (widening the band outside J) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the premises of the record differ from the current d86_common (1 s)"
+  },
+  {
+   "name": "W local J: type F written as outside the chamber (O) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: there are failed leaves (5 s)"
+  },
+  {
+   "name": "W local PM: 写し（壊さない） → passes",
+   "ok": true,
+   "detail": "[0] re-check local PM E:\\packing-lab\\release\\proof_v040\\work\\d86\\tests_scratch\\w_d86_local_PM_wide_0: leaves 850 (types {'F': 850}), failed 0, covering tree OK, 3 s (5 s)"
+  },
+  {
+   "name": "W local PM: candidate of type F changed to one that does not exist → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: there are failed leaves (4 s)"
+  },
+  {
+   "name": "W local PM: type F written as type S (O for PM) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: there are failed leaves (4 s)"
+  },
+  {
+   "name": "W local PM: delete 1 leaf → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the covering (a box without leaves) (4 s)"
+  },
+  {
+   "name": "W local PM: test-only breakage option put in the header → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the record must not contain test-only breakages (1 s)"
+  },
+  {
+   "name": "W local PM: k in the header changed to 3/4 → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the premises of the record differ from the current d86_common (1 s)"
+  },
+  {
+   "name": "W far M: 写し（壊さない） → passes",
+   "ok": true,
+   "detail": "[0] local: re-check local PM d86_local_PM_wide: leaves 850 (types {'F': 850}), failed 0, covering tree OK, 3 s (42 s)"
+  },
+  {
+   "name": "W far M: a + face of the sign pattern changed to − (the M multiplier removed) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (39 s)"
+  },
+  {
+   "name": "W far M: candidate μ changed to 0 → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (36 s)"
+  },
+  {
+   "name": "W far M: rotation number of type L changed to one not in PM → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (35 s)"
+  },
+  {
+   "name": "W far M: delete 1 R leaf → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the cover (a box without a leaf) (2 s)"
+  },
+  {
+   "name": "W far M: delete 1 n box → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the cover (a box without a leaf) (35 s)"
+  },
+  {
+   "name": "W far M: β in the header changed to 1/2 → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: premises of the record (2 s)"
+  },
+  {
+   "name": "W far M: local in the header changed to the narrow PM (R_PM = 1/16) → rejected",
+   "ok": true,
+   "detail": "[1] FileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\packing-lab\\\\release\\\\proof_v040\\\\work\\\\d86\\\\d86_local_PM.leaves.jsonl.gz' (2 s)"
+  },
+  {
+   "name": "W far A: 写し（壊さない） → passes",
+   "ok": true,
+   "detail": "[0] local: re-check local J d86_local_J_wide: leaves 1091 (types {'F': 661, 'O': 23, 'S': 407}), failed 0, covering tree OK, 3 s (50 s)"
+  },
+  {
+   "name": "W far A: candidate face j changed 3 → 0 (side P) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (47 s)"
+  },
+  {
+   "name": "W far A: candidate μ changed to 1/1024 (smaller than D_j) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (47 s)"
+  },
+  {
+   "name": "W far A: type M written as type F (μ > 0 kept) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (47 s)"
+  },
+  {
+   "name": "W far A: rotation number of type D changed to one under which tr does not increase → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (50 s)"
+  },
+  {
+   "name": "W far A: rotation number of type L changed to one not in J → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (45 s)"
+  },
+  {
+   "name": "W far A: vertices of type S changed to ones with Š ≤ 0 → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (45 s)"
+  },
+  {
+   "name": "W far A: delete 1 R leaf → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the covering (a box without leaves) (2 s)"
+  },
+  {
+   "name": "W far A: delete 1 n box → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the covering (a box without leaves) (52 s)"
+  },
+  {
+   "name": "W far A: an n box inside the chamber written as out → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: out box (2 s)"
+  },
+  {
+   "name": "W far A: k in the header changed to 3/4 → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: premises of the record (2 s)"
+  },
+  {
+   "name": "W far A: local in the header changed to the narrow J (r_J = r_n = 1/16) → rejected",
+   "ok": true,
+   "detail": "[1] FileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\packing-lab\\\\release\\\\proof_v040\\\\work\\\\d86\\\\d86_local_J.leaves.jsonl.gz' (2 s)"
+  }
+ ],
+ "X_M": {
+  "pts": 300,
+  "over": 0,
+  "eq": 300,
+  "sens": {
+   "kappa_sign": 291,
+   "k34": 291,
+   "face12": 260
+  }
+ },
+ "sec": {
+  "X": 42,
+  "Xk": 30,
+  "Xu": 2,
+  "P": 4,
+  "Xb": 226,
+  "W": 684
+ },
+ "Xk": {
+  "1/4": {
+   "pts": 1572,
+   "F_lt_LP": 15,
+   "F_gt_LP": 0
+  },
+  "1": {
+   "pts": 79,
+   "F_lt_LP": 0,
+   "F_gt_LP": 0
+  },
+  "k1_forms_vs_k1_4_truth": {
+   "pts": 150,
+   "over": 106
+  }
+ },
+ "Xu": {
+  "L_leaves": 5549,
+  "rejected_with_uJ_1_32": 5549,
+  "arc_u_1_16": {
+   "G": "0",
+   "Sch": "-19/518"
+  }
+ },
+ "P": {
+  "A": [
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "I",
+    "G": "0",
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "arc u = 1/16",
+    "G": "0",
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "arc u = 1/8",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "arc u = 3/16",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "arc u = -1/16",
+    "G": "0",
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "near I 0",
+    "G": null,
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "near I 1",
+    "G": null,
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "near I 2",
+    "G": null,
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "D→AS"
+    ]
+   },
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "general 1",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "root of the arc n = −b_1 (vertex h = k′ = 0 of Ch)",
+    "q": "I, rotation of the piece",
+    "G": "0",
+    "types": [
+     "D→L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "I",
+    "G": "0",
+    "types": [
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "arc u = 1/16",
+    "G": "15/259",
+    "types": [
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "arc u = 1/8",
+    "G": null,
+    "types": [
+     "AS",
+     "AS",
+     "AS",
+     "AS"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "arc u = 3/16",
+    "G": null,
+    "types": [
+     "AS",
+     "AS",
+     "AS",
+     "AS"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "arc u = -1/16",
+    "G": "15/259",
+    "types": [
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "near I 0",
+    "G": null,
+    "types": [
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "near I 1",
+    "G": null,
+    "types": [
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "near I 2",
+    "G": null,
+    "types": [
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "D→AS,AS,AS,AS",
+     "D→AS,AS,AS,AS",
+     "D→AS,AS,AS,AS",
+     "D→AS,AS,AS,AS"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "general 1",
+    "G": null,
+    "types": [
+     "AM",
+     "AM",
+     "AM",
+     "AM"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AS",
+     "AS",
+     "AS",
+     "AS"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1/2",
+    "q": "I, rotation of the piece",
+    "G": "0",
+    "types": [
+     "D→L→局所 F,L→局所 F,L→局所 F,L→局所 F",
+     "D→L→局所 F,L→局所 F,L→局所 F,L→局所 F",
+     "D→L→局所 F,L→局所 F,L→局所 F,L→局所 F",
+     "D→L→局所 F,L→局所 F,L→局所 F,L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "I",
+    "G": "0",
+    "types": [
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "arc u = 1/16",
+    "G": "30/259",
+    "types": [
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "arc u = 1/8",
+    "G": null,
+    "types": [
+     "AS",
+     "AS"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "arc u = 3/16",
+    "G": null,
+    "types": [
+     "AS",
+     "AS"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "arc u = -1/16",
+    "G": "30/259",
+    "types": [
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "near I 0",
+    "G": null,
+    "types": [
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "near I 1",
+    "G": null,
+    "types": [
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "near I 2",
+    "G": null,
+    "types": [
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AM",
+     "AM"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "general 1",
+    "G": null,
+    "types": [
+     "AM",
+     "AM"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AS",
+     "AS"
+    ]
+   },
+   {
+    "n": "edge h = 0 of Δ₀, k′ = 1",
+    "q": "I, rotation of the piece",
+    "G": "0",
+    "types": [
+     "D→L→局所 F",
+     "D→L→局所 F"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "I",
+    "G": "0",
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "arc u = 1/16",
+    "G": "180/259",
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "arc u = 1/8",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "arc u = 3/16",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "arc u = -1/16",
+    "G": "180/259",
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "near I 0",
+    "G": null,
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "near I 1",
+    "G": null,
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "near I 2",
+    "G": null,
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "general 1",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "vertex (h, k′) = (2, 0) of Ch (n = b_0)",
+    "q": "I, rotation of the piece",
+    "G": "0",
+    "types": [
+     "D→L→局所 F"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "I",
+    "G": "3/16",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "arc u = 1/16",
+    "G": "1017/4144",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "arc u = 1/8",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "arc u = 3/16",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "arc u = -1/16",
+    "G": "1017/4144",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "near I 0",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "near I 1",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "near I 2",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "D→AS"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "general 1",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "outer edge of J h = −r_n, k′ = 1/2",
+    "q": "I, rotation of the piece",
+    "G": "3/16",
+    "types": [
+     "D→AF"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "I",
+    "G": "51/256",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "arc u = 1/16",
+    "G": "17049/66304",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "arc u = 1/8",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "arc u = 3/16",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "arc u = -1/16",
+    "G": "17049/66304",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "near I 0",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "near I 1",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "near I 2",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "D→AS"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "general 1",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "just outside the outer edge of J h = −r_n − 1/64",
+    "q": "I, rotation of the piece",
+    "G": "51/256",
+    "types": [
+     "D→AF"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "I",
+    "G": "3/16",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "arc u = 1/16",
+    "G": "1317/4144",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "arc u = 1/8",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "arc u = 3/16",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "arc u = -1/16",
+    "G": "1381/4144",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "near I 0",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "near I 1",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "near I 2",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "general 1",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "upper corner of side − of J k′ = 1 + r_n/2",
+    "q": "I, rotation of the piece",
+    "G": "3/16",
+    "types": [
+     "D→AF"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "I",
+    "G": "3/2",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "arc u = 1/16",
+    "G": "1017/518",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "arc u = 1/8",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "arc u = 3/16",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "arc u = -1/16",
+    "G": "1121/518",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "near I 0",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "near I 1",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "near I 2",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "general 1",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AS"
+    ]
+   },
+   {
+    "n": "mirror edge x = y (n = (1, 1, −3))",
+    "q": "I, rotation of the piece",
+    "G": "3/2",
+    "types": [
+     "D→AF"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "I",
+    "G": "3/4",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "arc u = 1/16",
+    "G": "3/4",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "arc u = 1/8",
+    "G": null,
+    "types": [
+     "AS",
+     "AS"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "arc u = 3/16",
+    "G": null,
+    "types": [
+     "AS",
+     "AS"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "arc u = -1/16",
+    "G": "3/4",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "near I 0",
+    "G": null,
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "near I 1",
+    "G": null,
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "near I 2",
+    "G": null,
+    "types": [
+     "AM",
+     "AM"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "D→AS,AS",
+     "D→AS,AS"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "general 1",
+    "G": null,
+    "types": [
+     "AM",
+     "AM"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AS",
+     "AS"
+    ]
+   },
+   {
+    "n": "mirror edge y = z (n = (2, −1, −1))",
+    "q": "I, rotation of the piece",
+    "G": "3/4",
+    "types": [
+     "D→AF,AF",
+     "D→AF,AF"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "I",
+    "G": "3/2",
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "arc u = 1/16",
+    "G": "761/518",
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "arc u = 1/8",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "arc u = 3/16",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "arc u = -1/16",
+    "G": "761/518",
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "near I 0",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "near I 1",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "near I 2",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "general 1",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 1, 1)",
+    "q": "I, rotation of the piece",
+    "G": "3/2",
+    "types": [
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "I",
+    "G": "3/4",
+    "types": [
+     "AM",
+     "AF"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "arc u = 1/16",
+    "G": "3/4",
+    "types": [
+     "AM",
+     "AF"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "arc u = 1/8",
+    "G": null,
+    "types": [
+     "AM",
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "arc u = 3/16",
+    "G": null,
+    "types": [
+     "AM",
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "arc u = -1/16",
+    "G": "3/4",
+    "types": [
+     "AM",
+     "AF"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "near I 0",
+    "G": null,
+    "types": [
+     "AM",
+     "AF"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "near I 1",
+    "G": null,
+    "types": [
+     "AM",
+     "AF"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "near I 2",
+    "G": null,
+    "types": [
+     "AM",
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AM",
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "general 1",
+    "G": null,
+    "types": [
+     "AM",
+     "AM"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AM",
+     "AS"
+    ]
+   },
+   {
+    "n": "chamber corner n = (1, 0, 0)",
+    "q": "I, rotation of the piece",
+    "G": "3/4",
+    "types": [
+     "D→AM",
+     "D→AF"
+    ]
+   }
+  ],
+  "M": [
+   {
+    "n": "axis n = (0, 0, 1)",
+    "q": "I",
+    "G": "0",
+    "types": [
+     "L→局所 F",
+     "AF"
+    ]
+   },
+   {
+    "n": "axis n = (0, 0, 1)",
+    "q": "near I 0",
+    "G": "3031/16749",
+    "types": [
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "axis n = (0, 0, 1)",
+    "q": "near I 1",
+    "G": "796/1683",
+    "types": [
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "axis n = (0, 0, 1)",
+    "q": "near I 2",
+    "G": "6278/16739",
+    "types": [
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "axis n = (0, 0, 1)",
+    "q": "near I 3",
+    "G": "3424/16635",
+    "types": [
+     "L→局所 F",
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "axis n = (0, 0, 1)",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "axis n = (0, 0, 1)",
+    "q": "general 1",
+    "G": "31/45",
+    "types": [
+     "D→L→局所 F,L→局所 F",
+     "D→L→局所 F,L→局所 F"
+    ]
+   },
+   {
+    "n": "axis n = (0, 0, 1)",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "axis n = (0, 0, 1)",
+    "q": "I, rotation of the piece",
+    "G": "0",
+    "types": [
+     "D→L→局所 F,AF",
+     "D→L→局所 F,AF"
+    ]
+   },
+   {
+    "n": "edge y = x of D_n (1/2)",
+    "q": "I",
+    "G": "1/8",
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = x of D_n (1/2)",
+    "q": "near I 0",
+    "G": "10043/44664",
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = x of D_n (1/2)",
+    "q": "near I 1",
+    "G": "2819/7480",
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = x of D_n (1/2)",
+    "q": "near I 2",
+    "G": "2297/7048",
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = x of D_n (1/2)",
+    "q": "near I 3",
+    "G": "11433/44360",
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = x of D_n (1/2)",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = x of D_n (1/2)",
+    "q": "general 1",
+    "G": "67/120",
+    "types": [
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF"
+    ]
+   },
+   {
+    "n": "edge y = x of D_n (1/2)",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = x of D_n (1/2)",
+    "q": "I, rotation of the piece",
+    "G": "1/8",
+    "types": [
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF"
+    ]
+   },
+   {
+    "n": "edge y = −x of D_n (1/2)",
+    "q": "I",
+    "G": "1/8",
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = −x of D_n (1/2)",
+    "q": "near I 0",
+    "G": "18461/44664",
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = −x of D_n (1/2)",
+    "q": "near I 1",
+    "G": "43753/67320",
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = −x of D_n (1/2)",
+    "q": "near I 2",
+    "G": "58597/133912",
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = −x of D_n (1/2)",
+    "q": "near I 3",
+    "G": "36917/133080",
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = −x of D_n (1/2)",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = −x of D_n (1/2)",
+    "q": "general 1",
+    "G": "109/120",
+    "types": [
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF"
+    ]
+   },
+   {
+    "n": "edge y = −x of D_n (1/2)",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge y = −x of D_n (1/2)",
+    "q": "I, rotation of the piece",
+    "G": "1/8",
+    "types": [
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF"
+    ]
+   },
+   {
+    "n": "edge x = 1 of D_n (y = 0)",
+    "q": "I",
+    "G": "1/4",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge x = 1 of D_n (y = 0)",
+    "q": "near I 0",
+    "G": "1789/5583",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge x = 1 of D_n (y = 0)",
+    "q": "near I 1",
+    "G": "314/935",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge x = 1 of D_n (y = 0)",
+    "q": "near I 2",
+    "G": "546/881",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge x = 1 of D_n (y = 0)",
+    "q": "near I 3",
+    "G": "1826/5545",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge x = 1 of D_n (y = 0)",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge x = 1 of D_n (y = 0)",
+    "q": "general 1",
+    "G": "7/9",
+    "types": [
+     "D→AF,AF",
+     "D→AF,AF"
+    ]
+   },
+   {
+    "n": "edge x = 1 of D_n (y = 0)",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge x = 1 of D_n (y = 0)",
+    "q": "I, rotation of the piece",
+    "G": "1/4",
+    "types": [
+     "D→AF,AF",
+     "D→AF,AF"
+    ]
+   },
+   {
+    "n": "corner (1, 1) of D_n",
+    "q": "I",
+    "G": "1/4",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, 1) of D_n",
+    "q": "near I 0",
+    "G": "18005/66996",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, 1) of D_n",
+    "q": "near I 1",
+    "G": "2191/3740",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, 1) of D_n",
+    "q": "near I 2",
+    "G": "1825/3524",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, 1) of D_n",
+    "q": "near I 3",
+    "G": "20603/66540",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, 1) of D_n",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, 1) of D_n",
+    "q": "general 1",
+    "G": "77/180",
+    "types": [
+     "D→AF"
+    ]
+   },
+   {
+    "n": "corner (1, 1) of D_n",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, 1) of D_n",
+    "q": "I, rotation of the piece",
+    "G": "1/4",
+    "types": [
+     "D→AF"
+    ]
+   },
+   {
+    "n": "corner (1, −1) of D_n",
+    "q": "I",
+    "G": "1/4",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, −1) of D_n",
+    "q": "near I 0",
+    "G": "15433/22332",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, −1) of D_n",
+    "q": "near I 1",
+    "G": "27833/33660",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, −1) of D_n",
+    "q": "near I 2",
+    "G": "2543/3524",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, −1) of D_n",
+    "q": "near I 3",
+    "G": "2587/4436",
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, −1) of D_n",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, −1) of D_n",
+    "q": "general 1",
+    "G": "55/36",
+    "types": [
+     "D→AF"
+    ]
+   },
+   {
+    "n": "corner (1, −1) of D_n",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "corner (1, −1) of D_n",
+    "q": "I, rotation of the piece",
+    "G": "1/4",
+    "types": [
+     "D→AF"
+    ]
+   },
+   {
+    "n": "edge of PM x = R_PM",
+    "q": "I",
+    "G": "1/16",
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge of PM x = R_PM",
+    "q": "near I 0",
+    "G": "227897/1071936",
+    "types": [
+     "L→局所 F",
+     "L→局所 F",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge of PM x = R_PM",
+    "q": "near I 1",
+    "G": "49189/179520",
+    "types": [
+     "L→局所 F",
+     "L→局所 F",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge of PM x = R_PM",
+    "q": "near I 2",
+    "G": "14041/56384",
+    "types": [
+     "L→局所 F",
+     "L→局所 F",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge of PM x = R_PM",
+    "q": "near I 3",
+    "G": "250691/1064640",
+    "types": [
+     "L→局所 F",
+     "L→局所 F",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge of PM x = R_PM",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge of PM x = R_PM",
+    "q": "general 1",
+    "G": "397/576",
+    "types": [
+     "D→L→局所 F,L→局所 F,AF,AF",
+     "D→L→局所 F,L→局所 F,AF,AF",
+     "D→L→局所 F,L→局所 F,AF,AF",
+     "D→L→局所 F,L→局所 F,AF,AF"
+    ]
+   },
+   {
+    "n": "edge of PM x = R_PM",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AF",
+     "AF",
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "edge of PM x = R_PM",
+    "q": "I, rotation of the piece",
+    "G": "1/16",
+    "types": [
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF",
+     "D→AF,AF,AF,AF"
+    ]
+   },
+   {
+    "n": "just outside the edge of PM x = R_PM + 1/64",
+    "q": "I",
+    "G": "17/256",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the edge of PM x = R_PM + 1/64",
+    "q": "near I 0",
+    "G": "26351/119104",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the edge of PM x = R_PM + 1/64",
+    "q": "near I 1",
+    "G": "204727/538560",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the edge of PM x = R_PM + 1/64",
+    "q": "near I 2",
+    "G": "15187/56384",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the edge of PM x = R_PM + 1/64",
+    "q": "near I 3",
+    "G": "85121/354880",
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the edge of PM x = R_PM + 1/64",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the edge of PM x = R_PM + 1/64",
+    "q": "general 1",
+    "G": "47/64",
+    "types": [
+     "D→AF,AF",
+     "D→AF,AF"
+    ]
+   },
+   {
+    "n": "just outside the edge of PM x = R_PM + 1/64",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AF",
+     "AF"
+    ]
+   },
+   {
+    "n": "just outside the edge of PM x = R_PM + 1/64",
+    "q": "I, rotation of the piece",
+    "G": "17/256",
+    "types": [
+     "D→AF,AF",
+     "D→AF,AF"
+    ]
+   },
+   {
+    "n": "very close to the axis (1/256, −1/512)",
+    "q": "I",
+    "G": "1/1024",
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "very close to the axis (1/256, −1/512)",
+    "q": "near I 0",
+    "G": "6229639/34301952",
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "very close to the axis (1/256, −1/512)",
+    "q": "near I 1",
+    "G": "49357/104448",
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "very close to the axis (1/256, −1/512)",
+    "q": "near I 2",
+    "G": "12818625/34281472",
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "very close to the axis (1/256, −1/512)",
+    "q": "near I 3",
+    "G": "7030093/34068480",
+    "types": [
+     "L→局所 F"
+    ]
+   },
+   {
+    "n": "very close to the axis (1/256, −1/512)",
+    "q": "general 0",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "very close to the axis (1/256, −1/512)",
+    "q": "general 1",
+    "G": "63583/92160",
+    "types": [
+     "D→L→局所 F"
+    ]
+   },
+   {
+    "n": "very close to the axis (1/256, −1/512)",
+    "q": "general 2",
+    "G": null,
+    "types": [
+     "AF"
+    ]
+   },
+   {
+    "n": "very close to the axis (1/256, −1/512)",
+    "q": "I, rotation of the piece",
+    "G": "1/1024",
+    "types": [
+     "D→L→局所 F"
+    ]
+   }
+  ],
+  "A_bad": 0,
+  "M_bad": 0,
+  "A_eq0": 10,
+  "M_eq0": 2
+ },
+ "Xb": {
+  "1": {
+   "theta": "0",
+   "returncode": 2,
+   "last": "== local PM E:\\packing-lab\\release\\proof_v040\\work\\d86\\tests_scratch\\d86_local_PM_beta1_1: 通った False, evaluated 63595, at limit 0, 64.9 s",
+   "sec": 111,
+   "float_min": -6.305400646056114e-12,
+   "at": [
+    0.5520564478598791,
+    2.1850047309540965,
+    -2.8040806489383693e-12,
+    -3.9284119172820145e-13,
+    -2.3040107311023347e-12
+   ]
+  },
+  "1/2": {
+   "theta": "1",
+   "returncode": 2,
+   "last": "== local PM E:\\packing-lab\\release\\proof_v040\\work\\d86\\tests_scratch\\d86_local_PM_beta1_2: 通った False, evaluated 61534, at limit 0, 65.1 s",
+   "sec": 115,
+   "float_min": -0.04162156319740773,
+   "at": [
+    0.8618862139831425,
+    -0.921278164845616,
+    -0.08137818394487409,
+    0.015043864624343584,
+    -0.033178534132014215
+   ]
+  }
+ },
+ "W": {
+  "local J: 写し（壊さない）": {
+   "returncode": 0,
+   "msg": "re-check local J E:\\packing-lab\\release\\proof_v040\\work\\d86\\tests_scratch\\w_d86_local_J_wide_0: leaves 1091 (types {'F': 661, 'O': 23, 'S': 407}), failed 0, covering tree OK, 3 s",
+   "sec": 4
+  },
+  "local J: candidate of type F changed to one that does not exist": {
+   "returncode": 1,
+   "msg": "RuntimeError: there are failed leaves",
+   "sec": 4
+  },
+  "local J: type F written as type S (O for PM)": {
+   "returncode": 1,
+   "msg": "RuntimeError: there are failed leaves",
+   "sec": 4
+  },
+  "local J: delete 1 leaf": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the covering (a box without leaves)",
+   "sec": 4
+  },
+  "local J: test-only breakage option put in the header": {
+   "returncode": 1,
+   "msg": "RuntimeError: the record must not contain test-only breakages",
+   "sec": 1
+  },
+  "local J: k in the header changed to 3/4": {
+   "returncode": 1,
+   "msg": "RuntimeError: the premises of the record differ from the current d86_common",
+   "sec": 1
+  },
+  "local J: r_n in the header changed to 1/2 (widening the band outside J)": {
+   "returncode": 1,
+   "msg": "RuntimeError: the premises of the record differ from the current d86_common",
+   "sec": 1
+  },
+  "local J: type F written as outside the chamber (O)": {
+   "returncode": 1,
+   "msg": "RuntimeError: there are failed leaves",
+   "sec": 5
+  },
+  "local PM: 写し（壊さない）": {
+   "returncode": 0,
+   "msg": "re-check local PM E:\\packing-lab\\release\\proof_v040\\work\\d86\\tests_scratch\\w_d86_local_PM_wide_0: leaves 850 (types {'F': 850}), failed 0, covering tree OK, 3 s",
+   "sec": 5
+  },
+  "local PM: candidate of type F changed to one that does not exist": {
+   "returncode": 1,
+   "msg": "RuntimeError: there are failed leaves",
+   "sec": 4
+  },
+  "local PM: type F written as type S (O for PM)": {
+   "returncode": 1,
+   "msg": "RuntimeError: there are failed leaves",
+   "sec": 4
+  },
+  "local PM: delete 1 leaf": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the covering (a box without leaves)",
+   "sec": 4
+  },
+  "local PM: test-only breakage option put in the header": {
+   "returncode": 1,
+   "msg": "RuntimeError: the record must not contain test-only breakages",
+   "sec": 1
+  },
+  "local PM: k in the header changed to 3/4": {
+   "returncode": 1,
+   "msg": "RuntimeError: the premises of the record differ from the current d86_common",
+   "sec": 1
+  },
+  "far M: 写し（壊さない）": {
+   "returncode": 0,
+   "msg": "local: re-check local PM d86_local_PM_wide: leaves 850 (types {'F': 850}), failed 0, covering tree OK, 3 s",
+   "sec": 42
+  },
+  "far M: a + face of the sign pattern changed to − (the M multiplier removed)": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 39
+  },
+  "far M: candidate μ changed to 0": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 36
+  },
+  "far M: rotation number of type L changed to one not in PM": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 35
+  },
+  "far M: delete 1 R leaf": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the cover (a box without a leaf)",
+   "sec": 2
+  },
+  "far M: delete 1 n box": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the cover (a box without a leaf)",
+   "sec": 35
+  },
+  "far M: β in the header changed to 1/2": {
+   "returncode": 1,
+   "msg": "RuntimeError: premises of the record",
+   "sec": 2
+  },
+  "far M: local in the header changed to the narrow PM (R_PM = 1/16)": {
+   "returncode": 1,
+   "msg": "FileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\packing-lab\\\\release\\\\proof_v040\\\\work\\\\d86\\\\d86_local_PM.leaves.jsonl.gz'",
+   "sec": 2
+  },
+  "far A: 写し（壊さない）": {
+   "returncode": 0,
+   "msg": "local: re-check local J d86_local_J_wide: leaves 1091 (types {'F': 661, 'O': 23, 'S': 407}), failed 0, covering tree OK, 3 s",
+   "sec": 50
+  },
+  "far A: candidate face j changed 3 → 0 (side P)": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 47
+  },
+  "far A: candidate μ changed to 1/1024 (smaller than D_j)": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 47
+  },
+  "far A: type M written as type F (μ > 0 kept)": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 47
+  },
+  "far A: rotation number of type D changed to one under which tr does not increase": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 50
+  },
+  "far A: rotation number of type L changed to one not in J": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 45
+  },
+  "far A: vertices of type S changed to ones with Š ≤ 0": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 45
+  },
+  "far A: delete 1 R leaf": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the covering (a box without leaves)",
+   "sec": 2
+  },
+  "far A: delete 1 n box": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the covering (a box without leaves)",
+   "sec": 52
+  },
+  "far A: an n box inside the chamber written as out": {
+   "returncode": 1,
+   "msg": "RuntimeError: out box",
+   "sec": 2
+  },
+  "far A: k in the header changed to 3/4": {
+   "returncode": 1,
+   "msg": "RuntimeError: premises of the record",
+   "sec": 2
+  },
+  "far A: local in the header changed to the narrow J (r_J = r_n = 1/16)": {
+   "returncode": 1,
+   "msg": "FileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\packing-lab\\\\release\\\\proof_v040\\\\work\\\\d86\\\\d86_local_J.leaves.jsonl.gz'",
+   "sec": 2
+  }
+ },
+ "fail": [],
+ "only": [
+  "P",
+  "W",
+  "X",
+  "Xb",
+  "Xk",
+  "Xu"
+ ],
+ "total_sec": 989
+}

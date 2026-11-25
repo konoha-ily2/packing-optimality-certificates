@@ -1,0 +1,137 @@
+{
+ "G_formula_vs_LP": {
+  "tests": 775,
+  "mismatch": 0
+ },
+ "equality_values": {
+  "I": "0",
+  "II": "0",
+  "III": "0",
+  "IV": "0"
+ },
+ "equality_all_zero": true,
+ "equality_t": {
+  "III": "t = (0, 0, 4/3 − e_z) = (0, 0, 2/3)",
+  "IV": "t = (4/3 − e_x, 4/3 − e_y, 0) = (2/3, 2/3, 0)",
+  "II": "t = 4/3 − e_i = ['2/3', '2/3', '2/3']"
+ },
+ "w_A_derivation_III": {
+  "alpha": [
+   "2/9",
+   "7/18",
+   "7/18"
+  ],
+  "beta": [
+   "1/2",
+   "1/2"
+  ],
+  "gamma": [
+   "1",
+   "1"
+  ],
+  "unique": true,
+  "all_nonneg": true,
+  "w": [
+   "5/18",
+   "5/18",
+   "2/9"
+  ],
+  "w_equals_W_A": true
+ },
+ "force_IV": {
+  "general_solution": {
+   "a1": "2*by3/3 + 1/9",
+   "a2": "4/9 - by3/3",
+   "a3": "4/9 - by3/3",
+   "bx1": "1 - by3",
+   "bx2": "by3",
+   "by1": "1 - by3",
+   "gz": "1"
+  },
+  "with_W_A": {
+   "a1": "4/9",
+   "a2": "5/18",
+   "a3": "5/18",
+   "bx1": "1/2",
+   "bx2": "1/2",
+   "by1": "1/2",
+   "by3": "1/2",
+   "gz": "1"
+  },
+  "free_after_W_A": [],
+  "all_nonneg": true
+ },
+ "claim_I": "n ≥ 0：G(n,R) ≥ max_k|n·r_k| = ‖Rᵀn‖∞ ≥ ‖n‖₂/√3 ≥ (n₁+n₂+n₃)/3 = n·w_Q（(n_i)₋ = 0 なので壁の項は無い。2 つ目は ∞ ノルムと 2 ノルム、3 つ目はコーシー＝シュワルツ）",
+ "claim_I_random_rational_violations": 0,
+ "upper": {
+  "ok": true,
+  "contain": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "congruent": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "pairs_separated": 36,
+  "pairs_failed": [],
+  "s_hat": "8/3",
+  "s_original": "ŝ₀/√2 = 8/(3√2) = 4√2/3、(4√2/3)² = 32/9 → 9x² − 32"
+ },
+ "upper_broken": {
+  "container_minus_1/100": {
+   "ok": false,
+   "contain_fail": 8
+  },
+  "corner_centroid_3/5": {
+   "ok": false,
+   "pairs_failed": [
+    [
+     "origin",
+     "corner+1+1+1"
+    ],
+    [
+     "corner+1+1+1",
+     "corner+1+1-1"
+    ],
+    [
+     "corner+1+1+1",
+     "corner+1-1+1"
+    ],
+    [
+     "corner+1+1+1",
+     "corner+1-1-1"
+    ],
+    [
+     "corner+1+1+1",
+     "corner-1+1+1"
+    ],
+    [
+     "corner+1+1+1",
+     "corner-1+1-1"
+    ],
+    [
+     "corner+1+1+1",
+     "corner-1-1+1"
+    ]
+   ]
+  }
+ },
+ "optimality_md": "alejandrozu/platonic-packing の docs/OPTIMALITY.md と optimality.json（11/14 に取得）に octincub_n09 は無い（octincub は n02 と、台地 n = 7〜8 の 19√2/15 の記述だけ）",
+ "seconds": 3.0,
+ "a_ok": true
+}

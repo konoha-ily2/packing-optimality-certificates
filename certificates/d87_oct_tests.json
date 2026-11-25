@@ -1,0 +1,2900 @@
+{
+ "checks": [
+  {
+   "name": "X far (II): all 1296 candidates ≤ true value, max = true value",
+   "ok": true,
+   "detail": "points 36, ≤ 36, equality 36, largest max − true 0"
+  },
+  {
+   "name": "X far (II): mixing up the side of the true value gives points that do not agree (point, sign, axis)",
+   "ok": true,
+   "detail": "{'w': 36, 'sign': 36, 'axis': 29} (out of 36 points)"
+  },
+  {
+   "name": "X far (III): all 36 candidates ≤ true value, max = true value",
+   "ok": true,
+   "detail": "points 36, ≤ 36, equality 36, largest max − true 0"
+  },
+  {
+   "name": "X far (III): mixing up the side of the true value gives points that do not agree (point, sign, axis)",
+   "ok": true,
+   "detail": "{'w': 32, 'sign': 36, 'axis': 28} (out of 36 points)"
+  },
+  {
+   "name": "X far (IV): all 216 candidates ≤ true value, max = true value",
+   "ok": true,
+   "detail": "points 36, ≤ 36, equality 36, largest max − true 0"
+  },
+  {
+   "name": "X far (IV): mixing up the side of the true value gives points that do not agree (point, sign, axis)",
+   "ok": true,
+   "detail": "{'w': 34, 'sign': 36, 'axis': 33} (out of 36 points)"
+  },
+  {
+   "name": "X local P2: all 24 candidates ≤ true value, max = true value near the equality point",
+   "ok": true,
+   "detail": "points 60 (excluded outside the cone 0), ≤ 60, of 20 nearby points equality 20"
+  },
+  {
+   "name": "X local P2: mixing up the point w gives disagreement",
+   "ok": true,
+   "detail": "60/60"
+  },
+  {
+   "name": "X local J3: all 6 candidates ≤ true value, max = true value near the equality point",
+   "ok": true,
+   "detail": "points 57 (excluded outside the cone 3), ≤ 57, of 20 nearby points equality 20"
+  },
+  {
+   "name": "X local J3: mixing up the point w gives disagreement",
+   "ok": true,
+   "detail": "57/57"
+  },
+  {
+   "name": "X local J4: all 12 candidates ≤ true value, max = true value near the equality point",
+   "ok": true,
+   "detail": "points 60 (excluded outside the cone 0), ≤ 60, of 20 nearby points equality 20"
+  },
+  {
+   "name": "X local J4: mixing up the point w gives disagreement",
+   "ok": true,
+   "detail": "60/60"
+  },
+  {
+   "name": "P preparation (II): local in the far header = the local record",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "P preparation (III): local in the far header = the local record",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "P preparation (IV): local in the far header = the local record",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "P: special points × R give true value ≥ 0 and a leaf of the record is found (A: value of the candidate at the point, D: followed, L: down to the local leaf)",
+   "ok": true,
+   "detail": "187 pairs, failures 0, followed down to local 29, pairs with true value 0 6"
+  },
+  {
+   "name": "P: the copy into the chamber (permutation, x ↔ y, reflection) does not change the true value",
+   "ok": true,
+   "detail": "336 cases"
+  },
+  {
+   "name": "P: some pairs were followed down to type L (the hand-over test is not vacuous)",
+   "ok": true,
+   "detail": "29"
+  },
+  {
+   "name": "B1 w_A → w_Q: the cone of (III) has a rational point with G − n·w_Q < 0 (exact)",
+   "ok": true,
+   "detail": "floating minimum -0.01043, exact value -0.01037 (|n|₁ = 1.682), n ∝ [0.698, 0.613, -0.372]"
+  },
+  {
+   "name": "B1: at the same point, with w_A it is ≥ 0 (the correct version is not violated)",
+   "ok": true,
+   "detail": "0.0211"
+  },
+  {
+   "name": "B1: building local J3 with w_Q is rejected by the identity check in build",
+   "ok": true,
+   "detail": "J3: T has terms of degree 0 or 1"
+  },
+  {
+   "name": "B1: with far (III) on w_Q (without local), the n box of that point fails",
+   "ok": true,
+   "detail": "box [0.71875, 0.21875] to [0.75, 0.25], evaluations 40001, 10 s"
+  },
+  {
+   "name": "B1: the same box passes with the correct version",
+   "ok": true,
+   "detail": "evaluations 760"
+  },
+  {
+   "name": "B2 ŝ₀ + 1/1000: G − n·w < 0 at the 3 equality points (exact), 0 with the original ŝ₀",
+   "ok": true,
+   "detail": "{'II': '-3/2000', 'III': '-1/2000', 'IV': '-1/1000'}"
+  },
+  {
+   "name": "B2: building local P2 with ŝ₀ + 1/1000 is rejected by the identity check in build",
+   "ok": true,
+   "detail": "P2: T ≢ 0"
+  },
+  {
+   "name": "B2: building local J3 with ŝ₀ + 1/1000 is rejected by the identity check in build",
+   "ok": true,
+   "detail": "J3: T has terms of degree 0 or 1"
+  },
+  {
+   "name": "B2: building local J4 with ŝ₀ + 1/1000 is rejected by the identity check in build",
+   "ok": true,
+   "detail": "J4: T_c has terms of degree 0 or 1 ((0, 0, 0))"
+  },
+  {
+   "name": "B2 (upper-bound side): with container 8/3 − 1/1000 the 9 pieces of the record do not fit",
+   "ok": true,
+   "detail": "pieces with a vertex outside 8"
+  },
+  {
+   "name": "B3 band width 1/4: re-judging the type L leaves of the far (II) record with the region assigned to local P2 narrowed to 1/4 gives failures (0 with the current width)",
+   "ok": true,
+   "detail": "type L leaves 63, failures with the current width 0, failures with 1/4 63"
+  },
+  {
+   "name": "B3 band width 1/4: re-judging the type L leaves of the far (III) record with the region assigned to local J3 narrowed to 1/4 gives failures (0 with the current width)",
+   "ok": true,
+   "detail": "type L leaves 2494, failures with the current width 0, failures with 1/4 2494"
+  },
+  {
+   "name": "B3 band width 1/4: re-judging the type L leaves of the far (IV) record with the region assigned to local J4 narrowed to 1/4 gives failures (0 with the current width)",
+   "ok": true,
+   "detail": "type L leaves 550, failures with the current width 0, failures with 1/4 550"
+  },
+  {
+   "name": "B4 removing the quadratic treatment of (IV): local J4 without the treatment of T_c = τ²A_c has a face that does not pass",
+   "ok": true,
+   "detail": "{'failed_face': [0, 1], 'faces': [{'face': [0, 1], 'ev': 73428, 'leaves': 19427, 'lim': 0, 'timeout': True, 'sec': 180.0}], 'sec': 180}"
+  },
+  {
+   "name": "B4: with far (IV) without local (noL), an n box containing d′ fails",
+   "ok": true,
+   "detail": "failures 1, evaluations [40001]"
+  },
+  {
+   "name": "W local P2: 写し（壊していない） → passes",
+   "ok": true,
+   "detail": "[0] 確かめ直し 局所 P2 E:\\packing-lab\\release\\proof_v040\\work\\d87\\tests_scratch\\w_d87_oct_local_P2_0: 葉 537（型 {'F': 537}）、不合格 0、被覆の木 OK、25 秒 (26 s)"
+  },
+  {
+   "name": "W local P2: candidate changed to one not accepted (leaf 1) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: some leaves failed (26 s)"
+  },
+  {
+   "name": "W local P2: type F changed to D (leaf 1) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: some leaves failed (26 s)"
+  },
+  {
+   "name": "W local P2: delete 1 leaf → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: a gap in the cover (a box without a leaf) (26 s)"
+  },
+  {
+   "name": "W local P2: shift the box of a leaf (the cover breaks) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: a gap in the cover (a box without a leaf) (25 s)"
+  },
+  {
+   "name": "W local P2: double the upper limit of r in the header → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the premises of the record differ from the present code (1 s)"
+  },
+  {
+   "name": "W local P2: test breakage option in the header → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the record contains no test-only error (1 s)"
+  },
+  {
+   "name": "W local P2: type changed to an unknown one → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: some leaves failed (27 s)"
+  },
+  {
+   "name": "W local J3: 写し（壊していない） → passes",
+   "ok": true,
+   "detail": "[0] 確かめ直し 局所 J3 E:\\packing-lab\\release\\proof_v040\\work\\d87\\tests_scratch\\w_d87_oct_local_J3_0: 葉 2415（型 {'F': 1739, 'D': 676}）、不合格 0、被覆の木 OK、6 秒 (6 s)"
+  },
+  {
+   "name": "W local J3: candidate changed to one not accepted (leaf 1) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: some leaves failed (7 s)"
+  },
+  {
+   "name": "W local J3: type F changed to D (leaf 1) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: some leaves failed (7 s)"
+  },
+  {
+   "name": "W local J3: delete 1 leaf → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: a gap in the cover (a box without a leaf) (5 s)"
+  },
+  {
+   "name": "W local J3: shift the box of a leaf (the cover breaks) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: a gap in the cover (a box without a leaf) (5 s)"
+  },
+  {
+   "name": "W local J3: double the upper limit of r in the header → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the premises of the record differ from the present code (1 s)"
+  },
+  {
+   "name": "W local J3: test breakage option in the header → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the record contains no test-only error (1 s)"
+  },
+  {
+   "name": "W local J3: type changed to an unknown one → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: some leaves failed (6 s)"
+  },
+  {
+   "name": "W local J4: 写し（壊していない） → passes",
+   "ok": true,
+   "detail": "[0] かめ直し 局所 J4 E:\\packing-lab\\release\\proof_v040\\work\\d87\\tests_scratch\\w_d87_oct_local_J4_0: 葉 1438（型 {'F': 1290, 'D': 148}）、不合格 0、被覆の木 OK、15 秒 (16 s)"
+  },
+  {
+   "name": "W local J4: candidate changed to one not accepted (leaf 1) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: some leaves failed (16 s)"
+  },
+  {
+   "name": "W local J4: type F changed to D (leaf 1) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: some leaves failed (16 s)"
+  },
+  {
+   "name": "W local J4: delete 1 leaf → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: a gap in the cover (a box without a leaf) (16 s)"
+  },
+  {
+   "name": "W local J4: shift the box of a leaf (the cover breaks) → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: a gap in the cover (a box without a leaf) (16 s)"
+  },
+  {
+   "name": "W local J4: double the upper limit of r in the header → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the premises of the record differ from the present code (1 s)"
+  },
+  {
+   "name": "W local J4: test breakage option in the header → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the record contains no test-only error (1 s)"
+  },
+  {
+   "name": "W local J4: type changed to an unknown one → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: some leaves failed (16 s)"
+  },
+  {
+   "name": "W far (II): 写し（壊していない） → passes",
+   "ok": true,
+   "detail": "[0] local: 確かめ直し 局所 P2 d87_oct_local_P2: 葉 537（型 {'F': 537}）、不合格 0、被覆の木 OK、24 秒 (28 s)"
+  },
+  {
+   "name": "W far (II): candidate of type A changed to one with lower bound < 0 → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (3 s)"
+  },
+  {
+   "name": "W far (II): rotation of type D changed to one under which tr does not increase → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (3 s)"
+  },
+  {
+   "name": "W far (II): rotation of the piece of type L changed to one not in the assigned region → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (3 s)"
+  },
+  {
+   "name": "W far (II): delete 1 n box → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the cover (a box without a leaf) (3 s)"
+  },
+  {
+   "name": "W far (II): delete 1 R leaf → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the cover (a box without a leaf) (3 s)"
+  },
+  {
+   "name": "W far (II): kind of an n box changed to out → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: out box (1 s)"
+  },
+  {
+   "name": "W far (II): local name in the header changed to another lemma → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the local record is not P2, or is a test copy (1 s)"
+  },
+  {
+   "name": "W far (II): R* in the header changed to another direction → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: premises of the record (1 s)"
+  },
+  {
+   "name": "W far (III): 写し（壊していない） → passes",
+   "ok": true,
+   "detail": "[0] local: 確かめ直し 局所 J3 d87_oct_local_J3: 葉 2415（型 {'F': 1739, 'D': 676}）、不合格 0、被覆の木 OK、5 秒 (13 s)"
+  },
+  {
+   "name": "W far (III): candidate of type A changed to one with lower bound < 0 → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (7 s)"
+  },
+  {
+   "name": "W far (III): rotation of type D changed to one under which tr does not increase → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (8 s)"
+  },
+  {
+   "name": "W far (III): rotation of the piece of type L changed to one not in the assigned region → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (8 s)"
+  },
+  {
+   "name": "W far (III): delete 1 n box → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the cover (a box without a leaf) (8 s)"
+  },
+  {
+   "name": "W far (III): delete 1 R leaf → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the cover (a box without a leaf) (8 s)"
+  },
+  {
+   "name": "W far (III): kind of an n box changed to out → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: out box (1 s)"
+  },
+  {
+   "name": "W far (III): local name in the header changed to another lemma → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the local record is not J3, or is a test copy (1 s)"
+  },
+  {
+   "name": "W far (III): double the assigned region of the local lemma in the header → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: premises of the record (1 s)"
+  },
+  {
+   "name": "W far (III): w_A in the header changed to w_Q → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: premises of the record (1 s)"
+  },
+  {
+   "name": "W far (IV): 写し（壊していない） → passes",
+   "ok": true,
+   "detail": "[0] local: 確かめ直し 局所 J4 d87_oct_local_J4: 葉 1438（型 {'F': 1290, 'D': 148}）、不合格 0、被覆の木 OK、15 秒 (22 s)"
+  },
+  {
+   "name": "W far (IV): candidate of type A changed to one with lower bound < 0 → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (6 s)"
+  },
+  {
+   "name": "W far (IV): rotation of type D changed to one under which tr does not increase → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (6 s)"
+  },
+  {
+   "name": "W far (IV): rotation of the piece of type L changed to one not in the assigned region → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: failed 1 (7 s)"
+  },
+  {
+   "name": "W far (IV): delete 1 n box → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the cover (a box without a leaf) (9 s)"
+  },
+  {
+   "name": "W far (IV): delete 1 R leaf → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: hole in the cover (a box without a leaf) (8 s)"
+  },
+  {
+   "name": "W far (IV): kind of an n box changed to out → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: out box (2 s)"
+  },
+  {
+   "name": "W far (IV): local name in the header changed to another lemma → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: the local record is not J4, or is a test copy (1 s)"
+  },
+  {
+   "name": "W far (IV): double the assigned region of the local lemma in the header → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: premises of the record (2 s)"
+  },
+  {
+   "name": "W far (IV): w_A in the header changed to w_Q → rejected",
+   "ok": true,
+   "detail": "[1] RuntimeError: premises of the record (1 s)"
+  }
+ ],
+ "X": {
+  "II": {
+   "points": 36,
+   "le": 36,
+   "eq": 36,
+   "sens": {
+    "w": 36,
+    "sign": 36,
+    "axis": 29
+   }
+  },
+  "III": {
+   "points": 36,
+   "le": 36,
+   "eq": 36,
+   "sens": {
+    "w": 32,
+    "sign": 36,
+    "axis": 28
+   }
+  },
+  "IV": {
+   "points": 36,
+   "le": 36,
+   "eq": 36,
+   "sens": {
+    "w": 34,
+    "sign": 36,
+    "axis": 33
+   }
+  },
+  "P2": {
+   "points": 60,
+   "le": 60,
+   "near": 20,
+   "eq": 20,
+   "out_of_cone": 0,
+   "sens_w": 60
+  },
+  "J3": {
+   "points": 57,
+   "le": 57,
+   "near": 20,
+   "eq": 20,
+   "out_of_cone": 3,
+   "sens_w": 57
+  },
+  "J4": {
+   "points": 60,
+   "le": 60,
+   "near": 20,
+   "eq": 20,
+   "out_of_cone": 0,
+   "sens_w": 60
+  }
+ },
+ "sec": {
+  "X": 26,
+  "P": 32,
+  "B": 271,
+  "W": 520
+ },
+ "P": {
+  "results": [
+   {
+    "prob": "II",
+    "n": "equality m = (1,1,1)",
+    "R": "equality direction",
+    "G": "0",
+    "types": [
+     "D→D→D→L→局所 F,D→L→局所 F,D→D→L→局所 F,D→L→局所 F",
+     "D→D→D→L→局所 F,D→L→局所 F,D→D→L→局所 F,D→L→局所 F",
+     "L→局所 F",
+     "L→局所 F",
+     "D→D→D→L→局所 F,D→L→局所 F,D→D→L→局所 F,D→L→局所 F",
+     "D→D→D→L→局所 F,D→L→局所 F,D→D→L→局所 F,D→L→局所 F",
+     "D→D→D→L→局所 F,D→L→局所 F,D→D→L→局所 F,D→L→局所 F",
+     "D→D→D→L→局所 F,D→L→局所 F,D→D→L→局所 F,D→L→局所 F",
+     "D→D→L→局所 F",
+     "D→D→L→局所 F"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "equality m = (1,1,1)",
+    "R": "near equality 0",
+    "G": "71/173",
+    "types": [
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→D→A,D→A",
+     "D→A",
+     "A",
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→D→A,D→A",
+     "D→D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "equality m = (1,1,1)",
+    "R": "near equality 1",
+    "G": "354/1033",
+    "types": [
+     "D→D→D→A",
+     "A",
+     "A",
+     "D→D→D→A",
+     "D→D→D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "equality m = (1,1,1)",
+    "R": "near equality 2",
+    "G": "314/777",
+    "types": [
+     "D→D→D→A",
+     "D→D→A",
+     "A",
+     "D→D→A",
+     "D→D→D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "equality m = (1,1,1)",
+    "R": "general 0",
+    "G": "118/157",
+    "types": [
+     "D→A,A",
+     "D→A,A",
+     "D→D→A,A",
+     "D→D→A,A,D→A,A",
+     "A",
+     "D→D→A",
+     "D→D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "equality m = (1,1,1)",
+    "R": "general 1",
+    "G": "87/77",
+    "types": [
+     "D→D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A",
+     "D→D→D→A,A",
+     "D→D→D→A,A",
+     "A",
+     "A",
+     "D→D→A,A,D→A,A",
+     "D→D→D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "equality m = (1,1,1)",
+    "R": "general 2",
+    "G": "32/35",
+    "types": [
+     "D→D→A",
+     "D→D→D→A",
+     "D→A",
+     "D→D→A",
+     "D→D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "equality m = (1,1,1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "0",
+    "types": [
+     "D→D→L→局所 F,D→L→局所 F",
+     "D→L→局所 F",
+     "D→L→局所 F",
+     "D→L→局所 F",
+     "D→D→L→局所 F,D→L→局所 F",
+     "D→D→L→局所 F,D→L→局所 F",
+     "D→D→L→局所 F,D→L→局所 F",
+     "D→L→局所 F"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m3 = 0: m = (1,1,0)",
+    "R": "equality direction",
+    "G": "2/3",
+    "types": [
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m3 = 0: m = (1,1,0)",
+    "R": "near equality 0",
+    "G": "151/173",
+    "types": [
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→D→A,D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m3 = 0: m = (1,1,0)",
+    "R": "near equality 1",
+    "G": "2498/3099",
+    "types": [
+     "D→D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m3 = 0: m = (1,1,0)",
+    "R": "near equality 2",
+    "G": "554/777",
+    "types": [
+     "D→D→D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m3 = 0: m = (1,1,0)",
+    "R": "general 0",
+    "G": "121/157",
+    "types": [
+     "D→A,A",
+     "D→A,A",
+     "D→D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m3 = 0: m = (1,1,0)",
+    "R": "general 1",
+    "G": "68/77",
+    "types": [
+     "D→D→A,A",
+     "D→D→D→A,A",
+     "D→D→D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m3 = 0: m = (1,1,0)",
+    "R": "general 2",
+    "G": "171/175",
+    "types": [
+     "D→D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m3 = 0: m = (1,1,0)",
+    "R": "equality direction, rotation of the piece",
+    "G": "2/3",
+    "types": [
+     "D→D→A,D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone corner m = (1,0,0)",
+    "R": "equality direction",
+    "G": "1/3",
+    "types": [
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone corner m = (1,0,0)",
+    "R": "near equality 0",
+    "G": "91/173",
+    "types": [
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→D→A,D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone corner m = (1,0,0)",
+    "R": "near equality 1",
+    "G": "1345/3099",
+    "types": [
+     "D→D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone corner m = (1,0,0)",
+    "R": "near equality 2",
+    "G": "431/777",
+    "types": [
+     "D→D→D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone corner m = (1,0,0)",
+    "R": "general 0",
+    "G": "67/157",
+    "types": [
+     "D→A,A",
+     "D→A,A",
+     "D→D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone corner m = (1,0,0)",
+    "R": "general 1",
+    "G": "75/77",
+    "types": [
+     "D→D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone corner m = (1,0,0)",
+    "R": "general 2",
+    "G": "149/175",
+    "types": [
+     "D→D→A",
+     "D→D→D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone corner m = (1,0,0)",
+    "R": "equality direction, rotation of the piece",
+    "G": "1/3",
+    "types": [
+     "D→D→A,D→A",
+     "D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m2 = m3: m = (2,1,1)",
+    "R": "equality direction",
+    "G": "1/3",
+    "types": [
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m2 = m3: m = (2,1,1)",
+    "R": "near equality 0",
+    "G": "131/173",
+    "types": [
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m2 = m3: m = (2,1,1)",
+    "R": "near equality 1",
+    "G": "2407/3099",
+    "types": [
+     "D→D→A,A,D→A,A",
+     "D→D→A,A,D→A,A",
+     "A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m2 = m3: m = (2,1,1)",
+    "R": "near equality 2",
+    "G": "541/777",
+    "types": [
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A",
+     "A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m2 = m3: m = (2,1,1)",
+    "R": "general 0",
+    "G": "121/157",
+    "types": [
+     "D→A,A,A,A",
+     "D→A,A,A,A",
+     "D→A,A,A,A",
+     "D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m2 = m3: m = (2,1,1)",
+    "R": "general 1",
+    "G": "122/77",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m2 = m3: m = (2,1,1)",
+    "R": "general 2",
+    "G": "53/35",
+    "types": [
+     "D→D→A,A,D→A,A",
+     "D→D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m2 = m3: m = (2,1,1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "1/3",
+    "types": [
+     "D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→A,A",
+     "D→A,A",
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m1 = m2: m = (1,1,1/2)",
+    "R": "equality direction",
+    "G": "2/3",
+    "types": [
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m1 = m2: m = (1,1,1/2)",
+    "R": "near equality 0",
+    "G": "222/173",
+    "types": [
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→D→A,D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m1 = m2: m = (1,1,1/2)",
+    "R": "near equality 1",
+    "G": "2930/3099",
+    "types": [
+     "D→D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m1 = m2: m = (1,1,1/2)",
+    "R": "near equality 2",
+    "G": "484/777",
+    "types": [
+     "D→D→D→A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m1 = m2: m = (1,1,1/2)",
+    "R": "general 0",
+    "G": "185/157",
+    "types": [
+     "D→A,A",
+     "D→A,A",
+     "D→D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m1 = m2: m = (1,1,1/2)",
+    "R": "general 1",
+    "G": "115/77",
+    "types": [
+     "D→D→A,A",
+     "D→D→D→A,A",
+     "D→D→D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m1 = m2: m = (1,1,1/2)",
+    "R": "general 2",
+    "G": "41/25",
+    "types": [
+     "D→D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "mirror edge m1 = m2: m = (1,1,1/2)",
+    "R": "equality direction, rotation of the piece",
+    "G": "2/3",
+    "types": [
+     "D→D→A,D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "general m = (3,2,1)",
+    "R": "equality direction",
+    "G": "1",
+    "types": [
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "general m = (3,2,1)",
+    "R": "near equality 0",
+    "G": "282/173",
+    "types": [
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "general m = (3,2,1)",
+    "R": "near equality 1",
+    "G": "1233/1033",
+    "types": [
+     "D→D→A,A,D→A,A",
+     "D→D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "general m = (3,2,1)",
+    "R": "near equality 2",
+    "G": "261/259",
+    "types": [
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "general m = (3,2,1)",
+    "R": "general 0",
+    "G": "239/157",
+    "types": [
+     "D→A,A,A,A",
+     "D→A,A,A,A",
+     "D→A,A,A,A",
+     "D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "general m = (3,2,1)",
+    "R": "general 1",
+    "G": "25/11",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "general m = (3,2,1)",
+    "R": "general 2",
+    "G": "436/175",
+    "types": [
+     "D→D→A,A,D→A,A",
+     "D→D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "general m = (3,2,1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "1",
+    "types": [
+     "D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→A,A,D→A,A,D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m = (1,0,1)",
+    "R": "equality direction",
+    "G": "2/3",
+    "types": [
+     "A",
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→A,D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m = (1,0,1)",
+    "R": "near equality 0",
+    "G": "147/173",
+    "types": [
+     "A",
+     "D→D→D→A,D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m = (1,0,1)",
+    "R": "near equality 1",
+    "G": "2378/3099",
+    "types": [
+     "A",
+     "D→D→D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m = (1,0,1)",
+    "R": "near equality 2",
+    "G": "86/111",
+    "types": [
+     "A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m = (1,0,1)",
+    "R": "general 0",
+    "G": "142/157",
+    "types": [
+     "D→D→A,A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m = (1,0,1)",
+    "R": "general 1",
+    "G": "69/77",
+    "types": [
+     "D→D→D→A,A,D→A,A,D→D→A,A",
+     "D→D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m = (1,0,1)",
+    "R": "general 2",
+    "G": "113/175",
+    "types": [
+     "D→D→D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "cone boundary m = (1,0,1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "2/3",
+    "types": [
+     "D→A",
+     "D→A",
+     "D→D→A,D→A",
+     "D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "P2 edge z1 = r",
+    "R": "that direction (reflection made a rotation by −1)",
+    "G": "1/8",
+    "types": [
+     "A",
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "P2 edge p1 = r",
+    "R": "that direction (reflection made a rotation by −1)",
+    "G": "8908/38025",
+    "types": [
+     "D→D→D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "P2 edge p3 = −r, z2 = r/2",
+    "R": "that direction (reflection made a rotation by −1)",
+    "G": "190241/608400",
+    "types": [
+     "A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "P2 just outside p2 = r + 1/64",
+    "R": "that direction (reflection made a rotation by −1)",
+    "G": "4521276/17447329",
+    "types": [
+     "D→D→D→A"
+    ]
+   },
+   {
+    "prob": "II",
+    "n": "P2 corner all r",
+    "R": "that direction (reflection made a rotation by −1)",
+    "G": "235/268",
+    "types": [
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→A,D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "equality n = (1,1,−1)",
+    "R": "equality direction",
+    "G": "0",
+    "types": [
+     "D→L→局所 F",
+     "D→D→L→局所 F,D→L→局所 F"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "equality n = (1,1,−1)",
+    "R": "near equality 0",
+    "G": "382/1043",
+    "types": [
+     "D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "equality n = (1,1,−1)",
+    "R": "near equality 1",
+    "G": "16/103",
+    "types": [
+     "D→D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "equality n = (1,1,−1)",
+    "R": "near equality 2",
+    "G": "1102/3123",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "equality n = (1,1,−1)",
+    "R": "general 0",
+    "G": "122/273",
+    "types": [
+     "D→D→A,D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "equality n = (1,1,−1)",
+    "R": "general 1",
+    "G": "20/27",
+    "types": [
+     "D→D→A,A",
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "equality n = (1,1,−1)",
+    "R": "general 2",
+    "G": "59/123",
+    "types": [
+     "D→D→A,A",
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "equality n = (1,1,−1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "0",
+    "types": [
+     "L→局所 F",
+     "D→D→D→L→局所 F,D→L→局所 F,D→D→L→局所 F,D→L→局所 F",
+     "D→D→D→L→局所 F,D→L→局所 F,D→D→L→局所 F,D→L→局所 F"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary c = 0: n = (1,1,0)",
+    "R": "equality direction",
+    "G": "7/9",
+    "types": [
+     "D→A",
+     "D→D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary c = 0: n = (1,1,0)",
+    "R": "near equality 0",
+    "G": "6257/9387",
+    "types": [
+     "D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary c = 0: n = (1,1,0)",
+    "R": "near equality 1",
+    "G": "3593/4635",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary c = 0: n = (1,1,0)",
+    "R": "near equality 2",
+    "G": "2341/3123",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary c = 0: n = (1,1,0)",
+    "R": "general 0",
+    "G": "409/819",
+    "types": [
+     "D→A,D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary c = 0: n = (1,1,0)",
+    "R": "general 1",
+    "G": "22/27",
+    "types": [
+     "D→A",
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary c = 0: n = (1,1,0)",
+    "R": "general 2",
+    "G": "254/369",
+    "types": [
+     "D→A",
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary c = 0: n = (1,1,0)",
+    "R": "equality direction, rotation of the piece",
+    "G": "7/9",
+    "types": [
+     "A",
+     "D→D→D→A,A,D→D→A,A",
+     "D→D→D→A,D→A,D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary b = 0: n = (1,0,−1)",
+    "R": "equality direction",
+    "G": "11/18",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary b = 0: n = (1,0,−1)",
+    "R": "near equality 0",
+    "G": "10693/18774",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary b = 0: n = (1,0,−1)",
+    "R": "near equality 1",
+    "G": "6271/9270",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary b = 0: n = (1,0,−1)",
+    "R": "near equality 2",
+    "G": "4705/6246",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary b = 0: n = (1,0,−1)",
+    "R": "general 0",
+    "G": "1091/1638",
+    "types": [
+     "D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→A,A,D→A,A,D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary b = 0: n = (1,0,−1)",
+    "R": "general 1",
+    "G": "35/54",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary b = 0: n = (1,0,−1)",
+    "R": "general 2",
+    "G": "559/738",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone boundary b = 0: n = (1,0,−1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "11/18",
+    "types": [
+     "A",
+     "A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone corner n = (0,0,−1)",
+    "R": "equality direction",
+    "G": "2/9",
+    "types": [
+     "D→A",
+     "D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone corner n = (0,0,−1)",
+    "R": "near equality 0",
+    "G": "2698/9387",
+    "types": [
+     "D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone corner n = (0,0,−1)",
+    "R": "near equality 1",
+    "G": "386/927",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone corner n = (0,0,−1)",
+    "R": "near equality 2",
+    "G": "386/1041",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone corner n = (0,0,−1)",
+    "R": "general 0",
+    "G": "722/819",
+    "types": [
+     "D→D→A,D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone corner n = (0,0,−1)",
+    "R": "general 1",
+    "G": "22/27",
+    "types": [
+     "D→D→A,A",
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone corner n = (0,0,−1)",
+    "R": "general 2",
+    "G": "184/369",
+    "types": [
+     "D→D→A,A",
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "cone corner n = (0,0,−1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "2/9",
+    "types": [
+     "A",
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→A,D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "mirror edge a = b: n = (1,1,−3)",
+    "R": "equality direction",
+    "G": "4/9",
+    "types": [
+     "D→A",
+     "D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "mirror edge a = b: n = (1,1,−3)",
+    "R": "near equality 0",
+    "G": "1262/1341",
+    "types": [
+     "D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "mirror edge a = b: n = (1,1,−3)",
+    "R": "near equality 1",
+    "G": "916/927",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "mirror edge a = b: n = (1,1,−3)",
+    "R": "near equality 2",
+    "G": "3418/3123",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "mirror edge a = b: n = (1,1,−3)",
+    "R": "general 0",
+    "G": "124/63",
+    "types": [
+     "D→D→A,D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "mirror edge a = b: n = (1,1,−3)",
+    "R": "general 1",
+    "G": "46/27",
+    "types": [
+     "D→D→A,A",
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "mirror edge a = b: n = (1,1,−3)",
+    "R": "general 2",
+    "G": "275/369",
+    "types": [
+     "D→D→A,A",
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "mirror edge a = b: n = (1,1,−3)",
+    "R": "equality direction, rotation of the piece",
+    "G": "4/9",
+    "types": [
+     "A",
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→A,D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "general n = (5,4,−3)",
+    "R": "equality direction",
+    "G": "7/6",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "general n = (5,4,−3)",
+    "R": "near equality 0",
+    "G": "5153/6258",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "general n = (5,4,−3)",
+    "R": "near equality 1",
+    "G": "4337/3090",
+    "types": [
+     "D→A,D→A,A",
+     "D→A,D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "general n = (5,4,−3)",
+    "R": "near equality 2",
+    "G": "2963/2082",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "general n = (5,4,−3)",
+    "R": "general 0",
+    "G": "1397/546",
+    "types": [
+     "D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→A,A,D→A,A,D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "general n = (5,4,−3)",
+    "R": "general 1",
+    "G": "59/18",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "general n = (5,4,−3)",
+    "R": "general 2",
+    "G": "527/246",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "general n = (5,4,−3)",
+    "R": "equality direction, rotation of the piece",
+    "G": "7/6",
+    "types": [
+     "A",
+     "A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "x ↔ y copy n = (1,2,−1)",
+    "R": "equality direction",
+    "G": "7/18",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "x ↔ y copy n = (1,2,−1)",
+    "R": "near equality 0",
+    "G": "15005/18774",
+    "types": [
+     "D→A,A,A,A",
+     "D→A,A,A,A",
+     "D→A,A,A,A",
+     "D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "x ↔ y copy n = (1,2,−1)",
+    "R": "near equality 1",
+    "G": "1021/1854",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "x ↔ y copy n = (1,2,−1)",
+    "R": "near equality 2",
+    "G": "1111/2082",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "x ↔ y copy n = (1,2,−1)",
+    "R": "general 0",
+    "G": "1705/1638",
+    "types": [
+     "D→A,A,A,A",
+     "D→A,A,A,A",
+     "D→A,A,A,A",
+     "D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "x ↔ y copy n = (1,2,−1)",
+    "R": "general 1",
+    "G": "71/54",
+    "types": [
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "x ↔ y copy n = (1,2,−1)",
+    "R": "general 2",
+    "G": "851/738",
+    "types": [
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A",
+     "D→A,A,A,A,A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "x ↔ y copy n = (1,2,−1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "7/18",
+    "types": [
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "J3 base edge u = 1/4",
+    "R": "that direction",
+    "G": "10/153",
+    "types": [
+     "D→D→D→D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "J3 base edge s = −1/8",
+    "R": "that direction",
+    "G": "139/1089",
+    "types": [
+     "D→D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "J3 base edge s = 1/4",
+    "R": "that direction",
+    "G": "2/27",
+    "types": [
+     "D→D→A,D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "J3 lateral edge y = 1/32",
+    "R": "that direction",
+    "G": "48380/789507",
+    "types": [
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "J3 lateral edge z1 = 1/8",
+    "R": "that direction",
+    "G": "13171/80496",
+    "types": [
+     "D→D→L→局所 F"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "J3 just outside the base s = 1/4 + 1/64",
+    "R": "that direction",
+    "G": "1242122/16384707",
+    "types": [
+     "D→D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "III",
+    "n": "J3 just outside laterally y = 1/32 + 1/256",
+    "R": "that direction",
+    "G": "74145780/1079056801",
+    "types": [
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "equality n = (−1,−1,1)",
+    "R": "equality direction",
+    "G": "0",
+    "types": [
+     "D→L→局所 F",
+     "D→D→L→局所 F,D→L→局所 F"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "equality n = (−1,−1,1)",
+    "R": "near equality 0",
+    "G": "802/3099",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "equality n = (−1,−1,1)",
+    "R": "near equality 1",
+    "G": "1028/3099",
+    "types": [
+     "D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "equality n = (−1,−1,1)",
+    "R": "near equality 2",
+    "G": "302/1033",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "equality n = (−1,−1,1)",
+    "R": "general 0",
+    "G": "34/33",
+    "types": [
+     "A",
+     "A",
+     "D→D→D→A,A,D→A,A",
+     "D→D→D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "equality n = (−1,−1,1)",
+    "R": "general 1",
+    "G": "329/381",
+    "types": [
+     "D→D→D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "equality n = (−1,−1,1)",
+    "R": "general 2",
+    "G": "52/69",
+    "types": [
+     "D→D→D→A,D→A",
+     "D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "equality n = (−1,−1,1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "0",
+    "types": [
+     "L→局所 F",
+     "D→D→D→L→局所 F,D→L→局所 F,D→D→L→局所 F,D→L→局所 F",
+     "D→D→D→L→局所 F,D→L→局所 F,D→D→L→局所 F,D→L→局所 F"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary c = 0: n = (−1,−1,0)",
+    "R": "equality direction",
+    "G": "5/9",
+    "types": [
+     "D→A",
+     "D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary c = 0: n = (−1,−1,0)",
+    "R": "near equality 0",
+    "G": "6701/9297",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary c = 0: n = (−1,−1,0)",
+    "R": "near equality 1",
+    "G": "5741/9297",
+    "types": [
+     "D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary c = 0: n = (−1,−1,0)",
+    "R": "near equality 2",
+    "G": "5525/9297",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary c = 0: n = (−1,−1,0)",
+    "R": "general 0",
+    "G": "76/99",
+    "types": [
+     "A",
+     "A",
+     "D→D→D→A,A,D→A,A",
+     "D→D→D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary c = 0: n = (−1,−1,0)",
+    "R": "general 1",
+    "G": "764/1143",
+    "types": [
+     "D→D→D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary c = 0: n = (−1,−1,0)",
+    "R": "general 2",
+    "G": "175/207",
+    "types": [
+     "D→D→D→A,D→A",
+     "D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary c = 0: n = (−1,−1,0)",
+    "R": "equality direction, rotation of the piece",
+    "G": "5/9",
+    "types": [
+     "A",
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→A,D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary b = 0: n = (−1,0,1)",
+    "R": "equality direction",
+    "G": "13/18",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary b = 0: n = (−1,0,1)",
+    "R": "near equality 0",
+    "G": "15133/18594",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary b = 0: n = (−1,0,1)",
+    "R": "near equality 1",
+    "G": "13357/18594",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary b = 0: n = (−1,0,1)",
+    "R": "near equality 2",
+    "G": "15085/18594",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary b = 0: n = (−1,0,1)",
+    "R": "general 0",
+    "G": "173/198",
+    "types": [
+     "A",
+     "A",
+     "A",
+     "A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary b = 0: n = (−1,0,1)",
+    "R": "general 1",
+    "G": "2137/2286",
+    "types": [
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary b = 0: n = (−1,0,1)",
+    "R": "general 2",
+    "G": "173/414",
+    "types": [
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone boundary b = 0: n = (−1,0,1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "13/18",
+    "types": [
+     "A",
+     "A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone corner n = (0,0,1)",
+    "R": "equality direction",
+    "G": "4/9",
+    "types": [
+     "D→A",
+     "D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone corner n = (0,0,1)",
+    "R": "near equality 0",
+    "G": "5032/9297",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone corner n = (0,0,1)",
+    "R": "near equality 1",
+    "G": "4456/9297",
+    "types": [
+     "D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone corner n = (0,0,1)",
+    "R": "near equality 2",
+    "G": "4600/9297",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone corner n = (0,0,1)",
+    "R": "general 0",
+    "G": "71/99",
+    "types": [
+     "A",
+     "A",
+     "D→D→D→A,A,D→A,A",
+     "D→D→D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone corner n = (0,0,1)",
+    "R": "general 1",
+    "G": "664/1143",
+    "types": [
+     "D→D→D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone corner n = (0,0,1)",
+    "R": "general 2",
+    "G": "152/207",
+    "types": [
+     "D→D→D→A,A",
+     "D→A,D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "cone corner n = (0,0,1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "4/9",
+    "types": [
+     "A",
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→A,D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "mirror edge a = b: n = (−1,−1,3)",
+    "R": "equality direction",
+    "G": "8/9",
+    "types": [
+     "D→A",
+     "D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "mirror edge a = b: n = (−1,−1,3)",
+    "R": "near equality 0",
+    "G": "12470/9297",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "mirror edge a = b: n = (−1,−1,3)",
+    "R": "near equality 1",
+    "G": "11996/9297",
+    "types": [
+     "D→A",
+     "D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "mirror edge a = b: n = (−1,−1,3)",
+    "R": "near equality 2",
+    "G": "11918/9297",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "mirror edge a = b: n = (−1,−1,3)",
+    "R": "general 0",
+    "G": "244/99",
+    "types": [
+     "A",
+     "A",
+     "D→D→D→A,A,D→A,A",
+     "D→D→D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "mirror edge a = b: n = (−1,−1,3)",
+    "R": "general 1",
+    "G": "1433/1143",
+    "types": [
+     "D→D→D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "mirror edge a = b: n = (−1,−1,3)",
+    "R": "general 2",
+    "G": "316/207",
+    "types": [
+     "D→D→D→A,D→A",
+     "D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "mirror edge a = b: n = (−1,−1,3)",
+    "R": "equality direction, rotation of the piece",
+    "G": "8/9",
+    "types": [
+     "A",
+     "D→D→D→A,D→A,D→D→A,D→A",
+     "D→D→D→A,D→A,D→D→A,D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "general n = (−5,−3,4)",
+    "R": "equality direction",
+    "G": "1",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "general n = (−5,−3,4)",
+    "R": "near equality 0",
+    "G": "5773/3099",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "general n = (−5,−3,4)",
+    "R": "near equality 1",
+    "G": "2341/3099",
+    "types": [
+     "D→A,A",
+     "D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "general n = (−5,−3,4)",
+    "R": "near equality 2",
+    "G": "1633/1033",
+    "types": [
+     "D→A,D→A,A",
+     "D→A,D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "general n = (−5,−3,4)",
+    "R": "general 0",
+    "G": "136/33",
+    "types": [
+     "A",
+     "A",
+     "A",
+     "A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "general n = (−5,−3,4)",
+    "R": "general 1",
+    "G": "1625/381",
+    "types": [
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "general n = (−5,−3,4)",
+    "R": "general 2",
+    "G": "220/69",
+    "types": [
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A",
+     "D→D→D→A,A,D→A,A,D→A,A,D→A,A,D→D→A,A,D→A,A,D→A,A,D→A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "general n = (−5,−3,4)",
+    "R": "equality direction, rotation of the piece",
+    "G": "1",
+    "types": [
+     "A",
+     "A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "x ↔ y copy n = (−1,−2,1)",
+    "R": "equality direction",
+    "G": "5/18",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "x ↔ y copy n = (−1,−2,1)",
+    "R": "near equality 0",
+    "G": "12917/18594",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "x ↔ y copy n = (−1,−2,1)",
+    "R": "near equality 1",
+    "G": "12341/18594",
+    "types": [
+     "D→A,A,A,A",
+     "D→A,A,A,A",
+     "D→A,A,A,A",
+     "D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "x ↔ y copy n = (−1,−2,1)",
+    "R": "near equality 2",
+    "G": "10601/18594",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "x ↔ y copy n = (−1,−2,1)",
+    "R": "general 0",
+    "G": "235/198",
+    "types": [
+     "D→D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A",
+     "D→D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A",
+     "D→D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A",
+     "D→D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A",
+     "D→D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A",
+     "D→D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A",
+     "D→D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A",
+     "D→D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A,D→A,A,A,A,A,A,A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "x ↔ y copy n = (−1,−2,1)",
+    "R": "general 1",
+    "G": "2225/2286",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "x ↔ y copy n = (−1,−2,1)",
+    "R": "general 2",
+    "G": "451/414",
+    "types": [
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "x ↔ y copy n = (−1,−2,1)",
+    "R": "equality direction, rotation of the piece",
+    "G": "5/18",
+    "types": [
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A",
+     "D→D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A,D→A,A,A,A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "J4 base edge τ = 3/64",
+    "R": "that direction",
+    "G": "1761277760423/14893676521923",
+    "types": [
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "J4 base edge τ = −3/64",
+    "R": "that direction",
+    "G": "1761277760423/14893676521923",
+    "types": [
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "J4 lateral edge l1 = 1/16",
+    "R": "that direction",
+    "G": "7576/49923",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "J4 lateral edge l2 = −1/80",
+    "R": "that direction",
+    "G": "631112718541481/2832239928376849",
+    "types": [
+     "D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "J4 lateral edge z2 = 1/8",
+    "R": "that direction",
+    "G": "5/48",
+    "types": [
+     "D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "J4 just outside the base τ = 3/64 + 1/128",
+    "R": "that direction",
+    "G": "625786681570151/3987648510437667",
+    "types": [
+     "D→D→A"
+    ]
+   },
+   {
+    "prob": "IV",
+    "n": "J4 just outside laterally l1 = 1/16 + 1/128",
+    "R": "that direction",
+    "G": "11891160/68442529",
+    "types": [
+     "D→A",
+     "D→D→A"
+    ]
+   }
+  ],
+  "bad": 0,
+  "L": 29,
+  "eq0": 6
+ },
+ "B": {
+  "B1_J4_wQ_build": {
+   "rejected": false,
+   "msg": "build passed"
+  },
+  "B1": {
+   "float_min": -0.010434581722671255,
+   "exact": "-2137768511/206183239680",
+   "n": [
+    "2857/4096",
+    "2509/4096",
+    "-1523/4096"
+   ],
+   "R": [
+    [
+     "2117213/3355847",
+     "-596934/3355847",
+     "-2534322/3355847"
+    ],
+    [
+     "9294498/16779235",
+     "13168561/16779235",
+     "932610/3355847"
+    ],
+    [
+     "9115386/16779235",
+     "-9961098/16779235",
+     "1992275/3355847"
+    ]
+   ],
+   "box": [
+    [
+     771751936,
+     234881024
+    ],
+    [
+     805306368,
+     268435456
+    ]
+   ],
+   "far_ev": 40001
+  },
+  "B2": {
+   "II": "-3/2000",
+   "III": "-1/2000",
+   "IV": "-1/1000"
+  },
+  "B3_II": {
+   "L_leaves": 63,
+   "bad_now": 0,
+   "bad_quarter": 63
+  },
+  "B3_III": {
+   "L_leaves": 2494,
+   "bad_now": 0,
+   "bad_quarter": 2494
+  },
+  "B3_IV": {
+   "L_leaves": 550,
+   "bad_now": 0,
+   "bad_quarter": 550
+  },
+  "B4": {
+   "local": {
+    "failed_face": [
+     0,
+     1
+    ],
+    "faces": [
+     {
+      "face": [
+       0,
+       1
+      ],
+      "ev": 73428,
+      "leaves": 19427,
+      "lim": 0,
+      "timeout": true,
+      "sec": 180.0
+     }
+    ],
+    "sec": 180
+   },
+   "far_fail": 1
+  }
+ },
+ "W": {
+  "local P2: 写し（壊していない）": {
+   "returncode": 0,
+   "msg": "確かめ直し 局所 P2 E:\\packing-lab\\release\\proof_v040\\work\\d87\\tests_scratch\\w_d87_oct_local_P2_0: 葉 537（型 {'F': 537}）、不合格 0、被覆の木 OK、25 秒",
+   "sec": 26
+  },
+  "local P2: candidate changed to one not accepted (leaf 1)": {
+   "returncode": 1,
+   "msg": "RuntimeError: some leaves failed",
+   "sec": 26
+  },
+  "local P2: type F changed to D (leaf 1)": {
+   "returncode": 1,
+   "msg": "RuntimeError: some leaves failed",
+   "sec": 26
+  },
+  "local P2: delete 1 leaf": {
+   "returncode": 1,
+   "msg": "RuntimeError: a gap in the cover (a box without a leaf)",
+   "sec": 26
+  },
+  "local P2: shift the box of a leaf (the cover breaks)": {
+   "returncode": 1,
+   "msg": "RuntimeError: a gap in the cover (a box without a leaf)",
+   "sec": 25
+  },
+  "local P2: double the upper limit of r in the header": {
+   "returncode": 1,
+   "msg": "RuntimeError: the premises of the record differ from the present code",
+   "sec": 1
+  },
+  "local P2: test breakage option in the header": {
+   "returncode": 1,
+   "msg": "RuntimeError: the record contains no test-only error",
+   "sec": 1
+  },
+  "local P2: type changed to an unknown one": {
+   "returncode": 1,
+   "msg": "RuntimeError: some leaves failed",
+   "sec": 27
+  },
+  "local J3: 写し（壊していない）": {
+   "returncode": 0,
+   "msg": "確かめ直し 局所 J3 E:\\packing-lab\\release\\proof_v040\\work\\d87\\tests_scratch\\w_d87_oct_local_J3_0: 葉 2415（型 {'F': 1739, 'D': 676}）、不合格 0、被覆の木 OK、6 秒",
+   "sec": 6
+  },
+  "local J3: candidate changed to one not accepted (leaf 1)": {
+   "returncode": 1,
+   "msg": "RuntimeError: some leaves failed",
+   "sec": 7
+  },
+  "local J3: type F changed to D (leaf 1)": {
+   "returncode": 1,
+   "msg": "RuntimeError: some leaves failed",
+   "sec": 7
+  },
+  "local J3: delete 1 leaf": {
+   "returncode": 1,
+   "msg": "RuntimeError: a gap in the cover (a box without a leaf)",
+   "sec": 5
+  },
+  "local J3: shift the box of a leaf (the cover breaks)": {
+   "returncode": 1,
+   "msg": "RuntimeError: a gap in the cover (a box without a leaf)",
+   "sec": 5
+  },
+  "local J3: double the upper limit of r in the header": {
+   "returncode": 1,
+   "msg": "RuntimeError: the premises of the record differ from the present code",
+   "sec": 1
+  },
+  "local J3: test breakage option in the header": {
+   "returncode": 1,
+   "msg": "RuntimeError: the record contains no test-only error",
+   "sec": 1
+  },
+  "local J3: type changed to an unknown one": {
+   "returncode": 1,
+   "msg": "RuntimeError: some leaves failed",
+   "sec": 6
+  },
+  "local J4: 写し（壊していない）": {
+   "returncode": 0,
+   "msg": "確かめ直し 局所 J4 E:\\packing-lab\\release\\proof_v040\\work\\d87\\tests_scratch\\w_d87_oct_local_J4_0: 葉 1438（型 {'F': 1290, 'D': 148}）、不合格 0、被覆の木 OK、15 秒",
+   "sec": 16
+  },
+  "local J4: candidate changed to one not accepted (leaf 1)": {
+   "returncode": 1,
+   "msg": "RuntimeError: some leaves failed",
+   "sec": 16
+  },
+  "local J4: type F changed to D (leaf 1)": {
+   "returncode": 1,
+   "msg": "RuntimeError: some leaves failed",
+   "sec": 16
+  },
+  "local J4: delete 1 leaf": {
+   "returncode": 1,
+   "msg": "RuntimeError: a gap in the cover (a box without a leaf)",
+   "sec": 16
+  },
+  "local J4: shift the box of a leaf (the cover breaks)": {
+   "returncode": 1,
+   "msg": "RuntimeError: a gap in the cover (a box without a leaf)",
+   "sec": 16
+  },
+  "local J4: double the upper limit of r in the header": {
+   "returncode": 1,
+   "msg": "RuntimeError: the premises of the record differ from the present code",
+   "sec": 1
+  },
+  "local J4: test breakage option in the header": {
+   "returncode": 1,
+   "msg": "RuntimeError: the record contains no test-only error",
+   "sec": 1
+  },
+  "local J4: type changed to an unknown one": {
+   "returncode": 1,
+   "msg": "RuntimeError: some leaves failed",
+   "sec": 16
+  },
+  "far (II): 写し（壊していない）": {
+   "returncode": 0,
+   "msg": "local: 確かめ直し 局所 P2 d87_oct_local_P2: 葉 537（型 {'F': 537}）、不合格 0、被覆の木 OK、24 秒",
+   "sec": 28
+  },
+  "far (II): candidate of type A changed to one with lower bound < 0": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 3
+  },
+  "far (II): rotation of type D changed to one under which tr does not increase": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 3
+  },
+  "far (II): rotation of the piece of type L changed to one not in the assigned region": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 3
+  },
+  "far (II): delete 1 n box": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the cover (a box without a leaf)",
+   "sec": 3
+  },
+  "far (II): delete 1 R leaf": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the cover (a box without a leaf)",
+   "sec": 3
+  },
+  "far (II): kind of an n box changed to out": {
+   "returncode": 1,
+   "msg": "RuntimeError: out box",
+   "sec": 1
+  },
+  "far (II): local name in the header changed to another lemma": {
+   "returncode": 1,
+   "msg": "RuntimeError: the local record is not P2, or is a test copy",
+   "sec": 1
+  },
+  "far (II): R* in the header changed to another direction": {
+   "returncode": 1,
+   "msg": "RuntimeError: premises of the record",
+   "sec": 1
+  },
+  "far (III): 写し（壊していない）": {
+   "returncode": 0,
+   "msg": "local: 確かめ直し 局所 J3 d87_oct_local_J3: 葉 2415（型 {'F': 1739, 'D': 676}）、不合格 0、被覆の木 OK、5 秒",
+   "sec": 13
+  },
+  "far (III): candidate of type A changed to one with lower bound < 0": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 7
+  },
+  "far (III): rotation of type D changed to one under which tr does not increase": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 8
+  },
+  "far (III): rotation of the piece of type L changed to one not in the assigned region": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 8
+  },
+  "far (III): delete 1 n box": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the cover (a box without a leaf)",
+   "sec": 8
+  },
+  "far (III): delete 1 R leaf": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the cover (a box without a leaf)",
+   "sec": 8
+  },
+  "far (III): kind of an n box changed to out": {
+   "returncode": 1,
+   "msg": "RuntimeError: out box",
+   "sec": 1
+  },
+  "far (III): local name in the header changed to another lemma": {
+   "returncode": 1,
+   "msg": "RuntimeError: the local record is not J3, or is a test copy",
+   "sec": 1
+  },
+  "far (III): double the assigned region of the local lemma in the header": {
+   "returncode": 1,
+   "msg": "RuntimeError: premises of the record",
+   "sec": 1
+  },
+  "far (III): w_A in the header changed to w_Q": {
+   "returncode": 1,
+   "msg": "RuntimeError: premises of the record",
+   "sec": 1
+  },
+  "far (IV): 写し（壊していない）": {
+   "returncode": 0,
+   "msg": "local: 確かめ直し 局所 J4 d87_oct_local_J4: 葉 1438（型 {'F': 1290, 'D': 148}）、不合格 0、被覆の木 OK、15 秒",
+   "sec": 22
+  },
+  "far (IV): candidate of type A changed to one with lower bound < 0": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 6
+  },
+  "far (IV): rotation of type D changed to one under which tr does not increase": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 6
+  },
+  "far (IV): rotation of the piece of type L changed to one not in the assigned region": {
+   "returncode": 1,
+   "msg": "RuntimeError: failed 1",
+   "sec": 7
+  },
+  "far (IV): delete 1 n box": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the cover (a box without a leaf)",
+   "sec": 9
+  },
+  "far (IV): delete 1 R leaf": {
+   "returncode": 1,
+   "msg": "RuntimeError: hole in the cover (a box without a leaf)",
+   "sec": 8
+  },
+  "far (IV): kind of an n box changed to out": {
+   "returncode": 1,
+   "msg": "RuntimeError: out box",
+   "sec": 2
+  },
+  "far (IV): local name in the header changed to another lemma": {
+   "returncode": 1,
+   "msg": "RuntimeError: the local record is not J4, or is a test copy",
+   "sec": 1
+  },
+  "far (IV): double the assigned region of the local lemma in the header": {
+   "returncode": 1,
+   "msg": "RuntimeError: premises of the record",
+   "sec": 2
+  },
+  "far (IV): w_A in the header changed to w_Q": {
+   "returncode": 1,
+   "msg": "RuntimeError: premises of the record",
+   "sec": 1
+  }
+ },
+ "fail": [],
+ "only": [
+  "B",
+  "P",
+  "W",
+  "X"
+ ],
+ "total_sec": 849,
+ "when": "2026-11-15 11:13",
+ "code_sha256": {
+  "d87_cub_common.py": "a7e5baa4709b921a537e12fb41a2fffddfa6ffc79984b4467ac23314e7db7c35",
+  "d87_oct_step0.py": "cca648ce366d9dc054f187b06c95b56498976b4edca06feb10d0da29bbaab9c7",
+  "d87_oct_local.py": "24a05813fe201a8f65395b8262c2753b1d05e1a009a7ee05de6463e40c7c3455",
+  "d87_oct_far.py": "f75dde69af478f008df39abb5e827edab81b0703124b59c56aa60eada13baa01",
+  "d87_oct_tests.py": "64f4952db0ca205b592954a6aa1726a4b34ab201d2035bb3ae0a0dfdd9494c33",
+  "d31_common.py": "c7257465cd4a074f6b98b60996dd115c7b0fd65035e0cdfcb86f9f2a25c19441",
+  "d37_tet_n05_common.py": "bdb4bcc64f99f6c233fe96852e9a2a5df6dfd5a0dc0de1f614dbf6c8de9dbe00"
+ }
+}

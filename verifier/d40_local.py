@@ -347,6 +347,7 @@ def replay(name):
         cur = [(lo, hi) for _, lo, hi in root_leaves(cen)]
         keys = set(lv)
         while cur:
+            need(len(cur) <= len(lv) - seen, "hole in the cover (a box without leaves)")   # in a correct tree every box of a level contains at least one leaf not yet seen (L4'r, 11-15)
             need(depth <= 200, f"{nm}: a branch does not reach a leaf"); depth += 1
             nxt = []
             for lo, hi in cur:

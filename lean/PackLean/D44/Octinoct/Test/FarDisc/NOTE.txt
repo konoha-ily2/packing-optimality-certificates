@@ -1,0 +1,2 @@
+octinoct disc (part far)
+error: discard box chart 0 [-17592186044416, -17592186044416, -17592186044416]–[-8796093022208, -8796093022208, -8796093022208]: pair 12 → 1 (Python rejects it too)

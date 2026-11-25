@@ -1,0 +1,2 @@
+octinoct upper (part consts)
+error: t̂ moved by 1e-30 along the normal of a face touched by piece A (Python: some vertex leaves the container of offset S_up or crosses the plane)

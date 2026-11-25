@@ -26,7 +26,7 @@ All Platonic pieces used here (cube, octahedron, icosahedron, dodecahedron) sati
 
 *(2 ⇒ 1).* Let $K'=RK+t\subset sC$ with $0\notin\operatorname{int}K'$. Since $\operatorname{int}K'$ is an open convex set not containing $0$, there is $v\ne0$ with $v\cdot x>0$ on $\operatorname{int}K'$. Because $K=-K$, we have $-K'=R(-K)-t=RK-t$, which is a placement using only a rotation and a translation, and $C=-C$ gives $-K'\subset sC$. On $\operatorname{int}(-K')$ we have $v\cdot x<0$, so $\operatorname{int}K'$ and $\operatorname{int}(-K')$ are disjoint. The same formula is valid whether or not reflections are allowed. ∎
 
-**Minimum is attained.** "$K'\subset sC$" is a closed condition in (placement, $s$), "$0\in\operatorname{int}K'$" is open, so its negation is closed; placements are confined to a bounded set. Hence the minimal $s$ exists for the "touching allowed" definition. If touching is forbidden the same value is an infimum and is not attained.
+**Minimum is attained.** "$K'\subset sC$" is a closed condition in (placement, $s$), "$0\in\operatorname{int}K'$" is open, so its negation is closed; placements are confined to a bounded set. Hence the minimal $s$ exists for the "touching allowed" definition. If touching is forbidden the same value is an infimum.
 
 ## 3. One face of the piece, and the LP $\varphi(R)$
 

@@ -1,0 +1,2 @@
+icoinico locDrop (part local)
+error: local face x=+1: leaf [0, -17592186044416, -17592186044416]–[549755813888, 0, 0] removed from the tree

@@ -1,0 +1,35 @@
+{
+ "作成": "2026-11-15 11:15",
+ "注": "改行は LF に直して計算（作業の写しの CRLF によらない）",
+ "versions": {
+  "python": "3.10.5",
+  "sympy": "1.14.0",
+  "flint": "0.9.0",
+  "numpy": "2.2.6"
+ },
+ "sha256": {
+  "d87_oct_local_P2.json": "f7e7b1b858c913dd9df44abea852db7d0f62d769c6acfc2581d293a040732c8c",
+  "d87_oct_local_P2.leaves.jsonl.gz": "9b9b549550f832362ce302ff688ba763967277735c6f1b932c0f79adf7ff70ff",
+  "d87_oct_local_J3.json": "ca70473b0d081b291e67e2ab71ee6b306266747c1ab16cab330e00e4418585e3",
+  "d87_oct_local_J3.leaves.jsonl.gz": "145dc9309bb313ac711d920d66a5f1de4b72fdf4794879c8f82aa15d6a4d2be6",
+  "d87_oct_local_J4.json": "270c10956a1079a3854ee7c35d2a4664d33159a9cc6c02de46c35ff6e748f367",
+  "d87_oct_local_J4.leaves.jsonl.gz": "55b3746a0ef2e95d5ea2c2e6410f1d5f3ca310785546743fcd8a8ab1a87c7c47",
+  "d87_oct_far_II.json": "a7f83abeb4505d36c041aabd14a790909cf1f6f705d72c95563165a9e85733a9",
+  "d87_oct_far_II.boxes.jsonl.gz": "4eadc264c7ef19890712a81c8b9f2321c58aa08612b26cc304b2c8f583add984",
+  "d87_oct_far_III.json": "a0d0118b60eb5e03145a119ffacfe4e45935165349f30da13387519cf7261613",
+  "d87_oct_far_III.boxes.jsonl.gz": "ac68e739210acdfb5696477151fe501ba9842893a54cde019d9eb944e860a320",
+  "d87_oct_far_IV.json": "bc62980f53f07079f10f1e028c6aaca39ac0bbc6864663f0b7b3eccdf61675f1",
+  "d87_oct_far_IV.boxes.jsonl.gz": "5a18fa0be486391385f9b2f633bcc6f442e710b2dd007f60656c92f7f807e46a",
+  "d87_oct_step0.json": "77bfbfbb74e4337102cd85debfc9952556ec7ab38e1e16a737a953d63ce2a8ed",
+  "d87_oct_step0_exact.json": "dd2f65571a339f1f8da666c4ae70cda953371d3cc65cb18f5d1d4580171d8b30",
+  "d87_oct_tests.json": "2b3db6e51cc7585e8b14c4aa23c28f8c01b141c5218d48b11b8269e6171b3f05",
+  "d87_cub_common.py": "a7e5baa4709b921a537e12fb41a2fffddfa6ffc79984b4467ac23314e7db7c35",
+  "d87_oct_step0.py": "cca648ce366d9dc054f187b06c95b56498976b4edca06feb10d0da29bbaab9c7",
+  "d87_oct_local.py": "24a05813fe201a8f65395b8262c2753b1d05e1a009a7ee05de6463e40c7c3455",
+  "d87_oct_far.py": "f75dde69af478f008df39abb5e827edab81b0703124b59c56aa60eada13baa01",
+  "d87_oct_tests.py": "64f4952db0ca205b592954a6aa1726a4b34ab201d2035bb3ae0a0dfdd9494c33",
+  "d87_oct_replay_all.py": "ee0193868bd0dcef95488e33c1f6d0b7a78a1f36ce9a698e05d00c0a5ccca087",
+  "d31_common.py": "c7257465cd4a074f6b98b60996dd115c7b0fd65035e0cdfcb86f9f2a25c19441",
+  "d37_tet_n05_common.py": "bdb4bcc64f99f6c233fe96852e9a2a5df6dfd5a0dc0de1f614dbf6c8de9dbe00"
+ }
+}

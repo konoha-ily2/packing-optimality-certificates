@@ -33,8 +33,9 @@ def cover_check(name):
         lv = {(k[1], k[2]) for k in leaves if k[0] == ch}
         root = ([-DEN] * 3, [DEN] * 3)
         anc = DL.ancestors(root, lv, F.split)
-        cur = [root]
+        cur = [root]; seen0 = seen
         while cur:
+            need(len(cur) <= len(lv) - (seen - seen0), "hole in the cover (a box without leaves)")   # in a correct tree every box of a level contains at least one leaf not yet seen (L4'r, 11-15)
             nxt = []
             for lo, hi in cur:
                 key = (tuple(lo), tuple(hi))

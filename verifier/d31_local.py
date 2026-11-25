@@ -293,6 +293,7 @@ def replay(kind, name):
             maxdepth = max((sum(round(math.log2(f / (h - l))) for l, h, f in zip(lo, hi, full)) for lo, hi in lv), default=0)
             depth = 0
             while cur:
+                need(len(cur) <= len(lv) - seen, "hole in the cover (a box without leaves)")   # in a correct tree every box of a level contains at least one leaf not yet seen (L4'r, 11-15)
                 need(depth <= maxdepth, "a branch that reaches no leaf")
                 depth += 1
                 nxt = []

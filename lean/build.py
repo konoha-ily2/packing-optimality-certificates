@@ -4,7 +4,7 @@ Usage (from this lean/ directory, with elan installed; lean-toolchain pins the v
   python build.py icoinoct                 # one case: cubinoct | icoincub | dodinico | icoinoct | icointet | cubintet
                                            #           | icoindod | octindod | cubinico | octintet
                                            #           | octinico | tetintet | dodincub | dodinoct | tetintet_n05
-                                           #           | dodintet
+                                           #           | dodintet | cubindod | icoinico | dodindod | octinoct (v1.0.0, sandwich)
   python build.py all                      # all cases, then the #print axioms summaries
   python build.py inject [d16|b2|d28|d30|d31|d30s3|d40|d30x|d37n05|d45dt]  # injected-error certificates: every target must FAIL
                                            # (b2 = only the D16 tests of icoindod / octindod; d30x = dodincub and
@@ -13,6 +13,11 @@ Usage (from this lean/ directory, with elan installed; lean-toolchain pins the v
   python build.py plateau                  # plateau corollaries (icointet / octintet, n = 2..5), decide +kernel
   python build.py inject plateau           # injected errors of the plateau corollaries (24 files): every target must FAIL
   python build.py kernel                   # optional kernel (decide +kernel) trials on parts of icoinoct / icointet
+  python build.py d87                      # n >= 3 upper bounds (v1.0.0): octincub_n09 and dodinico_n13, decide +kernel
+  python build.py inject d44               # injected errors of the four sandwich cases (v1.0.0): 27 must FAIL, 1 builds
+  python build.py formal                   # v1.0: the 19 n = 2 main theorems (Formal/Spec.lean) and N2All.n2_all,
+                                           #       kernel only (no native_decide), Mathlib; needs the dodintet modules
+                                           #       of PackLean/E3i/ rebuilt first (tools/e3i/README.md, rebuild.py)
 
 Modules are built in dependency order with `lake build <module>`, one at a time, so that at most one Lean
 process runs (memory). For each case the script lists the modules and prints pass/fail and the wall time.
@@ -44,6 +49,11 @@ CASES = {
     "dodinoct": ("D30X/Oct", "PackLean.D30X.Oct"),
     "tetintet_n05": ("D37N05", "PackLean.D37N05"),
     "dodintet": ("D45DT", "PackLean.D45DT"),
+    # v1.0.0 (D44): the n = 2 sandwiches of the four cases without a closed form
+    "cubindod": ("D44/Cubindod", "PackLean.D44.Cubindod"),
+    "icoinico": ("D44/Icoinico", "PackLean.D44.Icoinico"),
+    "dodindod": ("D44/Dodindod", "PackLean.D44.Dodindod"),
+    "octinoct": ("D44/Octinoct", "PackLean.D44.Octinoct"),
 }
 # cases whose modules are built in their own order (other stems in the directory, e.g. D31/Core, are left to the imports)
 CASE_ORDER = {
@@ -59,7 +69,9 @@ CASE_ORDER = {
 AXIOMS = ["PackLean.D16.Axioms", "PackLean.D16.AxiomsB2", "PackLean.D28.Ico.Axioms", "PackLean.D28.Cub.Axioms",
           "PackLean.D30.Axioms", "PackLean.D31.Axioms", "PackLean.D30S3.Axioms", "PackLean.D40.Axioms",
           "PackLean.D30X.Cub.Axioms", "PackLean.D30X.Oct.Axioms",
-          "PackLean.D37N05.Axioms", "PackLean.D45DT.Axioms"]
+          "PackLean.D37N05.Axioms", "PackLean.D45DT.Axioms",
+          "PackLean.D44.Cubindod.Axioms", "PackLean.D44.Icoinico.Axioms", "PackLean.D44.Dodindod.Axioms",
+          "PackLean.D44.Octinoct.Axioms"]
 # injected-error modules that are expected to BUILD. In D30/Test/RhoBig only the local theorem is the injected-error
 # test: the far theorem passes, because widening the L region only makes the far check easier, and the constants
 # theorem passes, because ρ₀ = 1/8 and r0 = ρ₀·rden are consistent with each other (Consts was not built in the
@@ -97,7 +109,11 @@ EXPECT_PASS |= {"PackLean.D45DT.Test.R0Big.Far000"}
 INJECT_ONLY = {"D30S3": {
     "Lam": ["Far"], "Sum": ["Far"], "Drop": ["Far"], "Disc": ["Far"], "Ident": ["Local", "Consts"], "Tsmall": ["Consts"],
     "LocCand": ["Local"], "LocDrop": ["Local"], "Nolift": ["Local"], "WCand": ["Local"], "RhoBig": ["Local"],
-    "TwBig": ["Local"], "TcShift": ["Local", "Far"], "LiftZero": ["Local"], "LiftHalf": ["Local"], "WHalf": ["Local"]}}
+    "TwBig": ["Local"], "TcShift": ["Local", "Far"], "LiftZero": ["Local"], "LiftHalf": ["Local"], "WHalf": ["Local"]},
+    # D44 (v1.0.0): SBig of icoinico and dodindod writes every part, but in the original run (plan D12 section 24,
+    # pp/logs/a11_lean_inject.json) only their local and constants modules were built as tests; the far modules are
+    # not targets
+    "D44/Icoinico": {"SBig": ["Local", "Consts"]}, "D44/Dodindod": {"SBig": ["Local", "Consts"]}}
 # kernel trials (not part of `all`); for cubinico only the trials that finished (ConstsAll and LocalAll were stopped)
 KERNEL = ["PackLean.D16.IcoOct.Kernel", "PackLean.D28.Ico.Kernel.Axioms", "PackLean.D30.Kernel.Axioms"]
 # octintet: constants and identities, then the far/local trials (D31/Kernel/Loc3, a C face with 215 leaves, took
@@ -114,11 +130,25 @@ ORDER = [r"Data", r"CoverData", r"Tok\d+", r"CoverTok\d+", r"Far\d+", r"Far", r"
 
 # cases whose modules are listed explicitly, in dependency order (flat directory; the axioms files are included)
 EXPLICIT = {
+    # v1.0.0: the exact upper-bound placements of octincub_n09 and dodinico_n13 (decide +kernel, no Mathlib)
+    "d87": ["PackLean.D87Oct.Arith", "PackLean.D87Dod.Arith"],
+    # v1.0: the 19 n = 2 main theorems, one module per case (the last theorem `<case>_n02_proof` of each), then the
+    # conjunction N2All.n2_all. Each module prints its `#print axioms`; the claims are stated in Formal/Spec.lean.
+    # cubinoct's main theorem is in Formal/CubinoctUpper.lean (`Up.cubinoct_n02_proof`), cubindod's in Cases/CubDodR.
+    "formal": ["PackLean.Formal.CubinoctUpper"] + ["PackLean.Formal.Cases." + s for s in
+               ("IcoCub", "DodIco", "IcoOct", "IcoDod", "OctDod", "CubIco", "IcoTet", "CubTet", "OctTet", "OctIco",
+                "DodCub", "DodOct", "TetTet", "DodTet", "CubDodR", "IcoIco", "DodDod", "OctOct")]
+              + ["PackLean.Formal.N2All"],
     "plateau": ["PackLean.Plateau." + s for s in
                 ("Core", "Data", "Ico", "Oct", "N5Data", "N5", "N5EndCore", "N5End", "Axioms", "N5Axioms")],
 }
 # inject groups whose Test/ directories sit one level deeper
-INJECT_GROUPS = {"d30x": ["D30X/Cub", "D30X/Oct"]}
+INJECT_GROUPS = {"d30x": ["D30X/Cub", "D30X/Oct"],
+                 "d44": ["D44/Cubindod", "D44/Icoinico", "D44/Dodindod", "D44/Octinoct"]}
+# D44/Octinoct/Test/SBig (s-bar raised to s_up + 1e-10): the local and constants modules are the injected-error tests.
+# The far module builds: the far boxes keep a margin above the raised S-bar, because the neighbourhood of R-hat is in
+# the local region L (the original expectation table listed it wrongly; plan D12 section 24, pp/logs/a11_lean_inject.json)
+EXPECT_PASS |= {"PackLean.D44.Octinoct.Test.SBig.Far"}
 # injected-error groups kept as flat files in <dir>/Test/, and the Lean messages that count as "rejected by the check".
 # These use `decide +kernel`: a wrong certificate fails either with "application type mismatch" (the kernel does not
 # accept the value as true) or with "`decide` proved that the proposition ... is false".
@@ -139,7 +169,9 @@ def case_modules(case):
         order = CASE_ORDER[case]
         key = lambda s: (next(i for i, pat in enumerate(order) if re.fullmatch(pat, s)), s)
         return [f"{prefix}.{s}" for s in sorted((s for s in stems if any(re.fullmatch(p, s) for p in order)), key=key)]
-    return [f"{prefix}.{s}" for s in sorted(stems, key=rank)]
+    # only the stems named in ORDER: v1.0 puts kernel-only helpers of the formal proofs (e.g. D28/Ico/Upper.lean)
+    # next to the v0.3.0 case files, and they are not part of the native_decide re-check
+    return [f"{prefix}.{s}" for s in sorted((s for s in stems if rank(s)[0] < len(ORDER)), key=rank)]
 
 
 def inject_targets(group):

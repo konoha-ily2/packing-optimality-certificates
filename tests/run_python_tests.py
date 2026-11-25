@@ -3,7 +3,12 @@
 Usage (from the repository root):
   python -X utf8 tests/run_python_tests.py <case> [count=300]
   case: cubinoct | icoincub | dodinico | icoinoct | icoindod | octindod | cubinico | icointet | cubintet | octintet | octinico | tetintet
-        | dodincub | dodintet | tetintet_n05
+        | dodincub | dodintet | tetintet_n05 | icoinico | dodindod | octinoct | octincub_n09 | dodinico_n13 | tetintet_n03
+For icoinico, dodindod and octinoct, d44_s3_tests.py runs the controls of the local record (d44_tests.py of the far stage reads
+intermediate batch files that are not part of the records and is not run here).
+octincub_n09, dodinico_n13 and tetintet_n03 run their full test scripts (d87_oct_tests.py, d87_dod_tests.py, d86_tests.py) in the
+same scratch layout as tests/replay_all.py (work/replay/<case>/run/, code and records side by side); the result is written there as
+<prefix>_tests.json and can be compared with the stored one in certificates/.
 For dodinoct the full test set has not been run on the record of the claim (rho0 = 1/32); the controls of that record are run by
   verifier/d30x_testsX.py dodinoct d30x_dodinoct_local_r32_nolp.json d30_dodinoct_far_r32 tmp_testsX parent,corrupt
 (see tests/README.md).
@@ -52,6 +57,14 @@ EXTRA = {
                  CERT / "d45_dodintet_local_TB.leaves.jsonl.gz", CERT / "d45_dodintet_upper.json"],
     "tetintet_n05": [CERT / "d37_tet_n05_local_r16.json", CERT / "d37_tet_n05_local_r16.leaves.jsonl.gz"],
 }
+for _p in ("icoinico", "dodindod", "octinoct"):
+    RECORDS[_p] = [f"d44_{_p}_s3far_k10"]
+    EXTRA[_p] = [CERT / f"d44_{_p}_local_k10.json", CERT / "d44_upper.json", CERT / "d44_rhat.json"]
+SELF_TESTS = {
+    "octincub_n09": ["d87_oct_tests.py"],
+    "dodinico_n13": ["d87_dod_tests.py", "--procs", "3"],
+    "tetintet_n03": ["d86_tests.py"],
+}
 # environment variables for the test scripts
 ENV = {
     "tetintet_n05": {"D37_R0": "1/16"},         # the records were made with R0 = 1/16
@@ -59,6 +72,8 @@ ENV = {
 
 
 def command(case, count):
+    if case in ("icoinico", "dodindod", "octinoct"):
+        return [str(V / "d44_s3_tests.py"), f"d44_{case}_local_k10.json"]
     if case == "cubinoct":
         return [str(V / "d16_cover_tests.py"), count]
     if case in ("icointet", "cubintet"):
@@ -84,7 +99,20 @@ def command(case, count):
     return [str(V / "d16d_tests.py"), case, count]
 
 
+def main_self(case):
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from replay_all import prepare_self
+    run = prepare_self(case)
+    print(f"running in {run}", flush=True)
+    cmd = SELF_TESTS[case]
+    p = subprocess.run([sys.executable, "-X", "utf8", str(run / cmd[0])] + cmd[1:] + ["--scratch", str(run / "tests_scratch")],
+                       cwd=run)
+    return p.returncode
+
+
 def main(case, count="300"):
+    if case in SELF_TESTS:
+        return main_self(case)
     if case not in RECORDS:
         sys.exit(f"unknown case {case}; choose from {list(RECORDS)}")
     work = ROOT / "work" / case

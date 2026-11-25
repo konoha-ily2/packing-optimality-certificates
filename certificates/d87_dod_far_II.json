@@ -1,0 +1,39 @@
+{
+ "evaluated": 49487,
+ "n_ok": 70,
+ "n_split": 23,
+ "n_X": 0,
+ "levels": [
+  [
+   3,
+   64,
+   64,
+   62
+  ],
+  [
+   4,
+   8,
+   8,
+   8
+  ]
+ ],
+ "X_tris": [],
+ "leaves": {
+  "A": 11662,
+  "D": 5200,
+  "L": 41
+ },
+ "seconds": 131.2,
+ "passed": true,
+ "params": {
+  "ND": 1073741824,
+  "DEN": 1073741824,
+  "nmin": 14,
+  "budget": 8000,
+  "wmin_exp": 16,
+  "forced_exp": 3,
+  "local": "d87_dod_local_P",
+  "procs": 2,
+  "brk": {}
+ }
+}

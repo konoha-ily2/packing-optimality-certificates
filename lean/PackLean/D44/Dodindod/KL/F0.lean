@@ -1,0 +1,15 @@
+-- 自動で書き出したもの（lean/tools/e3g_gen_d44.py、E3g2）。手で直さない。
+import PackLean.D44.Dodindod.KL.Faces
+
+namespace PackLean.D44.Dodindod.KL
+open PackLean.D16 PackLean.D44 PackLean.D44.KL PackLean.D44.Dodindod
+open PackLean.D28 (Poly)
+
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+
+/-- 面 (0, 1)：葉 22（遠方の形 0）。 -/
+theorem face0 : faceRun P qlamL polysT ((0, 1), f0) = (true, 22, 0) := by
+  decide +kernel
+
+end PackLean.D44.Dodindod.KL

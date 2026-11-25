@@ -478,6 +478,7 @@ def verify(path, ctx=None, quiet=False):
         seen = 0
         cur = [([0, -D, -D], [r0, D, D])]
         while cur:
+            need(len(cur) <= len(leaves) - seen, "hole in the cover (a box without leaves)")   # in a correct tree every box of a level contains at least one leaf not yet seen (L4'r, 11-15)
             nxt = []
             for lo, hi in cur:
                 if (tuple(lo), tuple(hi)) in leaves:

@@ -1,0 +1,43 @@
+{
+ "problem": "d44_dodindod",
+ "evaluated": 110651,
+ "A": 52461,
+ "D": 2866,
+ "L": 8,
+ "X": 0,
+ "lp_fail": 0,
+ "levels": [],
+ "per_chart": {},
+ "seconds": 590.2,
+ "X_boxes": [],
+ "params": {
+  "problem": "d44_dodindod",
+  "charts": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "wmin_exp": 30,
+  "Sbar": "2544668139560355369319227/604462909807314587353088",
+  "T": "135/64",
+  "scale": "1",
+  "RHO0": "1/32",
+  "DEN_exp": 44,
+  "QLAM": 4503599627370496,
+  "use_discard": true,
+  "n_pairs_used": 599
+ },
+ "closed": true,
+ "d44": {
+  "pair": "dodindod",
+  "k": 10,
+  "sbar": "9937990427/5000000000",
+  "sbar_float": 1.9875980854,
+  "S_bar": "2544668139560355369319227/604462909807314587353088",
+  "qlam_exp": 52,
+  "note": "RHO0 = 1/32（0 なら局所なし）、P.SSTAR := S̄（見張り）、並列 3・小箱の深さ 3",
+  "stopped": null,
+  "lpfix": false
+ }
+}

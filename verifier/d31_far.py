@@ -230,6 +230,7 @@ def replay(name):
         cur = [(ch, [-DEN] * 3, [DEN] * 3) for ch in range(4)]
         depth = 0
         while cur:
+            need(len(cur) <= len(rl) - seen, "hole in the cover (a box without leaves)")   # in a correct tree every box of a level contains at least one leaf not yet seen (L4'r, 11-15)
             need(depth <= dmax, "a branch that reaches no R leaf"); depth += 1
             nxt = []
             for ch, a, b in cur:
@@ -243,6 +244,7 @@ def replay(name):
     cur = [([0, 0], [ND, 2 * ND])]
     depth = 0
     while cur:
+        need(len(cur) <= len(nleaves) - seen, "hole in the cover (a box without leaves)")   # in a correct tree every box of a level contains at least one leaf not yet seen (L4'r, 11-15)
         need(depth <= dmax, "a branch that reaches no n leaf"); depth += 1
         nxt = []
         for lo, hi in cur:

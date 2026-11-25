@@ -1,0 +1,43 @@
+{
+ "problem": "d44_cubindod",
+ "evaluated": 33811,
+ "A": 16383,
+ "D": 524,
+ "L": 8,
+ "X": 0,
+ "lp_fail": 0,
+ "levels": [],
+ "per_chart": {},
+ "seconds": 216.3,
+ "X_boxes": [],
+ "params": {
+  "problem": "d44_cubindod",
+  "charts": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "wmin_exp": 38,
+  "Sbar": "2344292128946263419001193/1208925819614629174706176",
+  "T": "65/64",
+  "scale": "1",
+  "RHO0": "1/4096",
+  "DEN_exp": 44,
+  "QLAM": 4503599627370496,
+  "use_discard": true,
+  "n_pairs_used": 479
+ },
+ "closed": true,
+ "d44": {
+  "pair": "cubindod",
+  "k": 10,
+  "sbar": "18310877063587989/20000000000000000",
+  "sbar_float": 0.9155438531793995,
+  "S_bar": "2344292128946263419001193/1208925819614629174706176",
+  "qlam_exp": 52,
+  "note": "RHO0 = 1/4096（0 なら局所なし）、P.SSTAR := S̄（見張り）、並列 2・小箱の深さ 3",
+  "stopped": null,
+  "lpfix": true
+ }
+}

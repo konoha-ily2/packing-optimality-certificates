@@ -4,3 +4,7 @@ lean/.lake/
 work/
 NOTES_ja.md
 work_notes/
+lean/PackLean/E3i/Coarse/
+lean/PackLean/E3i/Gen/
+lean/PackLean/E3i/Bun/
+lean/PackLean/E3i/NT/

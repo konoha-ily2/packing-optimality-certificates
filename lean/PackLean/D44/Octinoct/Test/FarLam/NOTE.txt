@@ -1,0 +1,2 @@
+octinoct lam (part far)
+error: accepted box chart 0 [-7696581394432, -2199023255552, -6597069766656]–[-6597069766656, 0, -4398046511104]: move 755208513144134/qlam of λ from face 3 to 0 (Python rejects it too)
