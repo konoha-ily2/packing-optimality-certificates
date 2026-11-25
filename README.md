@@ -224,6 +224,6 @@ MIT (see [LICENSE](LICENSE)).
 
 ## Citation
 
-Cite as: Hirotaka Nakano, *packing-optimality-certificates*, Zenodo, DOI [10.5281/zenodo.24191316](https://doi.org/10.5281/zenodo.24191316) (concept DOI, all versions); v0.1.0: [10.5281/zenodo.24191317](https://doi.org/10.5281/zenodo.24191317); v0.2.0: [10.5281/zenodo.24195467](https://doi.org/10.5281/zenodo.24195467); v0.3.0: [10.5281/zenodo.24223156](https://doi.org/10.5281/zenodo.24223156); v1.0.0: [10.5281/zenodo.24529459](https://doi.org/10.5281/zenodo.24529459).
+Cite as: Hirotaka Nakano, *packing-optimality-certificates*, Zenodo, DOI [10.5281/zenodo.24191316](https://doi.org/10.5281/zenodo.24191316) (concept DOI, all versions); v0.1.0: [10.5281/zenodo.24191317](https://doi.org/10.5281/zenodo.24191317); v0.2.0: [10.5281/zenodo.24195467](https://doi.org/10.5281/zenodo.24195467); v0.3.0: [10.5281/zenodo.24223156](https://doi.org/10.5281/zenodo.24223156); v1.0.0: [10.5281/zenodo.24529459](https://doi.org/10.5281/zenodo.24529459); v1.0.1: [10.5281/zenodo.24529695](https://doi.org/10.5281/zenodo.24529695).
 
 See [CITATION.cff](CITATION.cff). Please cite the nineteen $n=2$ results as formally verified in Lean 4, and everything else as computer-assisted results, not as formal proofs.
