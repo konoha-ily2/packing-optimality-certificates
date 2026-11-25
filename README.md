@@ -1,4 +1,4 @@
-# Optimality proofs for packing unit Platonic solids into a Platonic container, v1.0.0
+# Optimality proofs for packing unit Platonic solids into a Platonic container, v1.0.1
 
 This repository contains proofs of the minimal container size for packings of congruent unit-edge Platonic solids into a Platonic container. Version 1.0.0 has two parts of different strength:
 
@@ -6,6 +6,8 @@ This repository contains proofs of the minimal container size for packings of co
 2. **Computer-assisted results (not formally verified).** Eight results for three or more pieces, and, for the six enclosures above, the exact value $s^{\ast}=s_0$ (an algebraic number of degree 5 to 48). These rest on Python certificates with exact arithmetic and on arguments written in prose, checked by reading only.
 
 Compared with v0.3.0 (the last published version; no v0.4.0 was released), v1.0.0 adds: the Lean formal proofs of all nineteen $n=2$ pairs; four new $n=2$ pairs (`cubindod`, `icoinico`, `dodindod`, `octinoct`); the computer-assisted equalities $s^{\ast}=s_0$ for the six pairs with algebraic values (`tetintet` and `dodintet` were enclosures in v0.3.0); and three results for more pieces (`octincub_n09`, `dodinico_n13`, and `tetintet_n03` with $n=4$). The certificates, checkers and Lean re-check modules of v0.3.0 are unchanged, except for one added line (a guard in the coverage check; acceptance unchanged) in ten checkers (`verifier/d30_local.py` and nine others, listed in [verification.md §9](docs/verification.md#9-additions-in-v100); see also [review_log.md](docs/review_log.md#v100)); the Lean project files (`lakefile.toml`, which now requires Mathlib, `PackLean.lean` and `build.py`) were extended for v1.0.
+
+Version 1.0.1 adds only the manuscript [`paper/p1.pdf`](paper/p1.pdf) (*Two Platonic solids in a Platonic container: nineteen minimal sizes, with the reduction checked in Lean*, 25 November 2026), which refers to v1.0.0 (commit `57aa64bd10`); the proofs, certificates, checkers and Lean files are those of v1.0.0.
 
 > **What is formally verified, and what is not.**
 > Only the Lean theorems for the nineteen $n=2$ pairs below are formal proofs. Everything else in this repository — the results for $n\ge3$, the equalities $s^{\ast}=s_0$ of the six algebraic values, the Python certificates themselves, and the Lean re-checks of their arithmetic with `native_decide` — is computer-assisted and **not** formally verified. There has been **no human review** of any part; the reviews were made by other sessions of Claude models.
@@ -202,6 +204,7 @@ Independently of the formal proofs, the arithmetic of the Python certificates wa
 - `lean/` – the Lean 4 project: the formal proofs of the nineteen $n=2$ results (`PackLean/Formal/`, the kernel-only certificate modules they import, their generators in `tools/`), and the re-check of the arithmetic of the certificates (no Mathlib): `PackLean/D16/`, `PackLean/D28/`, `PackLean/D30/`, `PackLean/D31/`, `PackLean/D30S3/` (octinico), `PackLean/D40/` (tetintet), `PackLean/D30X/` (dodincub, dodinoct), `PackLean/D45DT/` (dodintet), `PackLean/D37N05/` (tetintet_n05), `PackLean/D44/` (the four enclosures), `PackLean/D87Oct/`, `PackLean/D87Dod/` (upper bounds of octincub_n09, dodinico_n13), `PackLean/Plateau/`; injected-error certificates in `*/Test/`, `build.py`, `build_log.txt`; see [lean/README.md](lean/README.md)
 - `tests/` – `replay_all.py`, `run_python_tests.py` and how to run the injected-error tests; see [tests/README.md](tests/README.md)
 - `requirements.txt` – Python packages with the versions used
+- `paper/p1.pdf` – the manuscript on the nineteen $n=2$ results (v1.0.1; not listed in any SHA-256 table)
 - `CITATION.cff` – citation metadata; `LICENSE` – MIT
 
 Quick check (Python 3.10 or later):
